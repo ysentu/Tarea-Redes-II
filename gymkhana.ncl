@@ -4,6 +4,8 @@
 			<importBase alias="conn" documentURI="defaultConnBase.ncl">
 			</importBase>
 		</connectorBase>
+		
+		<!--REGIONES-->
 		<regionBase id="regionBase0">
 			<region height="100.00%" id="screen" left="0.00%" top="0.00%" width="100.00%" zIndex="1">
 				<region height="66.46%" id="video" left="0.00%" top="0.00%" width="71.66%" zIndex="2">
@@ -26,14 +28,24 @@
 				</region>
 			</region>
 		</regionBase>
+		
+		<!--DESCRIPTORES-->
 		<descriptorBase id="descriptorBase1">
 			<descriptor id="region_video" region="video">
 			</descriptor>
 			<descriptor id="fondo" region="r_instrucciones">
 			</descriptor>
 			<descriptor id="instruc_1" region="instruccion_1">
+				<descriptorParam name="fontFamily" value="Tiresias"/>
+				<descriptorParam name="fontSize" value="18"/>
+				<descriptorParam name="fontWeight" value="normal"/>
+				<descriptorParam name="fontColor" value="red"/>
 			</descriptor>
 			<descriptor id="instruc_2" region="instruccion_2">
+				<descriptorParam name="fontFamily" value="Tiresias"/>
+				<descriptorParam name="fontSize" value="18"/>
+				<descriptorParam name="fontWeight" value="normal"/>
+				<descriptorParam name="fontColor" value="red"/>
 			</descriptor>
 			<descriptor id="boton_rojo" region="red_button">
 			</descriptor>
@@ -43,15 +55,38 @@
 			</descriptor>
 			<descriptor id="fondo_resultados" region="r_resultados">
 			</descriptor>
+			<descriptor id="audio">				
+			</descriptor>
 		</descriptorBase>
+		
 	</head>
 	<body id="myBodyID">
+		
+		<!--CONTENIDOS-->
 		<media descriptor="region_video" id="gymkhana" src="media/gymkhana.mp4">
 		</media>
-		<media id="gymkhana_audio" src="media/gymkhana_audio.mp3">
+		<media descriptor="audio" id="gymkhana_audio" src="media/gymkhana_audio.mp3">
 		</media>
+		<media descriptor="fondo" id="background" src="media/background.jpg">
+		</media>
+		<media descriptor="instruc_1" id="instruccion1" src="media/instruccion1.txt">
+		</media>
+		<media descriptor="instruc_2" id="instruccion2" src="media/instruccion2.txt">
+		</media>
+		<media descriptor="boton_ok" id="ok" src="media/ok.png">
+		</media>
+		<media descriptor="boton_rojo" id="red" src="media/red.png">
+		</media>
+		<media descriptor="fondo_busqueda" id="cuadro_busqueda" src="media/cuadro_busqueda.png">
+		</media>
+		<media descriptor="fondo_resultados" id="cuadro_resultado" src="media/cuadro_resultado.png">
+		</media>
+		
+		<!--START-->
 		<port component="gymkhana" id="START">
 		</port>
+		
+		<!--RELACIONES ENTRE CONTENIDOS-->
 		<link id="start_audio" xconnector="conn#onBeginStart">
 			<bind component="gymkhana" role="onBegin">
 			</bind>
@@ -64,16 +99,7 @@
 			<bind component="gymkhana_audio" role="stop">
 			</bind>
 		</link>
-		<media descriptor="fondo" id="background" src="media/background.jpg">
-		</media>
-		<media descriptor="instruc_1" id="instruccion1" src="media/instruccion1.txt">
-		</media>
-		<media descriptor="instruc_2" id="instruccion2" src="media/instruccion2.txt">
-		</media>
-		<media descriptor="boton_ok" id="ok" src="media/ok.png">
-		</media>
-		<media descriptor="boton_rojo" id="red" src="media/red.png">
-		</media>
+
 		<link id="mostrar_red" xconnector="conn#onBeginStart">
 			<bind component="background" role="onBegin">
 			</bind>
@@ -104,10 +130,6 @@
 			<bind component="background" role="start">
 			</bind>
 		</link>
-		<media descriptor="fondo_busqueda" id="cuadro_busqueda" src="media/cuadro_busqueda.png">
-		</media>
-		<media descriptor="fondo_resultados" id="cuadro_resultado" src="media/cuadro_resultado.png">
-		</media>
 		<link id="mostrar_cuadro_resultados" xconnector="conn#onBeginStart">
 			<bind component="gymkhana" role="onBegin">
 			</bind>
