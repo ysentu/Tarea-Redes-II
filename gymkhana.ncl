@@ -40,5 +40,7 @@
 			<bind component="gymkhana_audio" role="stop">
 			</bind>
 		</link>
+		<media id="background" src="media/background.jpg">
+		</media>
 	</body>
 </ncl>
