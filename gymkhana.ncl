@@ -21,6 +21,8 @@
 					</region>
 				</region>
 				<region height="11.67%" id="r_busqueda" left="0.00%" top="65.83%" width="100.00%" zIndex="4">
+					<region id="r_escritura" top="5%" height="90%" left="20%" width="60%" zIndex="10">						
+					</region>
 					<region height="100.00%" id="r_espera" left="92.97%" top="0.00%" width="7.03%" zIndex="10">
 					</region>
 				</region>
@@ -57,6 +59,7 @@
 			</descriptor>
 			<descriptor id="audio">				
 			</descriptor>
+			<descriptor id="dsInput" region="r_escritura" focusIndex="Input"/>
 		</descriptorBase>
 		
 	</head>
@@ -81,6 +84,22 @@
 		</media>
 		<media descriptor="fondo_resultados" id="cuadro_resultado" src="media/cuadro_resultado.png">
 		</media>
+		
+		<!--CODIGOS LUA-->
+		<media id="input" src="input.lua"  descriptor="dsInput">
+			<area id="select"/>
+        	<property name="text"/>
+		</media>
+		
+		<!-- PARA HABILITAR E USO DEL TECLADO EN GINGA -->
+		<media type="application/x-ginga-settings" id="programSettings">
+       		<property name="service.currentKeyMaster" value="Input"/>
+		</media>
+		
+		<!-- PARA INICIALIZAR LOS PANELES -->
+    	<link xconnector="onBeginStart">
+			<bind role="onBegin" component="input"/>
+    	</link>
 		
 		<!--START-->
 		<port component="gymkhana" id="START">
