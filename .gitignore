@@ -2,6 +2,9 @@
 Thumbs.db
 ehthumbs.db
 
+#archivos:
+*.cpr~
+
 # Folder config file
 Desktop.ini
 

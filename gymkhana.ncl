@@ -1,4 +1,4 @@
-<ncl id="myNCLDocID">
+<ncl id="myNCLDocID" xmlns="http://www.ncl.org.br/NCL3.0/EDTVProfile">
 	<head>
 		<connectorBase id="connBaseId">
 			<importBase alias="conn" documentURI="defaultConnBase.ncl">
@@ -19,6 +19,8 @@
 					</region>
 				</region>
 				<region height="11.67%" id="r_busqueda" left="0.00%" top="65.83%" width="100.00%" zIndex="4">
+					<region height="100.00%" id="r_espera" left="92.97%" top="0.00%" width="7.03%" zIndex="10">
+					</region>
 				</region>
 				<region height="22.71%" id="r_resultados" left="0.00%" top="77.29%" width="100.00%" zIndex="5">
 				</region>
@@ -30,20 +32,16 @@
 			<descriptor id="fondo" region="r_instrucciones">
 			</descriptor>
 			<descriptor id="instruc_1" region="instruccion_1">
-				<descriptorParam name="fontFamily" value="Tiresias"/>
-				<descriptorParam name="fontSize" value="20"/>
-				<descriptorParam name="fontWeight" value="normal"/>
-				<descriptorParam name="fontColor" value="red"/>
 			</descriptor>
 			<descriptor id="instruc_2" region="instruccion_2">
-				<descriptorParam name="fontFamily" value="Tiresias"/>
-				<descriptorParam name="fontSize" value="20"/>
-				<descriptorParam name="fontWeight" value="normal"/>
-				<descriptorParam name="fontColor" value="red"/>
 			</descriptor>
 			<descriptor id="boton_rojo" region="red_button">
 			</descriptor>
 			<descriptor id="boton_ok" region="ok_button">
+			</descriptor>
+			<descriptor id="fondo_busqueda" region="r_busqueda">
+			</descriptor>
+			<descriptor id="fondo_resultados" region="r_resultados">
 			</descriptor>
 		</descriptorBase>
 	</head>
@@ -72,34 +70,54 @@
 		</media>
 		<media descriptor="instruc_2" id="instruccion2" src="media/instruccion2.txt">
 		</media>
-		<port component="background" id="p0">
-		</port>
 		<media descriptor="boton_ok" id="ok" src="media/ok.png">
 		</media>
 		<media descriptor="boton_rojo" id="red" src="media/red.png">
 		</media>
-		<link id="link0" xconnector="conn#onBeginStart">
+		<link id="mostrar_red" xconnector="conn#onBeginStart">
 			<bind component="background" role="onBegin">
 			</bind>
 			<bind component="red" role="start">
 			</bind>
 		</link>
-		<link id="link1" xconnector="conn#onBeginStart">
+		<link id="mostrar_ins1" xconnector="conn#onBeginStart">
 			<bind component="background" role="onBegin">
 			</bind>
 			<bind component="instruccion1" role="start">
 			</bind>
 		</link>
-		<link id="link2" xconnector="conn#onBeginStart">
+		<link id="mostrar_ok" xconnector="conn#onBeginStart">
 			<bind component="background" role="onBegin">
 			</bind>
 			<bind component="ok" role="start">
 			</bind>
 		</link>
-		<link id="link3" xconnector="conn#onBeginStart">
+		<link id="mostrar_ins2" xconnector="conn#onBeginStart">
 			<bind component="background" role="onBegin">
 			</bind>
 			<bind component="instruccion2" role="start">
+			</bind>
+		</link>
+		<link id="mostrar_instrucciones" xconnector="conn#onBeginStart">
+			<bind component="gymkhana" role="onBegin">
+			</bind>
+			<bind component="background" role="start">
+			</bind>
+		</link>
+		<media descriptor="fondo_busqueda" id="cuadro_busqueda" src="media/cuadro_busqueda.png">
+		</media>
+		<media descriptor="fondo_resultados" id="cuadro_resultado" src="media/cuadro_resultado.png">
+		</media>
+		<link id="mostrar_cuadro_resultados" xconnector="conn#onBeginStart">
+			<bind component="gymkhana" role="onBegin">
+			</bind>
+			<bind component="cuadro_resultado" role="start">
+			</bind>
+		</link>
+		<link id="mostrar_cuadro_busqueda" xconnector="conn#onBeginStart">
+			<bind component="gymkhana" role="onBegin">
+			</bind>
+			<bind component="cuadro_busqueda" role="start">
 			</bind>
 		</link>
 	</body>
