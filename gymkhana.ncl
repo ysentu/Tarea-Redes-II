@@ -3,6 +3,11 @@
 		<connectorBase id="connBaseId">
 			<importBase alias="conn" documentURI="defaultConnBase.ncl">
 			</importBase>
+			<!-- PARA INICIAR LOS PANELES QUE COPIAN EL TEXTO -->
+			<causalConnector id="onBeginStart">
+				<simpleCondition role="onBegin"/>
+				<simpleAction role="start" max="unbounded"/>
+			</causalConnector>
 		</connectorBase>
 		
 		<!--REGIONES-->
@@ -21,9 +26,9 @@
 					</region>
 				</region>
 				<region height="11.67%" id="r_busqueda" left="0.00%" top="65.83%" width="100.00%" zIndex="4">
-					<region id="r_escritura" top="5%" height="90%" left="20%" width="60%" zIndex="10">						
+					<region id="rgInput" top="5%" height="90%" left="12%" width="81%" zIndex="10">						
 					</region>
-					<region height="100.00%" id="r_espera" left="92.97%" top="0.00%" width="7.03%" zIndex="10">
+					<region height="100.00%" id="r_espera" left="93%" top="0.00%" width="7%" zIndex="10">
 					</region>
 				</region>
 				<region height="22.71%" id="r_resultados" left="0.00%" top="77.29%" width="100.00%" zIndex="5">
@@ -59,7 +64,7 @@
 			</descriptor>
 			<descriptor id="audio">				
 			</descriptor>
-			<descriptor id="dsInput" region="r_escritura" focusIndex="Input"/>
+			<descriptor id="dsInput"   region="rgInput" focusIndex="inputIdx"/>
 		</descriptorBase>
 		
 	</head>
@@ -85,25 +90,26 @@
 		<media descriptor="fondo_resultados" id="cuadro_resultado" src="media/cuadro_resultado.png">
 		</media>
 		
-		<!--CODIGOS LUA-->
+		<!-- PARA HABILITAR EL USO DEL TECLADO EN GINGA -->
+		<media type="application/x-ginga-settings" id="programSettings">
+  	      <property name="service.currentKeyMaster" value="inputIdx"/>
+		</media>
+
+		<!-- CODIGO LUA PARA INGRESO DE TEXTO -->
 		<media id="input" src="input.lua"  descriptor="dsInput">
 			<area id="select"/>
-        	<property name="text"/>
-		</media>
-		
-		<!-- PARA HABILITAR E USO DEL TECLADO EN GINGA -->
-		<media type="application/x-ginga-settings" id="programSettings">
-       		<property name="service.currentKeyMaster" value="Input"/>
+    	    <property name="text"/>
 		</media>
 		
 		<!-- PARA INICIALIZAR LOS PANELES -->
     	<link xconnector="onBeginStart">
 			<bind role="onBegin" component="input"/>
-    	</link>
+	    </link>
 		
 		<!--START-->
 		<port component="gymkhana" id="START">
 		</port>
+		<port id="entryPoint" component="input"/>
 		
 		<!--RELACIONES ENTRE CONTENIDOS-->
 		<link id="start_audio" xconnector="conn#onBeginStart">
