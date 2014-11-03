@@ -29,8 +29,9 @@ local case = function (c)
 end
 
 -- FUNCION PARA ESCRIBIR EL RESULTADO EN EL PANEL
-local dx, dy = canvas:attrSize()
 canvas:attrFont('vera', 3*dy/4)
+local dx, dy = canvas:attrSize()
+
 function redraw ()
 	canvas:attrColor('white')
 	canvas:drawRect('fill', 0,0, dx,dy)
@@ -82,7 +83,7 @@ local function nclHandler (evt)
 
 	if evt.type == 'attribution' then -- Cuando se apreta una tecla
 		if evt.name == 'text' then
-			setText(evt.value, true) -- Funcion para interpretar el uso de botones
+			setText(evt.value, true)  -- Funcion para interpretar el uso de botones
 		end
 	end
 
@@ -99,8 +100,8 @@ local sel = {
 
 -- FUNCION PARA INTERPRETAR EL USO DE TECLAS.
 local function keyHandler (evt)
-	if evt.class ~= 'key' then return end
-	if evt.type ~= 'press' then return true end
+	if evt.class ~= 'key'   then return end
+	if evt.type  ~= 'press' then return true end
 	local key = evt.key
 
 	-- SELECT
@@ -124,12 +125,12 @@ local function keyHandler (evt)
 	-- NUMBER (Interpretador de numeros)
 	elseif _G.tonumber(key) then
 		if KEY and (KEY ~= key) then -- si la tecla no se repite (ej: 2 veces tecla 1)
-			setText() -- se escribe el caracter en el texto
+			setText()                -- se escribe el caracter en el texto
 		end
 		-- Caso en que la tecla de repita
-		IDX = (IDX + 1) % #MAP[key] --aumenta el index de la llave utilizada
-		CHAR = MAP[key][IDX+1] -- se cambia el caracter a interpretar
-		KEY = key  --Se guarda la ultima key para verificar posteriores repeticiones
+		IDX  = (IDX + 1) % #MAP[key] --aumenta el index de la llave utilizada
+		CHAR = MAP[key][IDX+1]       -- se cambia el caracter a interpretar
+		KEYb = key                   --Se guarda la ultima key para verificar posteriores repeticiones
 	end
 
 	-- Tiempo para considerar repeticiones de teclas
@@ -141,51 +142,3 @@ local function keyHandler (evt)
 	return true
 end
 event.register(keyHandler)
-
--- TWEETER CONNECTION --
-
--- Utiliza las funciones de tcp.lua que implementa el modulo tcp propio de lua
-require 'tcp'
-
-local HOST = 'www2.elo.utfsm.cl' --Host a conectarse
-local url = '~elo323/tweet/settweet.php?search=%40kblog43%20' --Pagina solicitada(Pag ejemplo tarea 2013)
-local result = ''  --Resultado html de la busqueda
-local question = ''
-
---background
-canvas:attrColor('navy')
-canvas:clear()
-
-canvas:attrFont("Tiresias", 20, "normal") -- Se asignan sitintos tipos de letras con disitntos tamaños
-canvas:attrColor('white') -- Se define el color de todo lo que se dibuje/escriba
-
--- Implementa dentro de las funciones que tiene tcp.lua
- tcp.execute(
-        function ()
-			tcp.connect(HOST, 80)
-			tcp.send('GET '..url..' HTTP/1.1\r\n')
-			tcp.send('Host: '..HOST..'\r\n')
-			tcp.send('\r\n')
-			
-			result = tcp.receive()
-			
-			-- En caso de existir resultado
-			if result then
-				_,_,question = string.find(result, "<tweet>(.*)</tweet>") -- Busca resultado entre backets
-	        else
-		        result = 'error: '
-	        end
-			-- La asignacion de estos parametros solo tiene valor dentro de la funcion
-			--canvas:drawText(30,200,'resultado: '..result)
-			canvas:drawText(30,380,'Pregunta: '..question)
-			canvas:flush() 
-			tcp.disconnect()
-		end
-)
-
--- Escritura adicional
-canvas:drawText(30,80,'HOST: '..HOST)
-canvas:drawText(30,120,'url: '..url)
-
--- flush
-canvas:flush()
