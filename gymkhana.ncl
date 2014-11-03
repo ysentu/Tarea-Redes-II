@@ -11,6 +11,13 @@
 				<simpleAction role="start" max="unbounded"/>
 			</causalConnector>
 			
+			<!-- PARA EL TRASPASO POR CADA ESCRITURA -->
+			<causalConnector id="onEndAttributionSet">
+				<connectorParam name="var"/>
+				<simpleCondition role="onEndAttribution"/>
+				<simpleAction role="set" value="$var"/>
+			</causalConnector>	
+			
 			<!-- ANIMACION -->
 			<causalConnector id="onKeySelectionSet">
 				<connectorParam name="keyCode"/>
@@ -77,6 +84,7 @@
 			</descriptor>
 			<descriptor id="dsInput"   region="rgInput" focusIndex="inputIdx"/>
 			<descriptor id="cargando" region="regLua" />
+			<descriptor id="descTwitter" region="r_resultados"/>
 		</descriptorBase>
 		
 	</head>
@@ -116,6 +124,11 @@
 			<area id="select"/>
     	    <property name="text"/>
 		</media>
+		
+		<media id="twitter" src="twitter.lua" descriptor="descTwitter">
+			<property name="text"/>
+		</media>
+		
 		<media id="loading" src="loading.lua" descriptor="cargando" >
 			<property name="state"/>
 		</media>
@@ -124,8 +137,19 @@
 		<!-- PARA INICIALIZAR LOS PANELES -->
     	<link xconnector="onBeginStart">
 			<bind role="onBegin" component="input"/>
+			<bind role="start"   component="twitter"/>
 	    </link>
 	    
+	    
+	    <!-- CASO EN QUE SE ESCRIBA ALGUN CARACTE SE COPIA EL TEXTO -->
+		<link xconnector="onBeginSet">
+			<!-- Cada vez que se sete select(ENTER), el codigo LUA de input lo hablita como start para la interpretacion de "onBegin" en NCL -->
+			<bind role="onBegin" component="input" interface="select"/> 
+			<bind role="set" component="twitter" interface="text">  <!-- Se setea un parametro de otro codigo ($get) -->
+				<bindParam name="var" value="$get"/>
+			</bind>
+			<bind role="get" component="input" interface="text"/> <!-- Ese parametro corresponde al atributo text contenido en input -->
+		</link>
 	    
 	    <!-- CASO BOTON VERDE -->
 			<link xconnector="onKeySelectionSet">
