@@ -25,6 +25,7 @@
 				<simpleCondition role="onSelection" key="$keyCode"/>
 				<simpleAction role="set" value="$var"/>
 			</causalConnector>	
+	
 		</connectorBase>
 		
 		<!--REGIONES-->
@@ -32,21 +33,6 @@
 			<region height="100.00%" id="screen" left="0.00%" top="0.00%" width="100.00%" zIndex="1">
 				<region height="66%" id="video" left="0.00%" top="0.00%" width="72%" zIndex="2">
 				</region>
-				<region height="66.46%" id="r_instrucciones" left="71.55%" top="0.00%" width="28.45%" zIndex="3">
-					<region height="25.39%" id="banner" left="6.58%" top="0%" width="90%" zIndex="8">
-					</region>
-					<region height="17.55%" id="instruccion_1" left="6.58%" top="30%" width="87.24%" zIndex="6">
-					</region>
-					<region height="15%" id="red_button" left="20%" top="70%" width="20%" zIndex="7">
-					</region>
-					<region height="15%" id="ok_button" left="60%" top="70%" width="20%" zIndex="9">
-					</region>
-				</region>
-				<region height="8.54%" id="r_busqueda" left="0.00%" top="65.83%" width="100.00%" zIndex="4">
-					<region height="100.00%" id="r_espera" left="92.97%" top="0.00%" width="7.03%" zIndex="10">
-					</region>
-				</region>
-				<region height="25%" id="r_resultados" left="0.00%" top="77.29%" width="100.00%" zIndex="5">
 				<region height="66%" id="r_instrucciones" left="72%" top="0.00%" width="28%" zIndex="2">
 					<region height="17.55%" id="instruccion_1" left="6.58%" top="10.03%" width="87.24%" zIndex="4">
 					</region>
@@ -82,7 +68,6 @@
 				<descriptorParam name="fontWeight" value="normal"/>
 				<descriptorParam name="fontColor" value="red"/>
 			</descriptor>
-			<descriptor id="d_banner" region="banner"/>
 			<descriptor id="instruc_2" region="instruccion_2">
 				<descriptorParam name="fontFamily" value="Tiresias"/>
 				<descriptorParam name="fontSize" value="18"/>
@@ -134,8 +119,8 @@
 		<media type="application/x-ginga-settings" id="programSettings">
   	      <property name="service.currentKeyMaster" value="inputIdx"/>
 		</media>
-		
-		
+
+
 		<!-- CODIGOS LUA -->
 		<media id="input" src="input.lua"  descriptor="dsInput">
 			<area id="select"/>
@@ -204,14 +189,14 @@
 			</bind>
 			<bind component="gymkhana_audio" role="start">
 			</bind>
-		</link> 
+		</link>
 		<link id="end_audio" xconnector="conn#onEndStop">
 			<bind component="gymkhana" role="onEnd">
 			</bind>
 			<bind component="gymkhana_audio" role="stop">
 			</bind>
 		</link>
-		
+
 		<link id="mostrar_red" xconnector="conn#onBeginStart">
 			<bind component="background" role="onBegin">
 			</bind>
@@ -230,10 +215,10 @@
 			<bind component="ok" role="start">
 			</bind>
 		</link>
-		<link id="mostrar_banner" xconnector="conn#onBeginStart">
+		<link id="mostrar_ins2" xconnector="conn#onBeginStart">
 			<bind component="background" role="onBegin">
 			</bind>
-			<bind component="m_banner" role="start">
+			<bind component="instruccion2" role="start">
 			</bind>
 		</link>
 		<link id="mostrar_instrucciones" xconnector="conn#onBeginStart">
