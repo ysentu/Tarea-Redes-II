@@ -6,10 +6,10 @@ local cancelFunction = nil
 
 -- IMAGENES A UTILIZAR EN LA ANIMACION: Como arreglo para facilitar su implementacion
 local images={
-						canvas:new('loadingImages/FRAME_000001.png'),canvas:new('loadingImages/FRAME_000002.png')
-					,canvas:new('loadingImages/FRAME_000003.png'),canvas:new('loadingImages/FRAME_000004.png')
-					,canvas:new('loadingImages/FRAME_000005.png'),canvas:new('loadingImages/FRAME_000006.png')
-					,canvas:new('loadingImages/FRAME_000007.png'),canvas:new('loadingImages/FRAME_000008.png')
+						canvas:new('media/loadingImages/FRAME_000001.png'),canvas:new('media/loadingImages/FRAME_000002.png')
+					,canvas:new('media/loadingImages/FRAME_000003.png'),canvas:new('media/loadingImages/FRAME_000004.png')
+					,canvas:new('media/loadingImages/FRAME_000005.png'),canvas:new('media/loadingImages/FRAME_000006.png')
+					,canvas:new('media/loadingImages/FRAME_000007.png'),canvas:new('media/loadingImages/FRAME_000008.png')
 													}
 
 local actualIndex = 1 --indice inicial de la animacion
@@ -48,7 +48,7 @@ end
 function startAnimation()
 
 -- 	creamos una imagen de fondo
-	local background= canvas:new('loadingImages/fondoLoading.png')
+	local background= canvas:new('media/loadingImages/fondoLoading.png')
 -- componemos la imagen de fondo una sola vez
 	canvas:compose(0,0,background)
 -- actualizamos la pantalla
