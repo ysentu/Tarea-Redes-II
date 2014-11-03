@@ -31,7 +31,7 @@ end
 local dx, dy = canvas:attrSize()
 canvas:attrFont('vera', 3*dy/4)
 function redraw ()
-	canvas:attrColor('black')
+	canvas:attrColor('white')
 	canvas:drawRect('fill', 0,0, dx,dy)
 
 	canvas:attrColor('white')
