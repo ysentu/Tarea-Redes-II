@@ -11,12 +11,12 @@
 				<simpleAction role="start" max="unbounded"/>
 			</causalConnector>
 			
-			<!-- PARA EL TRASPASO POR CADA ESCRITURA -->
-			<causalConnector id="onEndAttributionSet">
+			<!-- PARA EL TRASPASO APRETANDO TECLA ENTER -->
+			<causalConnector id="onBeginSet">
 				<connectorParam name="var"/>
-				<simpleCondition role="onEndAttribution"/>
+				<simpleCondition role="onBegin"/>
 				<simpleAction role="set" value="$var"/>
-			</causalConnector>	
+			</causalConnector>
 			
 			<!-- ANIMACION -->
 			<causalConnector id="onKeySelectionSet">
@@ -139,7 +139,6 @@
 			<bind role="onBegin" component="input"/>
 			<bind role="start"   component="twitter"/>
 	    </link>
-	    
 	    
 	    <!-- CASO EN QUE SE ESCRIBA ALGUN CARACTE SE COPIA EL TEXTO -->
 		<link xconnector="onBeginSet">
