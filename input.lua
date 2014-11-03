@@ -1,3 +1,4 @@
+-- INPUT PART
 text = nil
 local TEXT = '' -- ESTE ES EL PARAMETRO QUE SE TRANSMITEN ENTRE APLICACIONES LUA, ES EL CONTENIDO DE LO ESCRITO
 local CHAR = '' -- PARAMETRO PARA REPRESENTAR EL CARACTER
@@ -140,3 +141,51 @@ local function keyHandler (evt)
 	return true
 end
 event.register(keyHandler)
+
+-- TWEETER CONNECTION --
+
+-- Utiliza las funciones de tcp.lua que implementa el modulo tcp propio de lua
+require 'tcp'
+
+local HOST = 'www2.elo.utfsm.cl' --Host a conectarse
+local url = '~elo323/tweet/settweet.php?search=%40kblog43%20' --Pagina solicitada(Pag ejemplo tarea 2013)
+local result = ''  --Resultado html de la busqueda
+local question = ''
+
+--background
+canvas:attrColor('navy')
+canvas:clear()
+
+canvas:attrFont("Tiresias", 20, "normal") -- Se asignan sitintos tipos de letras con disitntos tamaños
+canvas:attrColor('white') -- Se define el color de todo lo que se dibuje/escriba
+
+-- Implementa dentro de las funciones que tiene tcp.lua
+ tcp.execute(
+        function ()
+			tcp.connect(HOST, 80)
+			tcp.send('GET '..url..' HTTP/1.1\r\n')
+			tcp.send('Host: '..HOST..'\r\n')
+			tcp.send('\r\n')
+			
+			result = tcp.receive()
+			
+			-- En caso de existir resultado
+			if result then
+				_,_,question = string.find(result, "<tweet>(.*)</tweet>") -- Busca resultado entre backets
+	        else
+		        result = 'error: '
+	        end
+			-- La asignacion de estos parametros solo tiene valor dentro de la funcion
+			--canvas:drawText(30,200,'resultado: '..result)
+			canvas:drawText(30,380,'Pregunta: '..question)
+			canvas:flush() 
+			tcp.disconnect()
+		end
+)
+
+-- Escritura adicional
+canvas:drawText(30,80,'HOST: '..HOST)
+canvas:drawText(30,120,'url: '..url)
+
+-- flush
+canvas:flush()
