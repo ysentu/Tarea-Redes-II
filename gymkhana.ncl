@@ -34,11 +34,11 @@
 				<region height="66%" id="video" left="0.00%" top="0.00%" width="72%" zIndex="2">
 				</region>
 				<region height="66%" id="r_instrucciones" left="72%" top="0.00%" width="28%" zIndex="2">
-					<region height="17.55%" id="instruccion_1" left="6.58%" top="10.03%" width="87.24%" zIndex="3">
+					<region height="17.55%" id="instruccion_1" left="6.58%" top="10.03%" width="87.24%" zIndex="4">
 					</region>
 					<region height="14.11%" id="red_button" left="36.63%" top="30.09%" width="19.75%" zIndex="3">
 					</region>
-					<region height="25.39%" id="instruccion_2" left="6.58%" top="47.65%" width="86.83%" zIndex="3">
+					<region height="25.39%" id="instruccion_2" left="6.58%" top="47.65%" width="86.83%" zIndex="4">
 					</region>
 					<region height="14.73%" id="ok_button" left="37.04%" top="76.80%" width="21.40%" zIndex="3">
 					</region>
@@ -153,6 +153,12 @@
 		</link>
 	    
 	    <!-- CASO BOTON VERDE -->
+	    <link xconnector="onBeginSet">
+	    	<bind role="onBegin" component="input" interface="select"/>
+				<bind role="set" component="loading" interface="state" >
+					<bindParam name="var" value="start"/>
+				</bind>
+	    </link>
 			<link xconnector="onKeySelectionSet">
 				<linkParam name="keyCode" value="RED"/>
 				<bind role="onSelection" component="gymkhana"  />
