@@ -31,9 +31,9 @@
 		<!--REGIONES-->
 		<regionBase id="regionBase0">
 			<region height="100.00%" id="screen" left="0.00%" top="0.00%" width="100.00%" zIndex="1">
-				<region height="66.46%" id="video" left="0.00%" top="0.00%" width="71.66%" zIndex="2">
+				<region height="66%" id="video" left="0.00%" top="0.00%" width="72%" zIndex="2">
 				</region>
-				<region height="66.46%" id="r_instrucciones" left="71.55%" top="0.00%" width="28.45%" zIndex="3">
+				<region height="66%" id="r_instrucciones" left="72%" top="0.00%" width="28%" zIndex="3">
 					<region height="17.55%" id="instruccion_1" left="6.58%" top="10.03%" width="87.24%" zIndex="6">
 					</region>
 					<region height="14.11%" id="red_button" left="36.63%" top="30.09%" width="19.75%" zIndex="7">
@@ -43,13 +43,15 @@
 					<region height="14.73%" id="ok_button" left="37.04%" top="76.80%" width="21.40%" zIndex="9">
 					</region>
 				</region>
-				<region height="11.67%" id="r_busqueda" left="0.00%" top="65.83%" width="100.00%" zIndex="4">
+				<region height="12%" id="r_busqueda" left="0.00%" top="66%" width="100.00%" zIndex="4">
 					<region id="rgInput" top="5%" height="90%" left="12%" width="81%" zIndex="10">						
 					</region>
-					<region height="100.00%" id="regLua" left="93%" top="0.00%" width="7%" zIndex="11">
+					<region height="100.00%" id="regLoading" left="93%" top="0.00%" width="7%" zIndex="11">
 					</region>
 				</region>
-				<region height="22.71%" id="r_resultados" left="0.00%" top="77.29%" width="100.00%" zIndex="5">
+				<region height="22%" id="r_resultados" left="0.00%" top="78%" width="100.00%" zIndex="5">
+					<region height="76.00%" id="respuesta" left="2%" top="13.00%" width="96%" zIndex="6">
+					</region>
 				</region>
 			</region>
 		</regionBase>
@@ -83,8 +85,8 @@
 			<descriptor id="audio">				
 			</descriptor>
 			<descriptor id="dsInput"   region="rgInput" focusIndex="inputIdx"/>
-			<descriptor id="cargando" region="regLua" />
-			<descriptor id="descTwitter" region="r_resultados"/>
+			<descriptor id="cargando" region="regLoading" />
+			<descriptor id="descTwitter" region="respuesta"/>
 		</descriptorBase>
 		
 	</head>
@@ -154,7 +156,6 @@
 			<link xconnector="onKeySelectionSet">
 				<linkParam name="keyCode" value="RED"/>
 				<bind role="onSelection" component="gymkhana"  />
-				<bind role="onBegin" component="input"/>
 				<bind role="set" component="loading" interface="state" >
 					<bindParam name="var" value="start"/>
 				</bind>
