@@ -25,7 +25,6 @@
 				<simpleCondition role="onSelection" key="$keyCode"/>
 				<simpleAction role="set" value="$var"/>
 			</causalConnector>	
-	
 		</connectorBase>
 		
 		<!--REGIONES-->
@@ -33,7 +32,6 @@
 			<region height="100.00%" id="screen" left="0.00%" top="0.00%" width="100.00%" zIndex="1">
 				<region height="66%" id="video" left="0.00%" top="0.00%" width="72%" zIndex="2">
 				</region>
-<<<<<<< HEAD
 				<region height="66.46%" id="r_instrucciones" left="71.55%" top="0.00%" width="28.45%" zIndex="3">
 					<region height="25.39%" id="banner" left="6.58%" top="0%" width="90%" zIndex="8">
 					</region>
@@ -49,7 +47,6 @@
 					</region>
 				</region>
 				<region height="25%" id="r_resultados" left="0.00%" top="77.29%" width="100.00%" zIndex="5">
-=======
 				<region height="66%" id="r_instrucciones" left="72%" top="0.00%" width="28%" zIndex="2">
 					<region height="17.55%" id="instruccion_1" left="6.58%" top="10.03%" width="87.24%" zIndex="4">
 					</region>
@@ -69,7 +66,6 @@
 				<region height="22%" id="r_resultados" left="0.00%" top="78%" width="100.00%" zIndex="2">
 					<region height="76.00%" id="respuesta" left="2%" top="13.00%" width="96%" zIndex="3">
 					</region>
->>>>>>> implementacion-lua
 				</region>
 			</region>
 		</regionBase>
@@ -86,15 +82,12 @@
 				<descriptorParam name="fontWeight" value="normal"/>
 				<descriptorParam name="fontColor" value="red"/>
 			</descriptor>
-<<<<<<< HEAD
-			<descriptor id="d_banner" region="banner">
-=======
+			<descriptor id="d_banner" region="banner"/>
 			<descriptor id="instruc_2" region="instruccion_2">
 				<descriptorParam name="fontFamily" value="Tiresias"/>
 				<descriptorParam name="fontSize" value="18"/>
 				<descriptorParam name="fontWeight" value="normal"/>
 				<descriptorParam name="fontColor" value="red"/>
->>>>>>> implementacion-lua
 			</descriptor>
 			<descriptor id="boton_rojo" region="red_button">
 			</descriptor>
@@ -141,14 +134,8 @@
 		<media type="application/x-ginga-settings" id="programSettings">
   	      <property name="service.currentKeyMaster" value="inputIdx"/>
 		</media>
-<<<<<<< HEAD
 		
-		<port component="gymkhana" id="START">
-		</port>
 		
-=======
-
-
 		<!-- CODIGOS LUA -->
 		<media id="input" src="input.lua"  descriptor="dsInput">
 			<area id="select"/>
@@ -212,7 +199,6 @@
 		
 		
 		<!--RELACIONES ENTRE CONTENIDOS-->
->>>>>>> implementacion-lua
 		<link id="start_audio" xconnector="conn#onBeginStart">
 			<bind component="gymkhana" role="onBegin">
 			</bind>
@@ -225,22 +211,7 @@
 			<bind component="gymkhana_audio" role="stop">
 			</bind>
 		</link>
-<<<<<<< HEAD
 		
-		<media descriptor="fondo" id="background" src="media/fondo.jpg">
-		</media>
-		<media descriptor="instruc_1" id="instruccion1" src="media/instruccion1.txt">
-		</media>
-		<media descriptor="d_banner" id="m_banner" src="media/banner.jpg">
-		</media>
-		<media descriptor="boton_ok" id="ok" src="media/ok.png">
-		</media>
-		<media descriptor="boton_rojo" id="red" src="media/red.png">
-		</media>
-		
-=======
-
->>>>>>> implementacion-lua
 		<link id="mostrar_red" xconnector="conn#onBeginStart">
 			<bind component="background" role="onBegin">
 			</bind>
@@ -271,15 +242,6 @@
 			<bind component="background" role="start">
 			</bind>
 		</link>
-<<<<<<< HEAD
-		
-		<media descriptor="fondo_busqueda" id="cuadro_busqueda" src="media/cuadro_busqueda.png">
-		</media>
-		<media descriptor="fondo_resultados" id="cuadro_resultado" src="media/fondo.jpg">
-		</media>
-		
-=======
->>>>>>> implementacion-lua
 		<link id="mostrar_cuadro_resultados" xconnector="conn#onBeginStart">
 			<bind component="gymkhana" role="onBegin">
 			</bind>
