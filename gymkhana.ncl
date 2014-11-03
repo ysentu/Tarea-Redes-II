@@ -1,13 +1,24 @@
 <ncl id="myNCLDocID" xmlns="http://www.ncl.org.br/NCL3.0/EDTVProfile">
 	<head>
 		<connectorBase id="connBaseId">
+			
 			<importBase alias="conn" documentURI="defaultConnBase.ncl">
 			</importBase>
-			<!-- PARA INICIAR LOS PANELES QUE COPIAN EL TEXTO -->
+			
+			<!-- INGRESO DE TEXTO -->
 			<causalConnector id="onBeginStart">
 				<simpleCondition role="onBegin"/>
 				<simpleAction role="start" max="unbounded"/>
 			</causalConnector>
+			
+			<!-- ANIMACION -->
+			<causalConnector id="onKeySelectionSet">
+				<connectorParam name="keyCode"/>
+				<connectorParam name="var"/>
+				<simpleCondition role="onSelection" key="$keyCode"/>
+				<simpleAction role="set" value="$var"/>
+			</causalConnector>	
+	
 		</connectorBase>
 		
 		<!--REGIONES-->
@@ -28,7 +39,7 @@
 				<region height="11.67%" id="r_busqueda" left="0.00%" top="65.83%" width="100.00%" zIndex="4">
 					<region id="rgInput" top="5%" height="90%" left="12%" width="81%" zIndex="10">						
 					</region>
-					<region height="100.00%" id="r_espera" left="93%" top="0.00%" width="7%" zIndex="10">
+					<region height="100.00%" id="regLua" left="93%" top="0.00%" width="7%" zIndex="11">
 					</region>
 				</region>
 				<region height="22.71%" id="r_resultados" left="0.00%" top="77.29%" width="100.00%" zIndex="5">
@@ -65,10 +76,13 @@
 			<descriptor id="audio">				
 			</descriptor>
 			<descriptor id="dsInput"   region="rgInput" focusIndex="inputIdx"/>
+			<descriptor id="cargando" region="regLua" />
 		</descriptorBase>
 		
 	</head>
+	
 	<body id="myBodyID">
+		
 		
 		<!--CONTENIDOS-->
 		<media descriptor="region_video" id="gymkhana" src="media/gymkhana.mp4">
@@ -90,26 +104,54 @@
 		<media descriptor="fondo_resultados" id="cuadro_resultado" src="media/cuadro_resultado.png">
 		</media>
 		
+		
 		<!-- PARA HABILITAR EL USO DEL TECLADO EN GINGA -->
 		<media type="application/x-ginga-settings" id="programSettings">
   	      <property name="service.currentKeyMaster" value="inputIdx"/>
 		</media>
 
-		<!-- CODIGO LUA PARA INGRESO DE TEXTO -->
+
+		<!-- CODIGOS LUA -->
 		<media id="input" src="input.lua"  descriptor="dsInput">
 			<area id="select"/>
     	    <property name="text"/>
 		</media>
+		<media id="loading" src="loading.lua" descriptor="cargando" >
+			<property name="state"/>
+		</media>
+		
 		
 		<!-- PARA INICIALIZAR LOS PANELES -->
     	<link xconnector="onBeginStart">
 			<bind role="onBegin" component="input"/>
 	    </link>
+	    
+	    
+	    <!-- CASO BOTON VERDE -->
+			<link xconnector="onKeySelectionSet">
+				<linkParam name="keyCode" value="RED"/>
+				<bind role="onSelection" component="gymkhana"  />
+				<bind role="onBegin" component="input"/>
+				<bind role="set" component="loading" interface="state" >
+					<bindParam name="var" value="start"/>
+				</bind>
+			</link>
+ 
+		<!-- CASO BOTON ROJO -->
+			<link xconnector="onKeySelectionSet">
+				<linkParam name="keyCode" value="GREEN"/>
+				<bind role="onSelection" component="gymkhana"  />
+				<bind role="set" component="loading" interface="state" >
+					<bindParam name="var" value="stop"/>
+				</bind>
+			</link> 
+		
 		
 		<!--START-->
-		<port component="gymkhana" id="START">
-		</port>
+		<port id="START" component="gymkhana"/>
 		<port id="entryPoint" component="input"/>
+		<port id="p0" component="loading"/>
+		
 		
 		<!--RELACIONES ENTRE CONTENIDOS-->
 		<link id="start_audio" xconnector="conn#onBeginStart">
