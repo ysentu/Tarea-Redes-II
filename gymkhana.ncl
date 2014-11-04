@@ -126,9 +126,9 @@
     	    <property name="text"/>
 		</media>
 		
-		<!--<media id="twitter" src="twitter.lua" descriptor="descTwitter">
+		<media id="twitter" src="twitter.lua" descriptor="descTwitter">
 			<property name="text"/>
-		</media>-->
+		</media>
 		
 		<media id="loading" src="loading.lua" descriptor="cargando" >
 			<property name="state"/>
@@ -169,7 +169,6 @@
 	    </link>
    	
    	
-   	<!--
 	 		<link xconnector="onKeySelectionSet">
 				<linkParam name="keyCode" value="RED"/>
 				<bind role="onSelection" component="gymkhana"  />
@@ -186,7 +185,6 @@
 					<bindParam name="var" value="stop"/>
 				</bind>
 			</link> 
-	-->	
 		
 		<!--START-->
 		<port id="START" component="gymkhana"/>

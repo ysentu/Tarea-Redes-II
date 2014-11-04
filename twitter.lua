@@ -6,7 +6,7 @@ require 'tcp'
 --VARIABLES LOCALES
 local TEXT = ''
 local HOST   = 'www2.elo.utfsm.cl' -- Host a conectarse
-local url    = '~elo323/tweet/settweet.php?search=%40kblog43%20' -- Consulta
+local url    = '~elo323/tweet/settweet.php?search=%40kblog43+' -- Consulta
 local result = ''                  -- Resultado html de la busqueda
 local answer = ''
 
@@ -33,11 +33,11 @@ end
 event.register(handler)
 
 --background
---canvas:attrColor('navy')
---canvas:clear()
+canvas:attrColor('navy')
+canvas:clear()
 
---canvas:attrFont("Tiresias", 20, "normal") -- Se asignan sitintos tipos de letras con disitntos tamaños
---canvas:attrColor('blue') -- Se define el color de todo lo que se dibuje/escriba
+canvas:attrFont("Tiresias", 20, "normal") -- Se asignan sitintos tipos de letras con disitntos tamaños
+canvas:attrColor('blue') -- Se define el color de todo lo que se dibuje/escriba
 
 -- Implementa dentro de las funciones que tiene tcp.lua
  tcp.execute(
@@ -56,8 +56,8 @@ event.register(handler)
 	    end
 	
 			-- La asignacion de estos parametros solo tiene valor dentro de la funcion
-			canvas:drawText(30,200,'resultado: '..result)
-			--canvas:drawText(0,0,'Pregunta: '..answer)
+			-- canvas:drawText(30,10,'resultado: '..result)
+			canvas:drawText(0,0,'Pregunta:'..result)
 			canvas:flush()
 			
 			tcp.disconnect()
