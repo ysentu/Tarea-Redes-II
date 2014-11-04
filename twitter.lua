@@ -1,12 +1,12 @@
 ---- TWITTER CONNECTION --
 ---- Utiliza las funciones de tcp.lua que implementa el modulo tcp propio de lua
 require 'tcp'
---
 
---VARIABLES LOCALES
-local TEXT = ''
+
+--PARÁMETROS
+local TEXT   = ''
 local HOST   = 'www2.elo.utfsm.cl' -- Host a conectarse
-local url    = '~elo323/tweet/settweet.php?search=%40kblog43+' -- Consulta
+local url    = '~elo323/tweet/settweet.php?search=%40kblog43+car' -- Consulta
 local result = ''                  -- Resultado html de la busqueda
 local answer = ''
 
@@ -35,7 +35,7 @@ event.register(handler)
 local function write_text(text)
 	canvas:attrFont("Tiresias", 20, "normal")
 	canvas:attrColor('green') 
-	canvas:drawText(0,0,text)
+	canvas:drawText(5,5,text)
 	canvas:flush()
 end
 
