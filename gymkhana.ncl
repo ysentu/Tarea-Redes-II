@@ -34,13 +34,15 @@
 				<region height="66%" id="video" left="0.00%" top="0.00%" width="72%" zIndex="2">
 				</region>
 				<region height="66%" id="r_instrucciones" left="72%" top="0.00%" width="28%" zIndex="2">
-					<region height="17.55%" id="instruccion_1" left="6.58%" top="10.03%" width="87.24%" zIndex="4">
+					<region height="30%" id="r_banner" left="5%" top="0%" width="90%" zIndex="3">
 					</region>
-					<region height="14.11%" id="red_button" left="36.63%" top="30.09%" width="19.75%" zIndex="3">
+					<region height="17.55%" id="instruccion_1" left="6.58%" top="32.03%" width="87.24%" zIndex="4">
 					</region>
-					<region height="25.39%" id="instruccion_2" left="6.58%" top="47.65%" width="86.83%" zIndex="4">
+					<region height="12%" id="red_button" left="36.63%" top="50.09%" width="15%" zIndex="3">
 					</region>
-					<region height="14.73%" id="ok_button" left="37.04%" top="76.80%" width="21.40%" zIndex="3">
+					<region height="25.39%" id="instruccion_2" left="6.58%" top="62.65%" width="86.83%" zIndex="4">
+					</region>
+					<region height="12%" id="ok_button" left="37.04%" top="85.80%" width="19%" zIndex="3">
 					</region>
 				</region>
 				<region height="12%" id="r_busqueda" left="0.00%" top="66%" width="100.00%" zIndex="2">
@@ -61,6 +63,8 @@
 			<descriptor id="region_video" region="video">
 			</descriptor>
 			<descriptor id="fondo" region="r_instrucciones">
+			</descriptor>
+			<descriptor id="d_banner" region="r_banner">
 			</descriptor>
 			<descriptor id="instruc_1" region="instruccion_1">
 				<descriptorParam name="fontFamily" value="Tiresias"/>
@@ -99,6 +103,8 @@
 		<media descriptor="audio" id="gymkhana_audio" src="media/gymkhana_audio.mp3">
 		</media>
 		<media descriptor="fondo" id="background" src="media/fondo.jpg">
+		</media>
+		<media descriptor="d_banner" id="m_banner" src="media/banner.jpg">
 		</media>
 		<media descriptor="instruc_1" id="instruccion1" src="media/instruccion1.txt">
 		</media>
@@ -210,6 +216,12 @@
 			<bind component="background" role="onBegin">
 			</bind>
 			<bind component="red" role="start">
+			</bind>
+		</link>
+		<link id="mostrar_banner" xconnector="conn#onBeginStart">
+			<bind component="background" role="onBegin">
+			</bind>
+			<bind component="m_banner" role="start">
 			</bind>
 		</link>
 		<link id="mostrar_ins1" xconnector="conn#onBeginStart">
