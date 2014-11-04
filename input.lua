@@ -81,7 +81,7 @@ local function nclHandler (evt)
 
 	if evt.type == 'attribution' then -- Cuando se apreta una tecla
 		if evt.name == 'text' then
-			setText(evt.value, true)  -- Funcion para interpretar el uso de botones
+			setText(evt.value, true) -- Funcion para interpretar el uso de botones
 		end
 	end
 
