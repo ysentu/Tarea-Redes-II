@@ -32,12 +32,13 @@ end
 
 event.register(handler)
 
---background
-canvas:attrColor('navy')
-canvas:clear()
+local function write_text(text)
+	canvas:attrFont("Tiresias", 20, "normal")
+	canvas:attrColor('green') 
+	canvas:drawText(0,0,text)
+	canvas:flush()
+end
 
-canvas:attrFont("Tiresias", 20, "normal") -- Se asignan sitintos tipos de letras con disitntos tamaños
-canvas:attrColor('green') -- Se define el color de todo lo que se dibuje/escriba
 
 -- Implementa dentro de las funciones que tiene tcp.lua
  tcp.execute(
@@ -50,16 +51,14 @@ canvas:attrColor('green') -- Se define el color de todo lo que se dibuje/escriba
 			result = tcp.receive()
 			
 			if result then
-				_,_,answer = string.find(result, "<tweet>(.*)</tweet>")
-	    else
-		    result = 'error: '
-	    end
-	
-			-- La asignacion de estos parametros solo tiene valor dentro de la funcion
-			-- canvas:drawText(30,10,'resultado: '..result)
-			canvas:drawText(0,0,'Pregunta:'..result)
-			canvas:flush()
-			
+				answer = string.find(result, "Server")
+				
+				write_text('Pregunta:'..answer)
+				
+		    else
+			    result = 'error: '
+		    end
+		    
 			tcp.disconnect()
 		end
 )
