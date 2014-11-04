@@ -54,7 +54,7 @@ canvas:attrColor('blue') -- Se define el color de todo lo que se dibuje/escriba
 	    end
 	
 			-- La asignacion de estos parametros solo tiene valor dentro de la funcion
-			--canvas:drawText(30,200,'resultado: '..result)
+			canvas:drawText(30,200,'resultado: '..result)
 			--canvas:drawText(0,0,'Pregunta: '..answer)
 			canvas:flush()
 			

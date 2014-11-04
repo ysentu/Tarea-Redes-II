@@ -152,14 +152,26 @@
 			<bind role="get" component="input" interface="text"/> <!-- Ese parametro corresponde al atributo text contenido en input -->
 		</link>
 	    
-	    <!-- CASO BOTON VERDE -->
+	    <!-- INICIAR ANIMACION AL INGRESAR BUSQUEDA -->
 	    <link xconnector="onBeginSet">
 	    	<bind role="onBegin" component="input" interface="select"/>
 				<bind role="set" component="loading" interface="state" >
 					<bindParam name="var" value="start"/>
 				</bind>
 	    </link>
-			<link xconnector="onKeySelectionSet">
+	    
+	    <!-- DETENER ANIMACION DESPUES DE 3S -->
+	    <link xconnector="conn#onBeginSet_var_delay">
+			<bind role="onBegin" component="input" interface="select"/>
+			<linkParam name="delay" value="3s"/>
+			<bind role="set" component="loading" interface="state" >
+					<bindParam name="var" value="stop"/>
+			</bind>
+	    </link>
+   	
+   	
+   	<!--
+	 		<link xconnector="onKeySelectionSet">
 				<linkParam name="keyCode" value="RED"/>
 				<bind role="onSelection" component="gymkhana"  />
 				<bind role="set" component="loading" interface="state" >
@@ -167,7 +179,7 @@
 				</bind>
 			</link>
  
-		<!-- CASO BOTON ROJO -->
+	
 			<link xconnector="onKeySelectionSet">
 				<linkParam name="keyCode" value="GREEN"/>
 				<bind role="onSelection" component="gymkhana"  />
@@ -175,7 +187,7 @@
 					<bindParam name="var" value="stop"/>
 				</bind>
 			</link> 
-		
+	-->	
 		
 		<!--START-->
 		<port id="START" component="gymkhana"/>
