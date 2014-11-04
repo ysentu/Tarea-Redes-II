@@ -3,7 +3,7 @@
 require 'tcp'
 
 
---PARÁMETROS
+--PARï¿½METROS
 local TEXT   = ''
 local HOST   = 'www2.elo.utfsm.cl' -- Host a conectarse
 local url    = '~elo323/tweet/settweet.php?search=%40kblog43+car' -- Consulta
@@ -56,7 +56,10 @@ end
 				
 		    else
 			    result = 'error: '
-		    end
+		  	end
+		  
+		  	write_text('Tweet: '..answer)
 			tcp.disconnect()
+			
 		end
 )
