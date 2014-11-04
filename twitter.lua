@@ -37,7 +37,7 @@ canvas:attrColor('navy')
 canvas:clear()
 
 canvas:attrFont("Tiresias", 20, "normal") -- Se asignan sitintos tipos de letras con disitntos tamaños
-canvas:attrColor('blue') -- Se define el color de todo lo que se dibuje/escriba
+canvas:attrColor('green') -- Se define el color de todo lo que se dibuje/escriba
 
 -- Implementa dentro de las funciones que tiene tcp.lua
  tcp.execute(
