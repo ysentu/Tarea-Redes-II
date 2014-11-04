@@ -147,7 +147,7 @@
 			<bind role="start"   component="twitter"/>
 	    </link>
 	    
-	    <!-- CASO EN QUE SE ESCRIBA ALGUN CARACTE SE COPIA EL TEXTO -->
+	    <!-- CASO EN QUE SE ESCRIBA ALGUN CARACTER SE COPIA EL TEXTO -->
 		<link xconnector="onBeginSet">
 			<!-- Cada vez que se sete select(ENTER), el codigo LUA de input lo hablita como start para la interpretacion de "onBegin" en NCL -->
 			<bind role="onBegin" component="input" interface="select"/> 
@@ -173,7 +173,8 @@
 					<bindParam name="var" value="stop"/>
 			</bind>
 	    </link>
-   	
+	    
+  	
    	
 	 		<link xconnector="onKeySelectionSet">
 				<linkParam name="keyCode" value="RED"/>
