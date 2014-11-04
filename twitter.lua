@@ -40,4 +40,26 @@ event.register(handler)
 --canvas:attrColor('blue') -- Se define el color de todo lo que se dibuje/escriba
 
 -- Implementa dentro de las funciones que tiene tcp.lua
-
+ tcp.execute(
+        function ()
+			tcp.connect(HOST, 80)
+			tcp.send('GET '..url..' HTTP/1.1\r\n')
+			tcp.send('Host: '..HOST..'\r\n')		-- Es necesario 'Host: HTTP://'.. ???
+			tcp.send('\r\n')
+			
+			result = tcp.receive()
+			
+			if result then
+				_,_,answer = string.find(result, "<tweet>(.*)</tweet>")
+	    else
+		    result = 'error: '
+	    end
+	
+			-- La asignacion de estos parametros solo tiene valor dentro de la funcion
+			canvas:drawText(30,200,'resultado: '..result)
+			--canvas:drawText(0,0,'Pregunta: '..answer)
+			canvas:flush()
+			
+			tcp.disconnect()
+		end
+)

@@ -66,13 +66,13 @@
 				<descriptorParam name="fontFamily" value="Tiresias"/>
 				<descriptorParam name="fontSize" value="18"/>
 				<descriptorParam name="fontWeight" value="normal"/>
-				<descriptorParam name="fontColor" value="red"/>
+				<descriptorParam name="fontColor" value="green"/>
 			</descriptor>
 			<descriptor id="instruc_2" region="instruccion_2">
 				<descriptorParam name="fontFamily" value="Tiresias"/>
 				<descriptorParam name="fontSize" value="18"/>
 				<descriptorParam name="fontWeight" value="normal"/>
-				<descriptorParam name="fontColor" value="red"/>
+				<descriptorParam name="fontColor" value="green"/>
 			</descriptor>
 			<descriptor id="boton_rojo" region="red_button">
 			</descriptor>
@@ -93,13 +93,12 @@
 	
 	<body id="myBodyID">
 		
-		
 		<!--CONTENIDOS-->
 		<media descriptor="region_video" id="gymkhana" src="media/gymkhana.mp4">
 		</media>
 		<media descriptor="audio" id="gymkhana_audio" src="media/gymkhana_audio.mp3">
 		</media>
-		<media descriptor="fondo" id="background" src="media/background.jpg">
+		<media descriptor="fondo" id="background" src="media/fondo.jpg">
 		</media>
 		<media descriptor="instruc_1" id="instruccion1" src="media/instruccion1.txt">
 		</media>
@@ -111,7 +110,7 @@
 		</media>
 		<media descriptor="fondo_busqueda" id="cuadro_busqueda" src="media/cuadro_busqueda.png">
 		</media>
-		<media descriptor="fondo_resultados" id="cuadro_resultado" src="media/cuadro_resultado.png">
+		<media descriptor="fondo_resultados" id="cuadro_resultado" src="media/fondo.jpg">
 		</media>
 		
 		
@@ -127,9 +126,9 @@
     	    <property name="text"/>
 		</media>
 		
-		<media id="twitter" src="twitter.lua" descriptor="descTwitter">
+		<!--<media id="twitter" src="twitter.lua" descriptor="descTwitter">
 			<property name="text"/>
-		</media>
+		</media>-->
 		
 		<media id="loading" src="loading.lua" descriptor="cargando" >
 			<property name="state"/>
@@ -152,14 +151,26 @@
 			<bind role="get" component="input" interface="text"/> <!-- Ese parametro corresponde al atributo text contenido en input -->
 		</link>
 	    
-	    <!-- CASO BOTON VERDE -->
+	    <!-- INICIAR ANIMACION AL INGRESAR BUSQUEDA -->
 	    <link xconnector="onBeginSet">
 	    	<bind role="onBegin" component="input" interface="select"/>
 				<bind role="set" component="loading" interface="state" >
 					<bindParam name="var" value="start"/>
 				</bind>
 	    </link>
-			<link xconnector="onKeySelectionSet">
+	    
+	    <!-- DETENER ANIMACION DESPUES DE 3S -->
+	    <link xconnector="conn#onBeginSet_var_delay">
+			<bind role="onBegin" component="input" interface="select"/>
+			<linkParam name="delay" value="3s"/>
+			<bind role="set" component="loading" interface="state" >
+					<bindParam name="var" value="stop"/>
+			</bind>
+	    </link>
+   	
+   	
+   	<!--
+	 		<link xconnector="onKeySelectionSet">
 				<linkParam name="keyCode" value="RED"/>
 				<bind role="onSelection" component="gymkhana"  />
 				<bind role="set" component="loading" interface="state" >
@@ -167,7 +178,7 @@
 				</bind>
 			</link>
  
-		<!-- CASO BOTON ROJO -->
+	
 			<link xconnector="onKeySelectionSet">
 				<linkParam name="keyCode" value="GREEN"/>
 				<bind role="onSelection" component="gymkhana"  />
@@ -175,7 +186,7 @@
 					<bindParam name="var" value="stop"/>
 				</bind>
 			</link> 
-		
+	-->	
 		
 		<!--START-->
 		<port id="START" component="gymkhana"/>
