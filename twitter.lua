@@ -44,13 +44,13 @@ end
  tcp.execute(
         function ()
 			tcp.connect(HOST, 80)
-			tcp.send('GET http://www2.elo.utfsm.cl/~elo323/tweet/settweet.php?search=%40kblog43+'..TEXT)
+			tcp.send('GET http://www2.elo.utfsm.cl/~elo323/tweet/settweet.php?search=%40kblog43+cars'..TEXT)
 			tcp.send('\r\n')
 			
 			result = tcp.receive()
 			
 			if result then
-				answer = string.find(result, "<tweet>(.*)</tweet>")
+				_,_,answer = string.find(result, "<tweet>(.*)</tweet>")
 				
 				write_text('Pregunta:'..answer)
 				
