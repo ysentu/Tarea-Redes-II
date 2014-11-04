@@ -46,7 +46,7 @@
 				<region height="12%" id="r_busqueda" left="0.00%" top="66%" width="100.00%" zIndex="2">
 					<region id="rgInput" top="5%" height="90%" left="12%" width="81%" zIndex="3">						
 					</region>
-					<region height="100.00%" id="regLoading" left="93%" top="0.00%" width="7%" zIndex="3">
+					<region height="50.00%" id="regLoading" left="94%" top="25.00%" width="6%" zIndex="3">
 					</region>
 				</region>
 				<region height="22%" id="r_resultados" left="0.00%" top="78%" width="100.00%" zIndex="2">

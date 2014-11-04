@@ -44,21 +44,19 @@ end
  tcp.execute(
         function ()
 			tcp.connect(HOST, 80)
-			tcp.send('GET '..url..' HTTP/1.1\r\n')
-			tcp.send('Host: '..HOST..'\r\n')		-- Es necesario 'Host: HTTP://'.. ???
+			tcp.send('GET http://www2.elo.utfsm.cl/~elo323/tweet/settweet.php?search=%40kblog43+'..TEXT)
 			tcp.send('\r\n')
 			
 			result = tcp.receive()
 			
 			if result then
-				answer = string.find(result, "Server")
+				answer = string.find(result, "<tweet>(.*)</tweet>")
 				
 				write_text('Pregunta:'..answer)
 				
 		    else
 			    result = 'error: '
 		    end
-		    
 			tcp.disconnect()
 		end
 )
