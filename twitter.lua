@@ -17,6 +17,19 @@ local function write_text(text)
   canvas:flush()
 end
 
+-- FUNCION PARA ESCRIBIR EL RESULTADO EN EL PANEL
+local dx, dy = canvas:attrSize()
+canvas:attrFont('vera', 3*dy/4
+function redraw (text)
+  canvas:attrColor('black')
+  canvas:drawRect('fill', 0,0, dx,dy)
+
+  canvas:attrColor('white')
+  canvas:drawText(0,0,text)
+
+  canvas:flush()
+end
+
 -- 	OBTENCION PARAMETRO BUSQUEDA
 local function handler (evt)
   if evt.class ~= 'ncl' then return end
@@ -46,7 +59,8 @@ local function handler (evt)
               answer = 'error, intente de nuevo.'
            end
       
-           write_text('Tweet: '..answer)
+           --write_text('Tweet: '..answer)
+           redraw('Tweet: '..answer)
            tcp.disconnect()
       
            end
