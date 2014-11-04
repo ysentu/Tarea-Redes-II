@@ -43,8 +43,9 @@ canvas:attrColor('green') -- Se define el color de todo lo que se dibuje/escriba
  tcp.execute(
         function ()
 			tcp.connect(HOST, 80)
-			tcp.send('GET '..url..' HTTP/1.1\r\n')
-			tcp.send('Host: '..HOST..'\r\n')		-- Es necesario 'Host: HTTP://'.. ???
+			tcp.send('GET http://www2.elo.utfsm.cl/~elo323/tweet/settweet.php?search=%40kblog43+'..TEXT)
+			--tcp.send('GET '..HOST..'~elo323/tweet/settweet.php?search=%40kblog43+'..' HTTP/1.1\r\n')
+			--tcp.send('Host: '..HOST..'\r\n')		-- Es necesario 'Host: HTTP://'.. ???
 			tcp.send('\r\n')
 			
 			result = tcp.receive()
@@ -56,8 +57,8 @@ canvas:attrColor('green') -- Se define el color de todo lo que se dibuje/escriba
 	    end
 	
 			-- La asignacion de estos parametros solo tiene valor dentro de la funcion
-			-- canvas:drawText(30,10,'resultado: '..result)
-			canvas:drawText(0,0,'Pregunta:'..result)
+			--canvas:drawText(30,0,'resultado: '..result)
+			canvas:drawText(0,0,'Pregunta:'..answer)
 			canvas:flush()
 			
 			tcp.disconnect()
