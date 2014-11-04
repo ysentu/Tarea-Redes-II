@@ -51,7 +51,7 @@ end
 			
 			if result then
 				_,_,answer = string.find(result, "<tweet>(.*)</tweet>")
-				
+
 				write_text('Tweet: '..answer)
 				
 		    else
