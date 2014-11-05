@@ -2,8 +2,8 @@
 ==============
 ##Tarea Redes de Computadores II
 
-####Autores:	René Pozo
-				Cristóbal Ramírez
+####Autores:		René Pozo
+					Cristóbal Ramírez
 
 Introducción
 ------------
@@ -26,11 +26,16 @@ Ambiente
  Para el ambiente de trabajo se uso Eclipse con los plugins de NCL y LUA. Se trabajo, además, con el emulador de Ginga para ejecutar el archivo .ncl.
  Para el manejo de versiones se uso git, con repositorio en github, usando el mismo programa ofrecido por Github para la GUI de git.
  
- Archivos Incluidos
- --------
+Archivos Incluidos
+--------
  - **gymkhana.ncl**: Archivo NCL con la programación de TVD.
  - **loading.lua**: Código en Lua de animación de carga.
  - **input.lua**: Código Lua para escribir mediante teclado.
  - **twitter.lua**: Código Lua para la búsqueda en twitter.
  - **defaultConnBase.ncl**: Contiene conectores usado en NCL.
  - **media**: Contiene video, audio y demás imágenes utilizadas.
+ 
+Otros
+------------
+- Enlace a proyecto en GitHub:
+[Tarea ELO323](https://github.com/ysentu/Tarea-Redes-II/).
