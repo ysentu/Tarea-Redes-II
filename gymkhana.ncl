@@ -155,8 +155,8 @@
 				<bind role="set" component="loading" interface="state" >
 					<bindParam name="var" value="start"/>
 				</bind>
-	    </link>   	
-   	
+	    </link>
+	    
 		<!--START-->
 		<port id="START" component="gymkhana"/>
 		<port id="entryPoint" component="input"/>

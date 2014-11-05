@@ -85,6 +85,7 @@ function handler(evt)
 		stopAnimation()
 -- iniciamos la animación
 		startAnimation()
+		event.timer(3000,stopAnimation)
 	end
   
 		if evt.name=='state' and evt.type=='attribution' and evt.value=='stop'then
