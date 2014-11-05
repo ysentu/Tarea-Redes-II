@@ -33,7 +33,7 @@ Archivos Incluidos
  - **loading.lua**: Código en Lua de animación de carga.
  - **input.lua**: Código Lua para escribir mediante teclado.
  - **twitter.lua**: Código Lua para la búsqueda en twitter.
- - **defaultConnBase.ncl**: Contiene conectores usado en NCL.
+ - **defaultConnBase.ncl**: Contiene conectores usados en NCL.
  - **media**: Contiene video, audio y demás imágenes utilizadas.
  
 Otros
