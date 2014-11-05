@@ -2,8 +2,9 @@
 ==============
 ##Tarea Redes de Computadores II
 
-####Autores:		René Pozo
-					Cristóbal Ramírez
+####Autores:
+				René Pozo
+				Cristóbal Ramírez
 
 Introducción
 ------------
