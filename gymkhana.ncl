@@ -18,25 +18,6 @@
 				<simpleAction role="set" value="$var"/>
 			</causalConnector>
 			
-			
-			
-			<!-- ANIMACION -->
-			<causalConnector id="onKeySelectionSet">
-				<connectorParam name="keyCode"/>
-				<connectorParam name="var"/>
-				<simpleCondition role="onSelection" key="$keyCode"/>
-				<simpleAction role="set" value="$var"/>
-				<simpleAction role="set" value="$var" delay="3s"/>
-			</causalConnector>	
-	
-			<!-- ANIMACION -->
-			<causalConnector id="onKeySelectionSet_Delay">
-				<connectorParam name="keyCode"/>
-				<connectorParam name="var"/>
-				<simpleCondition role="onSelection" key="$keyCode"/>
-				<simpleAction role="set" value="$var" delay="3s"/>
-			</causalConnector>	
-	
 		</connectorBase>
 		
 		<!--REGIONES-->
@@ -152,13 +133,13 @@
 		</media>
 		
 		
-		<!-- PARA INICIALIZAR LOS PANELES -->
+		<!-- PARA INICIALIZAR PANEL ESCRITURA Y TWITTER -->
     	<link xconnector="onBeginStart">
 			<bind role="onBegin" component="input"/>
 			<bind role="start"   component="twitter"/>
 	    </link>
 	    
-	    <!-- CASO EN QUE SE ESCRIBA ALGUN CARACTE SE COPIA EL TEXTO -->
+	    <!-- CASO EN QUE SE ESCRIBA ALGUN CARACTER SE COPIA EL TEXTO -->
 		<link xconnector="onBeginSet">
 			<!-- Cada vez que se sete select(ENTER), el codigo LUA de input lo hablita como start para la interpretacion de "onBegin" en NCL -->
 			<bind role="onBegin" component="input" interface="select"/> 
@@ -176,16 +157,6 @@
 				</bind>
 	    </link>   	
    	
-	 		<link xconnector="onKeySelectionSet">
-				<linkParam name="keyCode" value="ENTER"/>
-				<bind role="onSelection" component="gymkhana"  />
-				<bind role="set" component="loading" interface="state" >
-					<bindParam name="var" value="start"/>
-					<bindParam name="var" value="stop"/>
-				</bind>
-			</link>
-			
-
 		<!--START-->
 		<port id="START" component="gymkhana"/>
 		<port id="entryPoint" component="input"/>
