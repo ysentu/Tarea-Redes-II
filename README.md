@@ -14,3 +14,7 @@ Especificaciones
  La aplicación esta diseñada para trabajar con resolución 1280x720.
  Es necesario tener conexión a internet.
  
+Ambiente
+---------
+ Para el ambiente de trabajo se uso Eclipse con los plugins de NCL y LUA. Se trabajo, además, con el emulador de Ginga para ejecutar el archivo .ncl.
+ Para el manejo de versiones se uso git, con repositorio en github, usando el mismo programa ofrecido por Github para la GUI de git.
