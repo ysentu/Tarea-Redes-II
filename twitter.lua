@@ -19,15 +19,11 @@ end
 
 -- FUNCION PARA ESCRIBIR EL RESULTADO EN EL PANEL
 local dx, dy = canvas:attrSize()
-canvas:attrFont('vera', 3*dy/4
 function redraw (text)
-  canvas:attrColor('black')
-  canvas:drawRect('fill', 0,0, dx,dy)
-
-  canvas:attrColor('white')
-  canvas:drawText(0,0,text)
-
-  canvas:flush()
+	canvas:attrColor('black')
+	canvas:drawRect('fill', 0,0, 1000,120)
+	
+	write_text(text)
 end
 
 -- 	OBTENCION PARAMETRO BUSQUEDA
@@ -47,23 +43,24 @@ local function handler (evt)
         -- Implementa dentro de las funciones que tiene tcp.lua
         tcp.execute(
             function ()
-           tcp.connect(HOST, 80)
-           tcp.send('GET http://www2.elo.utfsm.cl/~elo323/tweet/settweet.php?search=%40MonsterEnergy+'..TEXT)
-           tcp.send('\r\n')
-      
-           result = tcp.receive()
-      
-           if result then
-               _,_,answer = string.find(result, "<tweet>(.*)</tweet>")       
-            else
-              answer = 'error, intente de nuevo.'
-           end
-      
-           --write_text('Tweet: '..answer)
-           redraw('Tweet: '..answer)
-           tcp.disconnect()
-      
-           end
+	           tcp.connect(HOST, 80)
+	           tcp.send('GET http://www2.elo.utfsm.cl/~elo323/tweet/settweet.php?search=%40MonsterEnergy+'..TEXT)
+	           tcp.send('\r\n')
+	      
+	           result = tcp.receive()
+	      
+	           if result then
+	               _,_,answer = string.find(result, "<tweet>(.*)</tweet>")       
+	            else
+	              answer = 'error, intente de nuevo.'
+	           end
+	           
+	           canvas:clear()      
+	           write_text('Tweet: '..answer)
+	           --redraw('Tweet: '..answer)
+	           tcp.disconnect()
+	      
+	           end
           )
         
       end
@@ -72,8 +69,3 @@ local function handler (evt)
 end
 
 event.register(handler)
-
-
-
-
-
