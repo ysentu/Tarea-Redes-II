@@ -5,9 +5,9 @@ LocalScreenManager::createScreen PARSER argv[0] = 'C:\Program Files\TeleMidia\Gi
 LocalScreenManager::createScreen PARSER argv[1] = '--ncl'
 LocalScreenManager::createScreen PARSER argv[2] = 'C:\Users\Cristobal\Documents\RedesPC2\gymkhana.ncl'
 LocalScreenManager::createScreen PARSER argv[3] = '--wid'
-LocalScreenManager::createScreen PARSER argv[4] = '5375962'
+LocalScreenManager::createScreen PARSER argv[4] = '4916630'
 LocalScreenManager::createScreen PARSER argv[5] = '--vmode'
-LocalScreenManager::createScreen PARSER argv[6] = '1334x605'
+LocalScreenManager::createScreen PARSER argv[6] = '1280x633'
 LocalScreenManager::createScreen PARSER argv[7] = '--disable-fkeys'
 LocalScreenManager::createScreen PARSER argv[8] = '--set-exitonend'
 LocalScreenManager::createScreen PARSER argv[9] = '--disable-multicast'
@@ -16,14 +16,14 @@ LocalScreenManager::createScreen PARSER argv[11] = '--context-dir'
 LocalScreenManager::createScreen PARSER argv[12] = 'C:\Users\Cristobal\AppData\Roaming\telemidia\ginga\contexts.ini'
 LocalScreenManager::createScreen PARSER argv[13] = '--enable-log'
 LocalScreenManager::createScreen PARSER argv[14] = 'file'
-LocalScreenManager::createScreen embed src = 5375962' and dst = '005207DA'
+LocalScreenManager::createScreen embed src = 4916630' and dst = '004B0596'
 SDLDeviceScreen::checkStdin calling cin
 SDLDeviceScreen::initScreen 'sdl'
-SDLDeviceScreen::getWidthResolution returns '1354'
-SDLDeviceScreen::getHeightResolution returns '656'
+SDLDeviceScreen::getWidthResolution returns '1300'
+SDLDeviceScreen::getHeightResolution returns '684'
 SDLDeviceScreen::initScreen renderer accelerated by hardware was created
 InputManager::initializeInputIntervalTime imperative = '0' declarative = '0'
-SDLDeviceScreen::initScreen 'sdl': '1354x656' all done
+SDLDeviceScreen::initScreen 'sdl': '1300x684' all done
 InputManager::addInputEventListener add listener but I am not running. I will notify you though,as soon as you start me!
 ginga main() NCLFILE = C:\Users\Cristobal\Documents\RedesPC2\gymkhana.ncl
 PresentationEngineManager::openNclFile document process time: 0
@@ -34,12 +34,12 @@ ContextManager::addContextListener
 ContextManager::getUserProfile Warning! can't find profile of user '-1'
 ContextManager::getUser Warning! can't find user '-1'
 SystemInfo::getSystemLanguage can't find 'system.language, return por
-SDLDeviceScreen::getWidthResolution returns '1354'
-SDLDeviceScreen::getHeightResolution returns '656'
-SDLDeviceScreen::getWidthResolution returns '1354'
-SDLDeviceScreen::getHeightResolution returns '656'
-SDLDeviceScreen::getHeightResolution returns '656'
-SDLDeviceScreen::getWidthResolution returns '1354'
+SDLDeviceScreen::getWidthResolution returns '1300'
+SDLDeviceScreen::getHeightResolution returns '684'
+SDLDeviceScreen::getWidthResolution returns '1300'
+SDLDeviceScreen::getHeightResolution returns '684'
+SDLDeviceScreen::getHeightResolution returns '684'
+SDLDeviceScreen::getWidthResolution returns '1300'
 InputManager::addInputEventListener add listener but I am not running. I will notify you though,as soon as you start me!
 
 
@@ -55,8 +55,8 @@ PresentationContext::getPropertyValue prop 'default.focusBorderWidth' == '3'
 PresentationContext::getPropertyValue prop 'default.selBorderColor' == 'green'
 InputManager::addInputEventListener add listener but I am not running. I will notify you though,as soon as you start me!
 PrivateBaseContext::createPrivateBase '-1'
-FormatterMediator::printData(008BABD8) screenId: 0 baseId: -1 playerId: C:\Users\Cristobal\Documents\RedesPC2\gymkhana.ncl devClass: 0 x: 0 y: 0 w: 1354 h: 656 enableGfx: 1 parentDocId:  docId: 
-FormatterMediator::addDocument(008BABD8) call addDocument 'C:\Users\Cristobal\Documents\RedesPC2\gymkhana.ncl'
+FormatterMediator::printData(0390ABD8) screenId: 0 baseId: -1 playerId: C:\Users\Cristobal\Documents\RedesPC2\gymkhana.ncl devClass: 0 x: 0 y: 0 w: 1300 h: 684 enableGfx: 1 parentDocId:  docId: 
+FormatterMediator::addDocument(0390ABD8) call addDocument 'C:\Users\Cristobal\Documents\RedesPC2\gymkhana.ncl'
 PATH = [C:\Users\Cristobal\Documents\RedesPC2\]
 parseRegionBase
 >>region: screenparseRegion
@@ -2793,6 +2793,15 @@ Link::containsNode searching 'gymkhana' inside link '' (1 condition binds)
 Link::containsNode link '' has 'input' with descriptor = 'region_video'
 FormatterConverter::compileExecutionObjectLinks can't process ncmLink '' inside '-1\myBodyID\'  because '' does not contain 'gymkhana' src
 FormatterConverter::compileExecutionObjectLinks processing ncmLink '' inside '-1\myBodyID\'
+Link::containsNode searching 'gymkhana' inside link '' (2 condition binds)
+Link::containsNode link '' has 'input' with descriptor = 'region_video'
+Link::containsNode link '' has 'input' with descriptor = 'region_video'
+FormatterConverter::compileExecutionObjectLinks can't process ncmLink '' inside '-1\myBodyID\'  because '' does not contain 'gymkhana' src
+FormatterConverter::compileExecutionObjectLinks processing ncmLink '' inside '-1\myBodyID\'
+Link::containsNode searching 'gymkhana' inside link '' (1 condition binds)
+Link::containsNode link '' has 'input' with descriptor = 'region_video'
+FormatterConverter::compileExecutionObjectLinks can't process ncmLink '' inside '-1\myBodyID\'  because '' does not contain 'gymkhana' src
+FormatterConverter::compileExecutionObjectLinks processing ncmLink '' inside '-1\myBodyID\'
 Link::containsNode searching 'gymkhana' inside link '' (1 condition binds)
 Link::containsNode link '' has 'gymkhana' with descriptor = 'region_video'
 CompositeExecutionObject::removeLinkUncompiled ''
@@ -2807,23 +2816,18 @@ FormatterConverter::compileExecutionObjectLinks processing ncmLink '' inside '-1
 Link::containsNode searching 'gymkhana' inside link '' (1 condition binds)
 Link::containsNode link '' has 'input' with descriptor = 'region_video'
 FormatterConverter::compileExecutionObjectLinks can't process ncmLink '' inside '-1\myBodyID\'  because '' does not contain 'gymkhana' src
-FormatterConverter::compileExecutionObjectLinks processing ncmLink '' inside '-1\myBodyID\'
-Link::containsNode searching 'gymkhana' inside link '' (2 condition binds)
-Link::containsNode link '' has 'input' with descriptor = 'region_video'
-Link::containsNode link '' has 'input' with descriptor = 'region_video'
-FormatterConverter::compileExecutionObjectLinks can't process ncmLink '' inside '-1\myBodyID\'  because '' does not contain 'gymkhana' src
-FormatterConverter::compileExecutionObjectLinks processing ncmLink '' inside '-1\myBodyID\'
-Link::containsNode searching 'gymkhana' inside link '' (1 condition binds)
-Link::containsNode link '' has 'input' with descriptor = 'region_video'
-FormatterConverter::compileExecutionObjectLinks can't process ncmLink '' inside '-1\myBodyID\'  because '' does not contain 'gymkhana' src
-FormatterConverter::compileExecutionObjectLinks processing ncmLink 'mostrar_ok' inside '-1\myBodyID\'
-Link::containsNode searching 'gymkhana' inside link 'mostrar_ok' (1 condition binds)
-Link::containsNode link 'mostrar_ok' has 'background' with descriptor = 'region_video'
-FormatterConverter::compileExecutionObjectLinks can't process ncmLink 'mostrar_ok' inside '-1\myBodyID\'  because 'mostrar_ok' does not contain 'gymkhana' src
-FormatterConverter::compileExecutionObjectLinks processing ncmLink 'mostrar_red' inside '-1\myBodyID\'
-Link::containsNode searching 'gymkhana' inside link 'mostrar_red' (1 condition binds)
-Link::containsNode link 'mostrar_red' has 'background' with descriptor = 'region_video'
-FormatterConverter::compileExecutionObjectLinks can't process ncmLink 'mostrar_red' inside '-1\myBodyID\'  because 'mostrar_red' does not contain 'gymkhana' src
+FormatterConverter::compileExecutionObjectLinks processing ncmLink 'mostrar_cuadro_resultados' inside '-1\myBodyID\'
+Link::containsNode searching 'gymkhana' inside link 'mostrar_cuadro_resultados' (1 condition binds)
+Link::containsNode link 'mostrar_cuadro_resultados' has 'gymkhana' with descriptor = 'region_video'
+CompositeExecutionObject::removeLinkUncompiled 'mostrar_cuadro_resultados'
+FormatterLinkConverter::createCausalLink inside '-1\myBodyID\' from ncmlinkId 'mostrar_cuadro_resultados'
+CascadingDescriptor::~CascadingDescriptor(region_video)
+ExecutionObject::addEvent 'gymkhana_1' in '-1\myBodyID\gymkhana\region_video'
+ExecutionObject::addPresentationEvent in '-1\myBodyID\gymkhana\region_video'. Call transition manager addPresentationEvent for 'gymkhana_1' begin = '0'; end = '1.#INF' position = '-1'
+FormatterConverter::getExecutionObjectFromPerspective Adding_object with id = '-1\myBodyID\cuadro_resultado\fondo_resultados', perspective = '-1\myBodyID\cuadro_resultado' and parent = '-1\myBodyID\'
+ExecutionObject::addEvent 'cuadro_resultado_1' in '-1\myBodyID\cuadro_resultado\fondo_resultados'
+ExecutionObject::addPresentationEvent in '-1\myBodyID\cuadro_resultado\fondo_resultados'. Call transition manager addPresentationEvent for 'cuadro_resultado_1' begin = '0'; end = '1.#INF' position = '-1'
+FormatterConverter::compileExecutionObjectLinks LINKCOMPILED 'mostrar_cuadro_resultados'
 FormatterConverter::compileExecutionObjectLinks processing ncmLink '' inside '-1\myBodyID\'
 Link::containsNode searching 'gymkhana' inside link '' (1 condition binds)
 Link::containsNode link '' has 'gymkhana' with descriptor = 'region_video'
@@ -2833,50 +2837,42 @@ CascadingDescriptor::~CascadingDescriptor(region_video)
 ExecutionObject::addEvent 'gymkhana_0_GREEN' in '-1\myBodyID\gymkhana\region_video'
 CascadingDescriptor::~CascadingDescriptor(cargando)
 FormatterConverter::compileExecutionObjectLinks LINKCOMPILED ''
-FormatterConverter::compileExecutionObjectLinks processing ncmLink 'end_audio' inside '-1\myBodyID\'
-Link::containsNode searching 'gymkhana' inside link 'end_audio' (1 condition binds)
-Link::containsNode link 'end_audio' has 'gymkhana' with descriptor = 'region_video'
-CompositeExecutionObject::removeLinkUncompiled 'end_audio'
-FormatterLinkConverter::createCausalLink inside '-1\myBodyID\' from ncmlinkId 'end_audio'
-CascadingDescriptor::~CascadingDescriptor(region_video)
-ExecutionObject::addEvent 'gymkhana_1' in '-1\myBodyID\gymkhana\region_video'
-ExecutionObject::addPresentationEvent in '-1\myBodyID\gymkhana\region_video'. Call transition manager addPresentationEvent for 'gymkhana_1' begin = '0'; end = '1.#INF' position = '-1'
-FormatterConverter::getExecutionObjectFromPerspective Adding_object with id = '-1\myBodyID\gymkhana_audio\audio', perspective = '-1\myBodyID\gymkhana_audio' and parent = '-1\myBodyID\'
-FormatterMultiDevice::getFormatterLayout region is NULL
-CascadingDescriptor::setFormatterRegion Warning! region == NULL
-ExecutionObject::addEvent 'gymkhana_audio_1' in '-1\myBodyID\gymkhana_audio\audio'
-ExecutionObject::addPresentationEvent in '-1\myBodyID\gymkhana_audio\audio'. Call transition manager addPresentationEvent for 'gymkhana_audio_1' begin = '0'; end = '1.#INF' position = '-1'
-FormatterConverter::compileExecutionObjectLinks LINKCOMPILED 'end_audio'
 FormatterConverter::compileExecutionObjectLinks processing ncmLink 'start_audio' inside '-1\myBodyID\'
 Link::containsNode searching 'gymkhana' inside link 'start_audio' (1 condition binds)
 Link::containsNode link 'start_audio' has 'gymkhana' with descriptor = 'region_video'
 CompositeExecutionObject::removeLinkUncompiled 'start_audio'
 FormatterLinkConverter::createCausalLink inside '-1\myBodyID\' from ncmlinkId 'start_audio'
 CascadingDescriptor::~CascadingDescriptor(region_video)
-CascadingDescriptor::~CascadingDescriptor(audio)
+FormatterConverter::getExecutionObjectFromPerspective Adding_object with id = '-1\myBodyID\gymkhana_audio\audio', perspective = '-1\myBodyID\gymkhana_audio' and parent = '-1\myBodyID\'
+FormatterMultiDevice::getFormatterLayout region is NULL
+CascadingDescriptor::setFormatterRegion Warning! region == NULL
+ExecutionObject::addEvent 'gymkhana_audio_1' in '-1\myBodyID\gymkhana_audio\audio'
+ExecutionObject::addPresentationEvent in '-1\myBodyID\gymkhana_audio\audio'. Call transition manager addPresentationEvent for 'gymkhana_audio_1' begin = '0'; end = '1.#INF' position = '-1'
 FormatterConverter::compileExecutionObjectLinks LINKCOMPILED 'start_audio'
-FormatterConverter::compileExecutionObjectLinks processing ncmLink 'mostrar_cuadro_resultados' inside '-1\myBodyID\'
-Link::containsNode searching 'gymkhana' inside link 'mostrar_cuadro_resultados' (1 condition binds)
-Link::containsNode link 'mostrar_cuadro_resultados' has 'gymkhana' with descriptor = 'region_video'
-CompositeExecutionObject::removeLinkUncompiled 'mostrar_cuadro_resultados'
-FormatterLinkConverter::createCausalLink inside '-1\myBodyID\' from ncmlinkId 'mostrar_cuadro_resultados'
+FormatterConverter::compileExecutionObjectLinks processing ncmLink 'end_audio' inside '-1\myBodyID\'
+Link::containsNode searching 'gymkhana' inside link 'end_audio' (1 condition binds)
+Link::containsNode link 'end_audio' has 'gymkhana' with descriptor = 'region_video'
+CompositeExecutionObject::removeLinkUncompiled 'end_audio'
+FormatterLinkConverter::createCausalLink inside '-1\myBodyID\' from ncmlinkId 'end_audio'
 CascadingDescriptor::~CascadingDescriptor(region_video)
-FormatterConverter::getExecutionObjectFromPerspective Adding_object with id = '-1\myBodyID\cuadro_resultado\fondo_resultados', perspective = '-1\myBodyID\cuadro_resultado' and parent = '-1\myBodyID\'
-ExecutionObject::addEvent 'cuadro_resultado_1' in '-1\myBodyID\cuadro_resultado\fondo_resultados'
-ExecutionObject::addPresentationEvent in '-1\myBodyID\cuadro_resultado\fondo_resultados'. Call transition manager addPresentationEvent for 'cuadro_resultado_1' begin = '0'; end = '1.#INF' position = '-1'
-FormatterConverter::compileExecutionObjectLinks LINKCOMPILED 'mostrar_cuadro_resultados'
-FormatterConverter::compileExecutionObjectLinks processing ncmLink 'mostrar_banner' inside '-1\myBodyID\'
-Link::containsNode searching 'gymkhana' inside link 'mostrar_banner' (1 condition binds)
-Link::containsNode link 'mostrar_banner' has 'background' with descriptor = 'region_video'
-FormatterConverter::compileExecutionObjectLinks can't process ncmLink 'mostrar_banner' inside '-1\myBodyID\'  because 'mostrar_banner' does not contain 'gymkhana' src
-FormatterConverter::compileExecutionObjectLinks processing ncmLink 'mostrar_ins2' inside '-1\myBodyID\'
-Link::containsNode searching 'gymkhana' inside link 'mostrar_ins2' (1 condition binds)
-Link::containsNode link 'mostrar_ins2' has 'background' with descriptor = 'region_video'
-FormatterConverter::compileExecutionObjectLinks can't process ncmLink 'mostrar_ins2' inside '-1\myBodyID\'  because 'mostrar_ins2' does not contain 'gymkhana' src
+CascadingDescriptor::~CascadingDescriptor(audio)
+FormatterConverter::compileExecutionObjectLinks LINKCOMPILED 'end_audio'
+FormatterConverter::compileExecutionObjectLinks processing ncmLink 'mostrar_red' inside '-1\myBodyID\'
+Link::containsNode searching 'gymkhana' inside link 'mostrar_red' (1 condition binds)
+Link::containsNode link 'mostrar_red' has 'background' with descriptor = 'region_video'
+FormatterConverter::compileExecutionObjectLinks can't process ncmLink 'mostrar_red' inside '-1\myBodyID\'  because 'mostrar_red' does not contain 'gymkhana' src
+FormatterConverter::compileExecutionObjectLinks processing ncmLink 'mostrar_ok' inside '-1\myBodyID\'
+Link::containsNode searching 'gymkhana' inside link 'mostrar_ok' (1 condition binds)
+Link::containsNode link 'mostrar_ok' has 'background' with descriptor = 'region_video'
+FormatterConverter::compileExecutionObjectLinks can't process ncmLink 'mostrar_ok' inside '-1\myBodyID\'  because 'mostrar_ok' does not contain 'gymkhana' src
 FormatterConverter::compileExecutionObjectLinks processing ncmLink 'mostrar_ins1' inside '-1\myBodyID\'
 Link::containsNode searching 'gymkhana' inside link 'mostrar_ins1' (1 condition binds)
 Link::containsNode link 'mostrar_ins1' has 'background' with descriptor = 'region_video'
 FormatterConverter::compileExecutionObjectLinks can't process ncmLink 'mostrar_ins1' inside '-1\myBodyID\'  because 'mostrar_ins1' does not contain 'gymkhana' src
+FormatterConverter::compileExecutionObjectLinks processing ncmLink 'mostrar_ins2' inside '-1\myBodyID\'
+Link::containsNode searching 'gymkhana' inside link 'mostrar_ins2' (1 condition binds)
+Link::containsNode link 'mostrar_ins2' has 'background' with descriptor = 'region_video'
+FormatterConverter::compileExecutionObjectLinks can't process ncmLink 'mostrar_ins2' inside '-1\myBodyID\'  because 'mostrar_ins2' does not contain 'gymkhana' src
 FormatterConverter::compileExecutionObjectLinks processing ncmLink 'mostrar_instrucciones' inside '-1\myBodyID\'
 Link::containsNode searching 'gymkhana' inside link 'mostrar_instrucciones' (1 condition binds)
 Link::containsNode link 'mostrar_instrucciones' has 'gymkhana' with descriptor = 'region_video'
@@ -2887,6 +2883,10 @@ FormatterConverter::getExecutionObjectFromPerspective Adding_object with id = '-
 ExecutionObject::addEvent 'background_1' in '-1\myBodyID\background\fondo'
 ExecutionObject::addPresentationEvent in '-1\myBodyID\background\fondo'. Call transition manager addPresentationEvent for 'background_1' begin = '0'; end = '1.#INF' position = '-1'
 FormatterConverter::compileExecutionObjectLinks LINKCOMPILED 'mostrar_instrucciones'
+FormatterConverter::compileExecutionObjectLinks processing ncmLink 'mostrar_banner' inside '-1\myBodyID\'
+Link::containsNode searching 'gymkhana' inside link 'mostrar_banner' (1 condition binds)
+Link::containsNode link 'mostrar_banner' has 'background' with descriptor = 'region_video'
+FormatterConverter::compileExecutionObjectLinks can't process ncmLink 'mostrar_banner' inside '-1\myBodyID\'  because 'mostrar_banner' does not contain 'gymkhana' src
 FormatterConverter::compileExecutionObjectLinks processing ncmLink 'mostrar_cuadro_busqueda' inside '-1\myBodyID\'
 Link::containsNode searching 'gymkhana' inside link 'mostrar_cuadro_busqueda' (1 condition binds)
 Link::containsNode link 'mostrar_cuadro_busqueda' has 'gymkhana' with descriptor = 'region_video'
@@ -2910,16 +2910,6 @@ Link::containsNode link '' has 'input' with descriptor = 'dsInput'
 CompositeExecutionObject::removeLinkUncompiled ''
 FormatterLinkConverter::createCausalLink inside '-1\myBodyID\' from ncmlinkId ''
 CascadingDescriptor::~CascadingDescriptor(dsInput)
-ExecutionObject::addEvent 'select_1' in '-1\myBodyID\input\dsInput'
-ExecutionObject::addPresentationEvent event 'select_1' has an undefined begin instant '1.#QNAN'
-CascadingDescriptor::~CascadingDescriptor(cargando)
-FormatterConverter::compileExecutionObjectLinks LINKCOMPILED ''
-FormatterConverter::compileExecutionObjectLinks processing ncmLink '' inside '-1\myBodyID\'
-Link::containsNode searching 'input' inside link '' (1 condition binds)
-Link::containsNode link '' has 'input' with descriptor = 'dsInput'
-CompositeExecutionObject::removeLinkUncompiled ''
-FormatterLinkConverter::createCausalLink inside '-1\myBodyID\' from ncmlinkId ''
-CascadingDescriptor::~CascadingDescriptor(dsInput)
 ExecutionObject::addEvent 'input_1' in '-1\myBodyID\input\dsInput'
 ExecutionObject::addPresentationEvent in '-1\myBodyID\input\dsInput'. Call transition manager addPresentationEvent for 'input_1' begin = '0'; end = '1.#INF' position = '-1'
 ApplicationExecutionObject::initializeApplicationObject(-1\myBodyID\twitter\descTwitter)
@@ -2933,6 +2923,8 @@ Link::containsNode link '' has 'input' with descriptor = 'dsInput'
 CompositeExecutionObject::removeLinkUncompiled ''
 FormatterLinkConverter::createCausalLink inside '-1\myBodyID\' from ncmlinkId ''
 CascadingDescriptor::~CascadingDescriptor(dsInput)
+ExecutionObject::addEvent 'select_1' in '-1\myBodyID\input\dsInput'
+ExecutionObject::addPresentationEvent event 'select_1' has an undefined begin instant '1.#QNAN'
 CascadingDescriptor::~CascadingDescriptor(dsInput)
 ExecutionObject::addEvent 'text_2' in '-1\myBodyID\input\dsInput'
 CascadingDescriptor::~CascadingDescriptor(descTwitter)
@@ -2945,29 +2937,37 @@ Link::containsNode link '' has 'input' with descriptor = 'dsInput'
 CompositeExecutionObject::removeLinkUncompiled ''
 FormatterLinkConverter::createCausalLink inside '-1\myBodyID\' from ncmlinkId ''
 CascadingDescriptor::~CascadingDescriptor(dsInput)
+CascadingDescriptor::~CascadingDescriptor(cargando)
+FormatterConverter::compileExecutionObjectLinks LINKCOMPILED ''
+FormatterConverter::compileExecutionObjectLinks processing ncmLink '' inside '-1\myBodyID\'
+Link::containsNode searching 'input' inside link '' (1 condition binds)
+Link::containsNode link '' has 'input' with descriptor = 'dsInput'
+CompositeExecutionObject::removeLinkUncompiled ''
+FormatterLinkConverter::createCausalLink inside '-1\myBodyID\' from ncmlinkId ''
+CascadingDescriptor::~CascadingDescriptor(dsInput)
 FormatterLinkConverter::createStatement Warning! cannot create statement of link '' because binds == NULL
 CascadingDescriptor::~CascadingDescriptor(cargando)
 FormatterConverter::compileExecutionObjectLinks LINKCOMPILED ''
-FormatterConverter::compileExecutionObjectLinks processing ncmLink 'mostrar_ok' inside '-1\myBodyID\'
-Link::containsNode searching 'input' inside link 'mostrar_ok' (1 condition binds)
-Link::containsNode link 'mostrar_ok' has 'background' with descriptor = 'dsInput'
-FormatterConverter::compileExecutionObjectLinks can't process ncmLink 'mostrar_ok' inside '-1\myBodyID\'  because 'mostrar_ok' does not contain 'input' src
 FormatterConverter::compileExecutionObjectLinks processing ncmLink 'mostrar_red' inside '-1\myBodyID\'
 Link::containsNode searching 'input' inside link 'mostrar_red' (1 condition binds)
 Link::containsNode link 'mostrar_red' has 'background' with descriptor = 'dsInput'
 FormatterConverter::compileExecutionObjectLinks can't process ncmLink 'mostrar_red' inside '-1\myBodyID\'  because 'mostrar_red' does not contain 'input' src
-FormatterConverter::compileExecutionObjectLinks processing ncmLink 'mostrar_banner' inside '-1\myBodyID\'
-Link::containsNode searching 'input' inside link 'mostrar_banner' (1 condition binds)
-Link::containsNode link 'mostrar_banner' has 'background' with descriptor = 'dsInput'
-FormatterConverter::compileExecutionObjectLinks can't process ncmLink 'mostrar_banner' inside '-1\myBodyID\'  because 'mostrar_banner' does not contain 'input' src
-FormatterConverter::compileExecutionObjectLinks processing ncmLink 'mostrar_ins2' inside '-1\myBodyID\'
-Link::containsNode searching 'input' inside link 'mostrar_ins2' (1 condition binds)
-Link::containsNode link 'mostrar_ins2' has 'background' with descriptor = 'dsInput'
-FormatterConverter::compileExecutionObjectLinks can't process ncmLink 'mostrar_ins2' inside '-1\myBodyID\'  because 'mostrar_ins2' does not contain 'input' src
+FormatterConverter::compileExecutionObjectLinks processing ncmLink 'mostrar_ok' inside '-1\myBodyID\'
+Link::containsNode searching 'input' inside link 'mostrar_ok' (1 condition binds)
+Link::containsNode link 'mostrar_ok' has 'background' with descriptor = 'dsInput'
+FormatterConverter::compileExecutionObjectLinks can't process ncmLink 'mostrar_ok' inside '-1\myBodyID\'  because 'mostrar_ok' does not contain 'input' src
 FormatterConverter::compileExecutionObjectLinks processing ncmLink 'mostrar_ins1' inside '-1\myBodyID\'
 Link::containsNode searching 'input' inside link 'mostrar_ins1' (1 condition binds)
 Link::containsNode link 'mostrar_ins1' has 'background' with descriptor = 'dsInput'
 FormatterConverter::compileExecutionObjectLinks can't process ncmLink 'mostrar_ins1' inside '-1\myBodyID\'  because 'mostrar_ins1' does not contain 'input' src
+FormatterConverter::compileExecutionObjectLinks processing ncmLink 'mostrar_ins2' inside '-1\myBodyID\'
+Link::containsNode searching 'input' inside link 'mostrar_ins2' (1 condition binds)
+Link::containsNode link 'mostrar_ins2' has 'background' with descriptor = 'dsInput'
+FormatterConverter::compileExecutionObjectLinks can't process ncmLink 'mostrar_ins2' inside '-1\myBodyID\'  because 'mostrar_ins2' does not contain 'input' src
+FormatterConverter::compileExecutionObjectLinks processing ncmLink 'mostrar_banner' inside '-1\myBodyID\'
+Link::containsNode searching 'input' inside link 'mostrar_banner' (1 condition binds)
+Link::containsNode link 'mostrar_banner' has 'background' with descriptor = 'dsInput'
+FormatterConverter::compileExecutionObjectLinks can't process ncmLink 'mostrar_banner' inside '-1\myBodyID\'  because 'mostrar_banner' does not contain 'input' src
 FormatterConverter::compileExecutionObjectLinks object = '-1\myBodyID\input\dsInput'
 CompositeExecutionObject::getUncompiledLinks '-1\' has '0' uncompiled links
 FormatterConverter::compileExecutionObjectLinks all links are already compiled for '-1\'
@@ -2989,26 +2989,26 @@ FormatterMediator::initializeSettingNodes ' id = 'programSettings' node perspect
 FormatterConverter::getExecutionObjectFromPerspective Adding_object with id = '-1\myBodyID\programSettings\', perspective = '-1\myBodyID\programSettings' and parent = '-1\myBodyID\'
 FormatterConverter::compileExecutionObjectLinks object = '-1\myBodyID\programSettings\'
 CompositeExecutionObject::getUncompiledLinks '-1\myBodyID\' has '5' uncompiled links
-FormatterConverter::compileExecutionObjectLinks processing ncmLink 'mostrar_ok' inside '-1\myBodyID\'
-Link::containsNode searching 'programSettings' inside link 'mostrar_ok' (1 condition binds)
-Link::containsNode link 'mostrar_ok' has 'background' with descriptor = 'NULL'
-FormatterConverter::compileExecutionObjectLinks can't process ncmLink 'mostrar_ok' inside '-1\myBodyID\'  because 'mostrar_ok' does not contain 'programSettings' src
 FormatterConverter::compileExecutionObjectLinks processing ncmLink 'mostrar_red' inside '-1\myBodyID\'
 Link::containsNode searching 'programSettings' inside link 'mostrar_red' (1 condition binds)
 Link::containsNode link 'mostrar_red' has 'background' with descriptor = 'NULL'
 FormatterConverter::compileExecutionObjectLinks can't process ncmLink 'mostrar_red' inside '-1\myBodyID\'  because 'mostrar_red' does not contain 'programSettings' src
-FormatterConverter::compileExecutionObjectLinks processing ncmLink 'mostrar_banner' inside '-1\myBodyID\'
-Link::containsNode searching 'programSettings' inside link 'mostrar_banner' (1 condition binds)
-Link::containsNode link 'mostrar_banner' has 'background' with descriptor = 'NULL'
-FormatterConverter::compileExecutionObjectLinks can't process ncmLink 'mostrar_banner' inside '-1\myBodyID\'  because 'mostrar_banner' does not contain 'programSettings' src
-FormatterConverter::compileExecutionObjectLinks processing ncmLink 'mostrar_ins2' inside '-1\myBodyID\'
-Link::containsNode searching 'programSettings' inside link 'mostrar_ins2' (1 condition binds)
-Link::containsNode link 'mostrar_ins2' has 'background' with descriptor = 'NULL'
-FormatterConverter::compileExecutionObjectLinks can't process ncmLink 'mostrar_ins2' inside '-1\myBodyID\'  because 'mostrar_ins2' does not contain 'programSettings' src
+FormatterConverter::compileExecutionObjectLinks processing ncmLink 'mostrar_ok' inside '-1\myBodyID\'
+Link::containsNode searching 'programSettings' inside link 'mostrar_ok' (1 condition binds)
+Link::containsNode link 'mostrar_ok' has 'background' with descriptor = 'NULL'
+FormatterConverter::compileExecutionObjectLinks can't process ncmLink 'mostrar_ok' inside '-1\myBodyID\'  because 'mostrar_ok' does not contain 'programSettings' src
 FormatterConverter::compileExecutionObjectLinks processing ncmLink 'mostrar_ins1' inside '-1\myBodyID\'
 Link::containsNode searching 'programSettings' inside link 'mostrar_ins1' (1 condition binds)
 Link::containsNode link 'mostrar_ins1' has 'background' with descriptor = 'NULL'
 FormatterConverter::compileExecutionObjectLinks can't process ncmLink 'mostrar_ins1' inside '-1\myBodyID\'  because 'mostrar_ins1' does not contain 'programSettings' src
+FormatterConverter::compileExecutionObjectLinks processing ncmLink 'mostrar_ins2' inside '-1\myBodyID\'
+Link::containsNode searching 'programSettings' inside link 'mostrar_ins2' (1 condition binds)
+Link::containsNode link 'mostrar_ins2' has 'background' with descriptor = 'NULL'
+FormatterConverter::compileExecutionObjectLinks can't process ncmLink 'mostrar_ins2' inside '-1\myBodyID\'  because 'mostrar_ins2' does not contain 'programSettings' src
+FormatterConverter::compileExecutionObjectLinks processing ncmLink 'mostrar_banner' inside '-1\myBodyID\'
+Link::containsNode searching 'programSettings' inside link 'mostrar_banner' (1 condition binds)
+Link::containsNode link 'mostrar_banner' has 'background' with descriptor = 'NULL'
+FormatterConverter::compileExecutionObjectLinks can't process ncmLink 'mostrar_banner' inside '-1\myBodyID\'  because 'mostrar_banner' does not contain 'programSettings' src
 FormatterConverter::compileExecutionObjectLinks object = '-1\myBodyID\programSettings\'
 CompositeExecutionObject::getUncompiledLinks '-1\' has '0' uncompiled links
 FormatterConverter::compileExecutionObjectLinks all links are already compiled for '-1\'
@@ -3041,18 +3041,18 @@ SDL2ffmpeg::openStreams 'C:\Users\Cristobal\Documents\RedesPC2\media\gymkhana.mp
 AVPlayer::createProvider 'C:\Users\Cristobal\Documents\RedesPC2\media\gymkhana.mp4' all done
 FormatterPlayerAdapter::createPlayer for 'C:\Users\Cristobal\Documents\RedesPC2\media\gymkhana.mp4' object = '-1\myBodyID\gymkhana\region_video' objectDevice = '0'
 AVPlayerAdapter::createPlayer for 'C:\Users\Cristobal\Documents\RedesPC2\media\gymkhana.mp4' has visual = '1' all done
-ExecutionObject::prepare(-1\myBodyID\gymkhana\region_video) 2nd call addEventListener '05521058' or '05521134'
+ExecutionObject::prepare(-1\myBodyID\gymkhana\region_video) 2nd call addEventListener '05B01058' or '05B01134'
 Player::setScope 'gymkhana'
 FormatterLayout::prepareFormatterRegion for '-1\myBodyID\gymkhana\region_video'
-FormatterRegion::prepareOutputDisplay '00926930' created with left   = '0' top    = '0' width  = '974' height = '432' 
-SDLWindow::renderFrom(00926930) Warning! NULL underlying surface!
+FormatterRegion::prepareOutputDisplay '03976AC8' created with left   = '0' top    = '0' width  = '936' height = '451' 
+SDLWindow::renderFrom(03976AC8) Warning! NULL underlying surface!
 FormatterLayout::prepareFormatterRegion deviceRegion class is '0'
 AVPlayer::play() calling provider play over
-SDLVideoProvider::playOver parent(00926930)
+SDLVideoProvider::playOver parent(03976AC8)
 AVPlayer::play(C:\Users\Cristobal\Documents\RedesPC2\media\gymkhana.mp4) all done!
 FormatterScheduler::eventStateChanged 'gymkhana_1' transition '0'
 FormatterMultiDevice::showObject '-1\myBodyID\gymkhana\region_video' class '0'
-FormatterRegion::setRegionVisibility (055211E8) object 'region_video' display '00926930' SHOW
+FormatterRegion::setRegionVisibility (05B011E8) object 'region_video' display '03976AC8' SHOW
 FormatterFocusManager::showObject 'gymkhana' with focus index = '' current focus = ''
 InputManager::addInputEventListener add listener but I am not running. I will notify you though,as soon as you start me!
 PresentationContext::getPropertyValue prop 'service.currentKeyMaster' == 'inputIdx'
@@ -3061,37 +3061,162 @@ PresentationEngineManager::updateStatus
 FormatterScheduler::eventStateChanged 'myBodyID_1' transition '0'
 FormatterPlayerAdapter::checkAnchorMonitor can't create TIME NominalEventMonitor for '-1\myBodyID\gymkhana\region_video' because next transition = '1.#INF' 
 InputManager::addInputEventListener add listener but I am not running. I will notify you though,as soon as you start me!
-FormatterScheduler::runAction takes '28' ms to start '-1\myBodyID\gymkhana\region_video'
+FormatterScheduler::runAction takes '34' ms to start '-1\myBodyID\gymkhana\region_video'
 LinkSimpleAction::~LinkSimpleAction
 AVPlayer::run
 AVPlayer::run total media time that will be considered  is '591.755'
+FormatterScheduler::runAction '1' over object '-1\myBodyID\cuadro_resultado\fondo_resultados' with event 'cuadro_resultado_1'
+FormatterConverter::compileExecutionObjectLinks object = '-1\myBodyID\cuadro_resultado\fondo_resultados'
+CompositeExecutionObject::getUncompiledLinks '-1\myBodyID\' has '5' uncompiled links
+SDL2ffmpeg::play calledFormatterConverter::compileExecutionObjectLinks 
+processing ncmLink 'mostrar_redSDL2ffmpeg::prepare Video frame rate is ''45000 inside '/-1\myBodyID\1877''
+
+SDL2ffmpeg::prepare Video average frame rate is '0/1'
+Link::containsNode searching 'SDL2ffmpeg::prepare Video time base frame rate is 'cuadro_resultado1' /inside link '90000mostrar_red'' (
+1 condition binds)
+Link::containsNode link 'mostrar_red' has 'background' with descriptor = 'fondo_resultados'
+FormatterConverter::compileExecutionObjectLinks can't process ncmLink 'mostrar_red' inside '-1\myBodyID\'  because 'mostrar_red' does not contain 'cuadro_resultado' src
+FormatterConverter::compileExecutionObjectLinks processing ncmLink 'mostrar_ok' inside '-1\myBodyID\'
+Link::containsNode searching 'cuadro_resultado' inside link 'mostrar_ok' (1 condition binds)
+Link::containsNode link 'mostrar_ok' has 'background' with descriptor = 'fondo_resultados'
+FormatterConverter::compileExecutionObjectLinks can't process ncmLink 'mostrar_ok' inside '-1\myBodyID\'  because 'mostrar_ok' does not contain 'cuadro_resultado' src
+FormatterConverter::compileExecutionObjectLinks processing ncmLink 'mostrar_ins1' inside '-1\myBodyID\'
+Link::containsNode searching 'cuadro_resultado' inside link 'mostrar_ins1' (1 condition binds)
+Link::containsNode link 'mostrar_ins1' has 'background' with descriptor = 'fondo_resultados'
+FormatterConverter::compileExecutionObjectLinks can't process ncmLink 'mostrar_ins1' inside '-1\myBodyID\'  because 'mostrar_ins1' does not contain 'cuadro_resultado' src
+FormatterConverter::compileExecutionObjectLinks processing ncmLink 'mostrar_ins2' inside '-1\myBodyID\'
+FormatterScheduler::runAction '1Link::containsNode searching 'cuadro_resultado' over object '' -1\myBodyID\input\dsInputinside link '' with event 'mostrar_ins2input_1' ('1
+ condition binds)
+Link::containsNode link 'mostrar_ins2FormatterScheduler::runAction ' has 'acquiring player for 'background-1\myBodyID\input\dsInput' with descriptor = '' fondo_resultados'
+FormatterConverter::compileExecutionObjectLinks can't process ncmLink 'mostrar_ins2' inside '-1\myBodyID\'  because 'mostrar_ins2' does not contain 'cuadro_resultadoPlayerAdapterManager::getPlayerClass is ' srcfinding a suitable player
+
+FormatterConverter::compileExecutionObjectLinks processing ncmLink 'mostrar_banner' inside '-1\myBodyID\'
+Link::containsNode searching 'cuadro_resultado' inside link 'mostrar_banner' (1 condition binds)
+Link::containsNode link 'mostrar_banner' has 'background' with descriptor = 'fondo_resultados'
+FormatterConverter::compileExecutionObjectLinks can't process ncmLink 'mostrar_banner' inside '-1\myBodyID\'  because 'mostrar_banner' does not contain 'cuadro_resultado' src
+ApplicationPlayerAdapter::ApplicationPlayerAdapter(05B11DA8FormatterConverter::compileExecutionObjectLinks object = ')-1\myBodyID\cuadro_resultado\fondo_resultados
+'
+PlayerAdapterManager::initializePlayer creating 'CompositeExecutionObject::getUncompiledLinks 'LuaPlayerAdapter-1\' param = '' has 'nclEdit0'' uncompiled links
+
+FormatterConverter::compileExecutionObjectLinks all links are already compiled for '-1\FormatterScheduler::runAction event ''input_1
+' for '-1\myBodyID\input\dsInput' action '1FormatterScheduler::runAction 'acquiring player for '
+-1\myBodyID\cuadro_resultado\fondo_resultados' FormatterScheduler::runActionOverApplicationObject ACTION = '1' event = 'input_1'
+PlayerAdapterManager::getPlayerClass is ApplicationPlayerAdapter::hasPrepared(finding a suitable player
+) return false because object = '00000000' and player = '00000000'
+RuleAdapter::adaptDescriptor for '-1\myBodyID\input\dsInput'
+PlayerAdapterManager::initializePlayer creating 'RuleAdapter::adaptDescriptor first unsolved descriptor ImagePlayerAdapteraddress '' param = '00000000''
+
+FormatterScheduler::runActionOverApplicationObject START 'FormatterPlayerAdapter::hasPrepared return false becauseinput_1 object = '' call player->prepare100000000
+' and player = '00000000'
+FormatterPlayerAdapter::prepareProperties(RuleAdapter::adaptDescriptor for 'C:\Users\Cristobal\Documents\RedesPC2\input.lua-1\myBodyID\cuadro_resultado\fondo_resultados) property ''text
+' with value 'RuleAdapter::adaptDescriptor first unsolved descriptor 'address '
+00000000'
+FormatterPlayerAdapter::hasPrepared return false because object = '00000000' and player = '00000000'
+ImagePlayerAdapter::createPlayer 'C:\Users\Cristobal\Documents\RedesPC2\media\fondo.jpg'
+ApplicationPlayerAdapter::createPlayer(05B11DA8)
+FormatterPlayerAdapter::createPlayer for 'C:\Users\Cristobal\Documents\RedesPC2\input.lua' set property 'text' value ''
+FormatterPlayerAdapter::createPlayer for 'C:\Users\Cristobal\Documents\RedesPC2\input.lua' object = '-1\myBodyID\input\dsInput' objectDevice = '0'
+ExecutionObject::addEvent Warning! Trying to add the same event 'input_1' twice current event address '05B00E40'  addEvent address '05B00E40'
+FormatterLayout::prepareFormatterRegion for '-1\myBodyID\input\dsInput'
+FormatterRegion::prepareOutputDisplay '05B13108' created with left   = '156' top    = '455' width  = '1053' height = '73' 
+SDLWindow::renderFrom(05B13108) Warning! NULL underlying surface!
+FormatterLayout::prepareFormatterRegion deviceRegion class is '0'
+ApplicationPlayerAdapter::start 
+InputManager::addInputEventListener add listener but I am not running. I will notify you though,as soon as you start me!
+fileExists is false: can't access 'vera'
+fileExists is false: can't access 'C:\Program Files\TeleMidia\Ginga\files\font\vera'
+ImagePlayerAdapter::createPlayer 'ApplicationExecutionObject::start starting transition manager!
+FormatterScheduler::eventStateChanged 'input_1' transition '0'
+FormatterMultiDevice::showObject '-1\myBodyID\input\dsInput' class '0'
+FormatterRegion::setRegionVisibility (05B0E0F0) object 'dsInput' display '05B13108' SHOW
+FormatterFocusManager::showObject 'input' with focus index = 'inputIdx' current focus = ''
+InputManager::addInputEventListener add listener but I am not running. I will notify you though,as soon as you start me!
+PresentationContext::getPropertyValue prop 'service.currentKeyMaster' == 'inputIdx'
+FormatterFocusManager::setFocus index 'inputIdx' is not in focus Table.
+PresentationContext::setPropertyValue propName = 'service.currentFocus' propValue = 'inputIdx'
+EntryEventListener::eventStateChanged parent id = '-1\myBodyID\' parent is running = '1' interface id = 'entryPoint' events running = '1'
+PresentationEngineManager::updateStatus
+ApplicationExecutionObject::start YEAP! Current event is running!
+FormatterPlayerAdapter::checkAnchorMonitor can't create TIME NominalEventMonitor for '-1\myBodyID\input\dsInput' because next transition = '1.#INF' 
+InputManager::addInputEventListener add listener but I am not running. I will notify you though,as soon as you start me!
+FormatterScheduler::runActionOverApp takes '47' ms to start '-1\myBodyID\input\dsInput'
+LinkSimpleAction::~LinkSimpleAction
+C:\Users\Cristobal\Documents\RedesPC2\media\fondo.jpg' ALL DONE
+FormatterPlayerAdapter::createPlayer for 'C:\Users\Cristobal\Documents\RedesPC2\media\fondo.jpg' object = '-1\myBodyID\cuadro_resultado\fondo_resultados' objectDevice = '0'
+ExecutionObject::prepare(-1\myBodyID\cuadro_resultado\fondo_resultados) 2nd call addEventListener '05B01058' or '05B01134'
+Player::setScope 'cuadro_resultado'
+FormatterLayout::prepareFormatterRegion for '-1\myBodyID\cuadro_resultado\fondo_resultados'
+FormatterRegion::prepareOutputDisplay '05B12558' created with left   = '0' top    = '533' width  = '1300' height = '150' 
+FormatterLayout::prepareFormatterRegion deviceRegion class is '0'
+FormatterScheduler::runAction '1' over object '-1\myBodyID\loading\cargando' with event 'loading_1'
+FormatterConverter::compileExecutionObjectLinks object = '-1\myBodyID\loading\cargando'
+CompositeExecutionObject::getUncompiledLinks '-1\myBodyID\' has '5' uncompiled links
+FormatterConverter::compileExecutionObjectLinks processing ncmLink 'mostrar_red' inside '-1\myBodyID\'
+Link::containsNode searching 'loading' inside link 'mostrar_red' (1 condition binds)
+Link::containsNode link 'mostrar_red' has 'background' with descriptor = 'cargando'
+FormatterConverter::compileExecutionObjectLinks can't process ncmLink 'mostrar_red' inside '-1\myBodyID\'  because 'mostrar_red' does not contain 'loading' src
+FormatterConverter::compileExecutionObjectLinks processing ncmLink 'mostrar_ok' inside '-1\myBodyID\'
+Link::containsNode searching 'loading' inside link 'mostrar_ok' (1 condition binds)
+Link::containsNode link 'mostrar_ok' has 'background' with descriptor = 'cargando'
+FormatterConverter::compileExecutionObjectLinks can't process ncmLink 'mostrar_ok' inside '-1\myBodyID\'  because 'mostrar_ok' does not contain 'loading' src
+FormatterConverter::compileExecutionObjectLinks processing ncmLink 'mostrar_ins1' inside '-1\myBodyID\'
+Link::containsNode searching 'loading' inside link 'mostrar_ins1' (1 condition binds)
+Link::containsNode link 'mostrar_ins1' has 'background' with descriptor = 'cargando'
+FormatterConverter::compileExecutionObjectLinks can't process ncmLink 'mostrar_ins1' inside '-1\myBodyID\'  because 'mostrar_ins1' does not contain 'loading' src
+FormatterConverter::compileExecutionObjectLinks processing ncmLink 'mostrar_ins2' inside '-1\myBodyID\'
+Link::containsNode searching 'loading' inside link 'mostrar_ins2' (1 condition binds)
+Link::containsNode link 'mostrar_ins2' has 'background' with descriptor = 'cargando'
+FormatterConverter::compileExecutionObjectLinks can't process ncmLink 'mostrar_ins2' inside '-1\myBodyID\'  because 'mostrar_ins2' does not contain 'loading' src
+FormatterConverter::compileExecutionObjectLinks processing ncmLink 'mostrar_banner' inside '-1\myBodyID\'
+Link::containsNode searching 'loading' inside link 'mostrar_banner' (1 condition binds)
+Link::containsNode link 'mostrar_banner' has 'background' with descriptor = 'cargando'
+FormatterConverter::compileExecutionObjectLinks can't process ncmLink 'mostrar_banner' inside '-1\myBodyID\'  because 'mostrar_banner' does not contain 'loading' src
+FormatterConverter::compileExecutionObjectLinks object = '-1\myBodyID\loading\cargando'
+CompositeExecutionObject::getUncompiledLinks '-1\' has '0' uncompiled links
+FormatterConverter::compileExecutionObjectLinks all links are already compiled for '-1\'
+FormatterScheduler::runAction acquiring player for '-1\myBodyID\loading\cargando' PlayerAdapterManager::getPlayerClass is finding a suitable player
+ApplicationPlayerAdapter::ApplicationPlayerAdapter(05B1E3D8)
+PlayerAdapterManager::initializePlayer creating 'LuaPlayerAdapter' param = 'nclEdit'
+FormatterScheduler::runAction event 'loading_1' for '-1\myBodyID\loading\cargando' action '1'
+FormatterScheduler::runActionOverApplicationObject ACTION = '1' event = 'loading_1'
+ApplicationPlayerAdapter::hasPrepared() return false because object = '00000000' and player = '00000000'
+RuleAdapter::adaptDescriptor for '-1\myBodyID\loading\cargando'
+RuleAdapter::adaptDescriptor first unsolved descriptor address '00000000'
+FormatterScheduler::runActionOverApplicationObject START 'loading_1' call player->prepare1
+FormatterPlayerAdapter::prepareProperties(C:\Users\Cristobal\Documents\RedesPC2\loading.lua) property 'state' with value ''
+FormatterScheduler::eventStateChanged 'cuadro_resultado_1' transition '0'
+FormatterMultiDevice::showObject '-1\myBodyID\cuadro_resultado\fondo_resultados' class '0'
+FormatterRegion::setRegionVisibility (05B064C8) object 'fondo_resultados' display '05B12558' SHOW
+FormatterFocusManager::showObject 'cuadro_resultado' with focus index = '' current focus = 'inputIdx'
+PresentationContext::getPropertyValue prop 'service.currentFocus' == 'inputIdx'
+PresentationContext::getPropertyValue prop 'service.currentKeyMaster' == 'inputIdx'
+FormatterPlayerAdapter::checkAnchorMonitor can't create TIME NominalEventMonitor for '-1\myBodyID\cuadro_resultado\fondo_resultados' because next transition = '1.#INF' 
+InputManager::addInputEventListener add listener but I am not running. I will notify you though,as soon as you start me!
+FormatterScheduler::runAction takes '91' ms to start '-1\myBodyID\cuadro_resultado\fondo_resultados'
+CompositeExecutionObject::linkEvaluationFinished(-1\myBodyID\) 'mostrar_cuadro_resultados'
 FormatterScheduler::runAction '1' over object '-1\myBodyID\gymkhana_audio\audio' with event 'gymkhana_audio_1'
-SDL2ffmpeg::play calledFormatterConverter::compileExecutionObjectLinks object = '
--1\myBodyID\gymkhana_audio\audio'SDL2ffmpeg::prepare Video frame rate is '
-45000CompositeExecutionObject::getUncompiledLinks '/-1\myBodyID\1877' has ''5
-' uncompiled links
-SDL2ffmpeg::prepare Video average frame rate is '0FormatterConverter::compileExecutionObjectLinks /processing ncmLink '1mostrar_ok''
- inside '-1\myBodyID\SDL2ffmpeg::prepare Video time base frame rate is ''1
-/90000'
-Link::containsNode searching 'gymkhana_audio' inside link 'mostrar_ok' (1 condition binds)
-Link::containsNode link 'mostrar_ok' has 'background' with descriptor = 'audio'
-FormatterConverter::compileExecutionObjectLinks can't process ncmLink 'mostrar_ok' inside '-1\myBodyID\'  because 'mostrar_ok' does not contain 'gymkhana_audio' src
+FormatterConverter::compileExecutionObjectLinks object = '-1\myBodyID\gymkhana_audio\audio'
+CompositeExecutionObject::getUncompiledLinks '-1\myBodyID\' has '5' uncompiled links
 FormatterConverter::compileExecutionObjectLinks processing ncmLink 'mostrar_red' inside '-1\myBodyID\'
 Link::containsNode searching 'gymkhana_audio' inside link 'mostrar_red' (1 condition binds)
 Link::containsNode link 'mostrar_red' has 'background' with descriptor = 'audio'
 FormatterConverter::compileExecutionObjectLinks can't process ncmLink 'mostrar_red' inside '-1\myBodyID\'  because 'mostrar_red' does not contain 'gymkhana_audio' src
-FormatterConverter::compileExecutionObjectLinks processing ncmLink 'mostrar_banner' inside '-1\myBodyID\'
-Link::containsNode searching 'gymkhana_audio' inside link 'mostrar_banner' (1 condition binds)
-Link::containsNode link 'mostrar_banner' has 'background' with descriptor = 'audio'
-FormatterConverter::compileExecutionObjectLinks can't process ncmLink 'mostrar_banner' inside '-1\myBodyID\'  because 'mostrar_banner' does not contain 'gymkhana_audio' src
-FormatterConverter::compileExecutionObjectLinks processing ncmLink 'mostrar_ins2' inside '-1\myBodyID\'
-Link::containsNode searching 'gymkhana_audio' inside link 'mostrar_ins2' (1 condition binds)
-Link::containsNode link 'mostrar_ins2' has 'background' with descriptor = 'audio'
-FormatterConverter::compileExecutionObjectLinks can't process ncmLink 'mostrar_ins2' inside '-1\myBodyID\'  because 'mostrar_ins2' does not contain 'gymkhana_audio' src
+FormatterConverter::compileExecutionObjectLinks processing ncmLink 'mostrar_ok' inside '-1\myBodyID\'
+Link::containsNode searching 'gymkhana_audio' inside link 'mostrar_ok' (1 condition binds)
+Link::containsNode link 'mostrar_ok' has 'background' with descriptor = 'audio'
+FormatterConverter::compileExecutionObjectLinks can't process ncmLink 'mostrar_ok' inside '-1\myBodyID\'  because 'mostrar_ok' does not contain 'gymkhana_audio' src
 FormatterConverter::compileExecutionObjectLinks processing ncmLink 'mostrar_ins1' inside '-1\myBodyID\'
 Link::containsNode searching 'gymkhana_audio' inside link 'mostrar_ins1' (1 condition binds)
 Link::containsNode link 'mostrar_ins1' has 'background' with descriptor = 'audio'
 FormatterConverter::compileExecutionObjectLinks can't process ncmLink 'mostrar_ins1' inside '-1\myBodyID\'  because 'mostrar_ins1' does not contain 'gymkhana_audio' src
+FormatterConverter::compileExecutionObjectLinks processing ncmLink 'mostrar_ins2' inside '-1\myBodyID\'
+Link::containsNode searching 'gymkhana_audio' inside link 'mostrar_ins2' (1 condition binds)
+Link::containsNode link 'mostrar_ins2' has 'background' with descriptor = 'audio'
+FormatterConverter::compileExecutionObjectLinks can't process ncmLink 'mostrar_ins2' inside '-1\myBodyID\'  because 'mostrar_ins2' does not contain 'gymkhana_audio' src
+FormatterConverter::compileExecutionObjectLinks processing ncmLink 'mostrar_banner' inside '-1\myBodyID\'
+Link::containsNode searching 'gymkhana_audio' inside link 'mostrar_banner' (1 condition binds)
+Link::containsNode link 'mostrar_banner' has 'background' with descriptor = 'audio'
+FormatterConverter::compileExecutionObjectLinks can't process ncmLink 'mostrar_banner' inside '-1\myBodyID\'  because 'mostrar_banner' does not contain 'gymkhana_audio' src
 FormatterConverter::compileExecutionObjectLinks object = '-1\myBodyID\gymkhana_audio\audio'
 CompositeExecutionObject::getUncompiledLinks '-1\' has '0' uncompiled links
 FormatterConverter::compileExecutionObjectLinks all links are already compiled for '-1\'
@@ -3102,25 +3227,24 @@ RuleAdapter::adaptDescriptor for '-1\myBodyID\gymkhana_audio\audio'
 RuleAdapter::adaptDescriptor first unsolved descriptor address '00000000'
 FormatterPlayerAdapter::hasPrepared return false because object = '00000000' and player = '00000000'
 AVPlayerAdapter::createPlayer for 'C:\Users\Cristobal\Documents\RedesPC2\media\gymkhana_audio.mp3' trying has visual = '0'
-AVPlayer::createProvider 'C:\Users\Cristobal\Documents\RedesPC2\media\gymkhana_audio.mp3' has visual = '0FormatterScheduler::runAction ''1
-' over object '-1\myBodyID\input\dsInput' with event 'input_1'
-FormatterScheduler::runAction acquiring player for '-1\myBodyID\input\dsInput' PlayerAdapterManager::getPlayerClass is finding a suitable player
-ApplicationPlayerAdapter::ApplicationPlayerAdapter(05531EF8)
-PlayerAdapterManager::initializePlayer creating 'LuaPlayerAdapter' param = 'nclEdit'
-FormatterScheduler::runAction event 'input_1' for '-1\myBodyID\input\dsInput' action '1'
-FormatterScheduler::runActionOverApplicationObject ACTION = '1' event = 'input_1'
-ApplicationPlayerAdapter::hasPrepared() return false because object = '00000000' and player = '00000000'
-RuleAdapter::adaptDescriptor for '-1\myBodyID\input\dsInput'
-RuleAdapter::adaptDescriptor first unsolved descriptor address '00000000'
-FormatterScheduler::runActionOverApplicationObject START 'input_1' call player->prepare1
-FormatterPlayerAdapter::prepareProperties(C:\Users\Cristobal\Documents\RedesPC2\input.lua) property 'text' with value ''
+AVPlayer::createProvider 'C:\Users\Cristobal\Documents\RedesPC2\media\gymkhana_audio.mp3' has visual = '0'
+ApplicationPlayerAdapter::createPlayer(05B1E3D8)
+FormatterPlayerAdapter::createPlayer for 'C:\Users\Cristobal\Documents\RedesPC2\loading.lua' set property 'state' value ''
+FormatterPlayerAdapter::createPlayer for 'C:\Users\Cristobal\Documents\RedesPC2\loading.lua' object = '-1\myBodyID\loading\cargando' objectDevice = '0'
+ExecutionObject::addEvent Warning! Trying to add the same event 'loading_1' twice current event address '05B00660'  addEvent address '05B00660'
+FormatterLayout::prepareFormatterRegion for '-1\myBodyID\loading\cargando'
+FormatterRegion::prepareOutputDisplay '05B13328' created with left   = '1222' top    = '471' width  = '78' height = '41' 
+SDLWindow::renderFrom(05B13328) Warning! NULL underlying surface!
+FormatterLayout::prepareFormatterRegion deviceRegion class is '0'
+ApplicationPlayerAdapter::start 
+InputManager::addInputEventListener add listener but I am not running. I will notify you though,as soon as you start me!
 SDL2ffmpeg::read_init context flags = '0'
 SDL2ffmpeg::openStreams 'C:\Users\Cristobal\Documents\RedesPC2\media\gymkhana_audio.mp3' doesn't have any video stream!
 SDL2ffmpeg::openStreams 'C:\Users\Cristobal\Documents\RedesPC2\media\gymkhana_audio.mp3' doesn't have any subtitle stream!
 AVPlayer::createProvider 'C:\Users\Cristobal\Documents\RedesPC2\media\gymkhana_audio.mp3' all done
 FormatterPlayerAdapter::createPlayer for 'C:\Users\Cristobal\Documents\RedesPC2\media\gymkhana_audio.mp3' object = '-1\myBodyID\gymkhana_audio\audio' objectDevice = '0'
 AVPlayerAdapter::createPlayer for 'C:\Users\Cristobal\Documents\RedesPC2\media\gymkhana_audio.mp3' has visual = '0' all done
-ExecutionObject::prepare(-1\myBodyID\gymkhana_audio\audio) 2nd call addEventListener '05521058' or '05521134'
+ExecutionObject::prepare(-1\myBodyID\gymkhana_audio\audio) 2nd call addEventListener '05B01058' or '05B01134'
 Player::setScope 'gymkhana_audio'
 FormatterMultiDevice::getFormatterLayout region is NULL
 AVPlayer::play() calling provider play over
@@ -3132,168 +3256,11 @@ FormatterMultiDevice::getFormatterLayout region is NULL
 FormatterFocusManager::showObject Warning!  FR is null.
 FormatterPlayerAdapter::checkAnchorMonitor can't create TIME NominalEventMonitor for '-1\myBodyID\gymkhana_audio\audio' because next transition = '1.#INF' 
 InputManager::addInputEventListener add listener but I am not running. I will notify you though,as soon as you start me!
-FormatterScheduler::runAction takes '24' ms to start '-1\myBodyID\gymkhana_audio\audio'
+FormatterScheduler::runAction takes '91' ms to start '-1\myBodyID\gymkhana_audio\audio'
 CompositeExecutionObject::linkEvaluationFinished(-1\myBodyID\) 'start_audio'
-FormatterScheduler::runAction '1' over object '-1\myBodyID\cuadro_resultado\fondo_resultados' with event 'cuadro_resultado_1'
-FormatterConverter::compileExecutionObjectLinks object = '-1\myBodyID\cuadro_resultado\fondo_resultados'
-CompositeExecutionObject::getUncompiledLinks '-1\myBodyID\' has '5' uncompiled links
-ApplicationPlayerAdapter::createPlayer(05531EF8FormatterConverter::compileExecutionObjectLinks )processing ncmLink '
-mostrar_ok' inside '-1\myBodyID\'
-FormatterPlayerAdapter::createPlayer for 'C:\Users\Cristobal\Documents\RedesPC2\input.lua' set property 'text' value ''
-Link::containsNode searching 'cuadro_resultado' inside link 'mostrar_ok' (1 condition binds)
-FormatterPlayerAdapter::createPlayer for 'C:\Users\Cristobal\Documents\RedesPC2\input.luaLink::containsNode link '' object = 'mostrar_ok-1\myBodyID\input\dsInput' has ''background objectDevice = '' with descriptor = '0fondo_resultados''
-
-FormatterConverter::compileExecutionObjectLinks can't process ncmLink 'mostrar_ok' inside '-1\myBodyID\'  because 'mostrar_ok' does not contain 'cuadro_resultado' src
-FormatterConverter::compileExecutionObjectLinks processing ncmLink 'mostrar_red' inside '-1\myBodyID\'
-Link::containsNode searching 'cuadro_resultado' inside link 'mostrar_red' (1ExecutionObject::addEvent Warning! Trying to add  condition binds)the same event '
-input_1' twiceLink::containsNode link ' current event address 'mostrar_red05520CF0' has '' background addEvent address '' with descriptor = '05520CF0fondo_resultados''
-
-FormatterConverter::compileExecutionObjectLinks can't process ncmLink 'mostrar_red' inside '-1\myBodyID\'  because 'mostrar_red' does not contain 'cuadro_resultado' src
-FormatterLayout::prepareFormatterRegion for 'FormatterConverter::compileExecutionObjectLinks -1\myBodyID\input\dsInputprocessing ncmLink ''mostrar_banner
-' inside '-1\myBodyID\'
-Link::containsNode searching 'cuadro_resultado' inside link 'mostrar_banner' (1 condition binds)
-Link::containsNode link 'mostrar_banner' has 'background' with descriptor = 'fondo_resultados'
-FormatterConverter::compileExecutionObjectLinks can't process ncmLink 'mostrar_banner' inside '-1\myBodyID\'  because 'mostrar_banner' does not contain 'cuadro_resultado' src
-FormatterConverter::compileExecutionObjectLinks processing ncmLink 'mostrar_ins2' inside '-1\myBodyID\'
-Link::containsNode searching 'cuadro_resultado' inside link 'mostrar_ins2' (1 condition binds)
-Link::containsNode link 'mostrar_ins2' has 'background' with descriptor = 'fondo_resultados'
-FormatterConverter::compileExecutionObjectLinks can't process ncmLink 'mostrar_ins2' inside '-1\myBodyID\'  because 'mostrar_ins2' does not contain 'cuadro_resultado' src
-FormatterConverter::compileExecutionObjectLinks processing ncmLink 'mostrar_ins1' inside '-1\myBodyID\'
-Link::containsNode searching 'cuadro_resultado' inside link 'mostrar_ins1' (1 condition binds)
-Link::containsNode link 'mostrar_ins1' has 'background' with descriptor = 'fondo_resultados'
-FormatterConverter::compileExecutionObjectLinks can't process ncmLink 'mostrar_ins1' inside '-1\myBodyID\'  because 'mostrar_ins1' does not contain 'cuadro_resultado' src
-FormatterConverter::compileExecutionObjectLinks object = 'FormatterRegion::prepareOutputDisplay '-1\myBodyID\cuadro_resultado\fondo_resultados05537C40'' created with 
-left   = '162CompositeExecutionObject::getUncompiledLinks '' -1\top    = '' has '4350' ' uncompiled linkswidth  = '
-1096' height = '70FormatterConverter::compileExecutionObjectLinks ' all links are already compiled for '
--1\'
-SDLWindow::renderFrom(05537C40) Warning! NULL underlying FormatterScheduler::runAction surface!acquiring player for '
--1\myBodyID\cuadro_resultado\fondo_resultados' FormatterLayout::prepareFormatterRegion deviceRegion class is '0'
-PlayerAdapterManager::getPlayerClass is finding a suitable player
-ApplicationPlayerAdapter::start 
-InputManager::addInputEventListener add listener but I am not running. I will notify you though,as soon as you start me!
-PlayerAdapterManager::initializePlayer creating 'ImagePlayerAdapter' param = ''
-FormatterPlayerAdapter::hasPrepared return false because object = '00000000' and player = '00000000'
-RuleAdapter::adaptDescriptor for '-1\myBodyID\cuadro_resultado\fondo_resultados'
-RuleAdapter::adaptDescriptor first unsolved descriptor address '00000000'
-FormatterPlayerAdapter::hasPrepared return false because object = '00000000' and player = '00000000'
-ImagePlayerAdapter::createPlayer 'C:\Users\Cristobal\Documents\RedesPC2\media\fondo.jpg'
-fileExists is false: can't access 'vera'
-fileExists is false: can't access 'C:\Program Files\TeleMidia\Ginga\files\font\vera'
-AVPlayer::run
-AVPlayer::run total media time that will be considered  is '591.807'
-ImagePlayerAdapter::createPlayer 'C:\Users\Cristobal\Documents\RedesPC2\media\fondo.jpg' ALL DONE
-ApplicationExecutionObject::start starting transition manager!
-FormatterScheduler::eventStateChanged 'input_1' transition '0'
-FormatterMultiDevice::showObject '-1\myBodyID\input\dsInput' class '0'
-FormatterRegion::setRegionVisibility (0552E0F0) object 'dsInput' display '05537C40' SHOW
-FormatterFocusManager::showObject 'input' with focus index = 'inputIdx' current focus = ''
-InputManager::addInputEventListener add listener but I am not running. I will notify you though,as soon as you start me!
-PresentationContext::getPropertyValue prop 'service.currentKeyMaster' == 'inputIdx'
-FormatterFocusManager::setFocus index 'inputIdx' is not in focus Table.
-PresentationContext::setPropertyValue propName = 'service.currentFocus' propValue = 'inputIdx'
-EntryEventListener::eventStateChanged parent id = '-1\myBodyID\' parent is running = '1' interface id = 'entryPoint' events running = '1'
-PresentationEngineManager::updateStatus
-ApplicationExecutionObject::start YEAP! Current event is running!
-FormatterPlayerAdapter::checkAnchorMonitor can't create TIME NominalEventMonitor for '-1\myBodyID\input\dsInput' because next transition = '1.#INF' 
-InputManager::addInputEventListener add listener but I am not running. I will notify you though,as soon as you start me!
-FormatterScheduler::runActionOverApp takes '72' ms to start '-1\myBodyID\input\dsInput'
-LinkSimpleAction::~LinkSimpleAction
-FormatterPlayerAdapter::createPlayer for 'C:\Users\Cristobal\Documents\RedesPC2\media\fondo.jpg' object = '-1\myBodyID\cuadro_resultado\fondo_resultados' objectDevice = '0'
-ExecutionObject::prepare(-1\myBodyID\cuadro_resultado\fondo_resultados) 2nd call addEventListener '05521058' or '05521134'
-Player::setScope 'cuadro_resultado'
-FormatterLayout::prepareFormatterRegion for '-1\myBodyID\cuadro_resultado\fondo_resultados'
-FormatterRegion::prepareOutputDisplay '055371A0' created with left   = '0' top    = '511' width  = '1354' height = '144' 
-FormatterLayout::prepareFormatterRegion deviceRegion class is '0'
-FormatterScheduler::runAction '1' over object '-1\myBodyID\loading\cargando' with event 'loading_1'
-FormatterConverter::compileExecutionObjectLinks object = '-1\myBodyID\loading\cargando'
-CompositeExecutionObject::getUncompiledLinks '-1\myBodyID\' has '5' uncompiled links
-FormatterConverter::compileExecutionObjectLinks processing ncmLink 'mostrar_ok' inside '-1\myBodyID\'
-Link::containsNode searching 'loading' inside link 'mostrar_ok' (1 condition binds)
-Link::containsNode link 'mostrar_ok' has 'background' with descriptor = 'cargando'
-FormatterConverter::compileExecutionObjectLinks can't process ncmLink 'mostrar_ok' inside '-1\myBodyID\'  because 'mostrar_ok' does not contain 'loading' src
-FormatterConverter::compileExecutionObjectLinks processing ncmLink 'mostrar_red' inside '-1\myBodyID\'
-Link::containsNode searching 'loading' inside link 'mostrar_red' (1 condition binds)
-Link::containsNode link 'mostrar_red' has 'background' with descriptor = 'cargando'
-FormatterConverter::compileExecutionObjectLinks can't process ncmLink 'mostrar_red' inside '-1\myBodyID\'  because 'mostrar_red' does not contain 'loading' src
-FormatterConverter::compileExecutionObjectLinks processing ncmLink 'mostrar_banner' inside '-1\myBodyID\'
-Link::containsNode searching 'loading' inside link 'mostrar_banner' (1 condition binds)
-Link::containsNode link 'mostrar_banner' has 'background' with descriptor = 'cargando'
-FormatterConverter::compileExecutionObjectLinks can't process ncmLink 'mostrar_banner' inside '-1\myBodyID\'  because 'mostrar_banner' does not contain 'loading' src
-FormatterConverter::compileExecutionObjectLinks processing ncmLink 'mostrar_ins2' inside '-1\myBodyID\'
-Link::containsNode searching 'loading' inside link 'mostrar_ins2' (1 condition binds)
-Link::containsNode link 'mostrar_ins2' has 'background' with descriptor = 'cargando'
-FormatterConverter::compileExecutionObjectLinks can't process ncmLink 'mostrar_ins2' inside '-1\myBodyID\'  because 'mostrar_ins2' does not contain 'loading' src
-FormatterConverter::compileExecutionObjectLinks processing ncmLink 'mostrar_ins1' inside '-1\myBodyID\'
-Link::containsNode searching 'loading' inside link 'mostrar_ins1' (1 condition binds)
-Link::containsNode link 'mostrar_ins1' has 'background' with descriptor = 'cargando'
-FormatterConverter::compileExecutionObjectLinks can't process ncmLink 'mostrar_ins1' inside '-1\myBodyID\'  because 'mostrar_ins1' does not contain 'loading' src
-FormatterConverter::compileExecutionObjectLinks object = '-1\myBodyID\loading\cargando'
-CompositeExecutionObject::getUncompiledLinks '-1\' has '0' uncompiled links
-FormatterConverter::compileExecutionObjectLinks all links are already compiled for '-1\'
-FormatterScheduler::runAction acquiring player for '-1\myBodyID\loading\cargando' PlayerAdapterManager::getPlayerClass is finding a suitable player
-ApplicationPlayerAdapter::ApplicationPlayerAdapter(0554D1C0)
-PlayerAdapterManager::initializePlayer creating 'LuaPlayerAdapter' param = 'nclEdit'
-FormatterScheduler::runAction event 'loading_1' for '-1\myBodyID\loading\cargando' action '1'
-FormatterScheduler::runActionOverApplicationObject ACTION = '1' event = 'loading_1'
-ApplicationPlayerAdapter::hasPrepared() return false because object = '00000000' and player = '00000000'
-RuleAdapter::adaptDescriptor for '-1\myBodyID\loading\cargando'
-RuleAdapter::adaptDescriptor first unsolved descriptor address '00000000'
-FormatterScheduler::runActionOverApplicationObject START 'loading_1' call player->prepare1
-FormatterPlayerAdapter::prepareProperties(C:\Users\Cristobal\Documents\RedesPC2\loading.lua) property 'state' with value ''
-ApplicationPlayerAdapter::createPlayer(0554D1C0)
-FormatterPlayerAdapter::createPlayer for 'C:\Users\Cristobal\Documents\RedesPC2\loading.lua' set property 'state' value ''
-FormatterPlayerAdapter::createPlayer for 'C:\Users\Cristobal\Documents\RedesPC2\loading.lua' object = '-1\myBodyID\loading\cargando' objectDevice = '0'
-ExecutionObject::addEvent Warning! Trying to add the same event 'loading_1' twice current event address '05520E40'  addEvent address '05520E40'
-FormatterLayout::prepareFormatterRegion for '-1\myBodyID\loading\cargando'
-FormatterRegion::prepareOutputDisplay '05537B30' created with left   = '1272' top    = '451' width  = '81' height = '39' 
-SDLWindow::renderFrom(05537B30) Warning! NULL underlying surface!
-FormatterLayout::prepareFormatterRegion deviceRegion class is '0'
-ApplicationPlayerAdapter::start 
-InputManager::addInputEventListener add listener but I am not running. I will notify you though,as soon as you start me!
-FormatterScheduler::eventStateChanged 'cuadro_resultado_1' transition '0'
-FormatterMultiDevice::showObject '-1\myBodyID\cuadro_resultado\fondo_resultados' class '0'
-FormatterRegion::setRegionVisibility (05528178) object 'fondo_resultados' display '055371A0' SHOW
-FormatterFocusManager::showObject 'cuadro_resultado' with focus index = '' current focus = 'inputIdx'
-PresentationContext::getPropertyValue prop 'service.currentFocus' == 'inputIdx'
-PresentationContext::getPropertyValue prop 'service.currentKeyMaster' == 'inputIdx'
-FormatterPlayerAdapter::checkAnchorMonitor can't create TIME NominalEventMonitor for '-1\myBodyID\cuadro_resultado\fondo_resultados' because next transition = '1.#INF' 
-InputManager::addInputEventListener add listener but I am not running. I will notify you though,as soon as you start me!
-FormatterScheduler::runAction takes '101' ms to start '-1\myBodyID\cuadro_resultado\fondo_resultados'
-CompositeExecutionObject::linkEvaluationFinished(-1\myBodyID\) 'mostrar_cuadro_resultados'
 FormatterScheduler::runAction '1' over object '-1\myBodyID\background\fondo' with event 'background_1'
 FormatterConverter::compileExecutionObjectLinks object = '-1\myBodyID\background\fondo'
 CompositeExecutionObject::getUncompiledLinks '-1\myBodyID\' has '5' uncompiled links
-FormatterConverter::compileExecutionObjectLinks processing ncmLink 'mostrar_ok' inside '-1\myBodyID\'
-Link::containsNode searching 'background' inside link 'mostrar_ok' (1 condition binds)
-Link::containsNode link 'mostrar_ok' has 'background' with descriptor = 'fondo'
-CompositeExecutionObject::removeLinkUncompiled 'mostrar_ok'
-FormatterLinkConverter::createCausalLink inside '-1\myBodyID\' from ncmlinkId 'mostrar_ok'
-CascadingDescriptor::~CascadingDescriptor(fondo)
-FormatterConverter::getExecutionObjectFromPerspective Adding_object with id = '-1\myBodyID\ok\boton_ok', perspective = '-1\myBodyID\ok' and parent = '-1\myBodyID\'
-FormatterConverter::compileExecutionObjectLinks object = '-1\myBodyID\ok\boton_ok'
-CompositeExecutionObject::getUncompiledLinks '-1\myBodyID\' has '4' uncompiled links
-FormatterConverter::compileExecutionObjectLinks processing ncmLink 'mostrar_red' inside '-1\myBodyID\'
-Link::containsNode searching 'ok' inside link 'mostrar_red' (1 condition binds)
-Link::containsNode link 'mostrar_red' has 'background' with descriptor = 'boton_ok'
-FormatterConverter::compileExecutionObjectLinks can't process ncmLink 'mostrar_red' inside '-1\myBodyID\'  because 'mostrar_red' does not contain 'ok' src
-FormatterConverter::compileExecutionObjectLinks processing ncmLink 'mostrar_banner' inside '-1\myBodyID\'
-Link::containsNode searching 'ok' inside link 'mostrar_banner' (1 condition binds)
-Link::containsNode link 'mostrar_banner' has 'background' with descriptor = 'boton_ok'
-FormatterConverter::compileExecutionObjectLinks can't process ncmLink 'mostrar_banner' inside '-1\myBodyID\'  because 'mostrar_banner' does not contain 'ok' src
-FormatterConverter::compileExecutionObjectLinks processing ncmLink 'mostrar_ins2' inside '-1\myBodyID\'
-Link::containsNode searching 'ok' inside link 'mostrar_ins2' (1 condition binds)
-Link::containsNode link 'mostrar_ins2' has 'background' with descriptor = 'boton_ok'
-FormatterConverter::compileExecutionObjectLinks can't process ncmLink 'mostrar_ins2' inside '-1\myBodyID\'  because 'mostrar_ins2' does not contain 'ok' src
-FormatterConverter::compileExecutionObjectLinks processing ncmLink 'mostrar_ins1' inside '-1\myBodyID\'
-Link::containsNode searching 'ok' inside link 'mostrar_ins1' (1 condition binds)
-Link::containsNode link 'mostrar_ins1' has 'background' with descriptor = 'boton_ok'
-FormatterConverter::compileExecutionObjectLinks can't process ncmLink 'mostrar_ins1' inside '-1\myBodyID\'  because 'mostrar_ins1' does not contain 'ok' src
-FormatterConverter::compileExecutionObjectLinks object = '-1\myBodyID\ok\boton_ok'
-CompositeExecutionObject::getUncompiledLinks '-1\' has '0' uncompiled links
-FormatterConverter::compileExecutionObjectLinks all links are already compiled for '-1\'
-ExecutionObject::addEvent 'ok_1' in '-1\myBodyID\ok\boton_ok'
-ExecutionObject::addPresentationEvent in '-1\myBodyID\ok\boton_ok'. Call transition manager addPresentationEvent for 'ok_1' begin = '0'; end = '1.#INF' position = '-1'
-FormatterConverter::compileExecutionObjectLinks LINKCOMPILED 'mostrar_ok'
 FormatterConverter::compileExecutionObjectLinks processing ncmLink 'mostrar_red' inside '-1\myBodyID\'
 Link::containsNode searching 'background' inside link 'mostrar_red' (1 condition binds)
 Link::containsNode link 'mostrar_red' has 'background' with descriptor = 'fondo'
@@ -3302,48 +3269,79 @@ FormatterLinkConverter::createCausalLink inside '-1\myBodyID\' from ncmlinkId 'm
 CascadingDescriptor::~CascadingDescriptor(fondo)
 FormatterConverter::getExecutionObjectFromPerspective Adding_object with id = '-1\myBodyID\red\boton_rojo', perspective = '-1\myBodyID\red' and parent = '-1\myBodyID\'
 FormatterConverter::compileExecutionObjectLinks object = '-1\myBodyID\red\boton_rojo'
-CompositeExecutionObject::getUncompiledLinks '-1\myBodyID\' has '3' uncompiled links
-FormatterConverter::compileExecutionObjectLinks processing ncmLink 'mostrar_banner' inside '-1\myBodyID\'
-Link::containsNode searching 'red' inside link 'mostrar_banner' (1 condition binds)
-Link::containsNode link 'mostrar_banner' has 'background' with descriptor = 'boton_rojo'
-FormatterConverter::compileExecutionObjectLinks can't process ncmLink 'mostrar_banner' inside '-1\myBodyID\'  because 'mostrar_banner' does not contain 'red' src
-FormatterConverter::compileExecutionObjectLinks processing ncmLink 'mostrar_ins2' inside '-1\myBodyID\'
-Link::containsNode searching 'red' inside link 'mostrar_ins2' (1 condition binds)
-Link::containsNode link 'mostrar_ins2' has 'background' with descriptor = 'boton_rojo'
-FormatterConverter::compileExecutionObjectLinks can't process ncmLink 'mostrar_ins2' inside '-1\myBodyID\'  because 'mostrar_ins2' does not contain 'red' src
+CompositeExecutionObject::getUncompiledLinks '-1\myBodyID\' has '4' uncompiled links
+FormatterConverter::compileExecutionObjectLinks processing ncmLink 'mostrar_ok' inside '-1\myBodyID\'
+Link::containsNode searching 'red' inside link 'mostrar_ok' (1 condition binds)
+Link::containsNode link 'mostrar_ok' has 'background' with descriptor = 'boton_rojo'
+FormatterConverter::compileExecutionObjectLinks can't process ncmLink 'mostrar_ok' inside '-1\myBodyID\'  because 'mostrar_ok' does not contain 'red' src
 FormatterConverter::compileExecutionObjectLinks processing ncmLink 'mostrar_ins1' inside '-1\myBodyID\'
 Link::containsNode searching 'red' inside link 'mostrar_ins1' (1 condition binds)
 Link::containsNode link 'mostrar_ins1' has 'background' with descriptor = 'boton_rojo'
 FormatterConverter::compileExecutionObjectLinks can't process ncmLink 'mostrar_ins1' inside '-1\myBodyID\'  because 'mostrar_ins1' does not contain 'red' src
+FormatterConverter::compileExecutionObjectLinks processing ncmLink 'mostrar_ins2' inside '-1\myBodyID\'
+Link::containsNode searching 'red' inside link 'mostrar_ins2' (1 condition binds)
+Link::containsNode link 'mostrar_ins2' has 'background' with descriptor = 'boton_rojo'
+FormatterConverter::compileExecutionObjectLinks can't process ncmLink 'mostrar_ins2' inside '-1\myBodyID\'  because 'mostrar_ins2' does not contain 'red' src
+FormatterConverter::compileExecutionObjectLinks processing ncmLink 'mostrar_banner' inside '-1\myBodyID\'
+Link::containsNode searching 'red' inside link 'mostrar_banner' (1 condition binds)
+Link::containsNode link 'mostrar_banner' has 'background' with descriptor = 'boton_rojo'
+FormatterConverter::compileExecutionObjectLinks can't process ncmLink 'mostrar_banner' inside '-1\myBodyID\'  because 'mostrar_banner' does not contain 'red' src
 FormatterConverter::compileExecutionObjectLinks object = '-1\myBodyID\red\boton_rojo'
 CompositeExecutionObject::getUncompiledLinks '-1\' has '0' uncompiled links
 FormatterConverter::compileExecutionObjectLinks all links are already compiled for '-1\'
 ExecutionObject::addEvent 'red_1' in '-1\myBodyID\red\boton_rojo'
 ExecutionObject::addPresentationEvent in '-1\myBodyID\red\boton_rojo'. Call transition manager addPresentationEvent for 'red_1' begin = '0'; end = '1.#INF' position = '-1'
 FormatterConverter::compileExecutionObjectLinks LINKCOMPILED 'mostrar_red'
-FormatterConverter::compileExecutionObjectLinks processing ncmLink 'mostrar_banner' inside '-1\myBodyID\'
-Link::containsNode searching 'background' inside link 'mostrar_banner' (1 condition binds)
-Link::containsNode link 'mostrar_banner' has 'background' with descriptor = 'fondo'
-CompositeExecutionObject::removeLinkUncompiled 'mostrar_banner'
-FormatterLinkConverter::createCausalLink inside '-1\myBodyID\' from ncmlinkId 'mostrar_banner'
+FormatterConverter::compileExecutionObjectLinks processing ncmLink 'mostrar_ok' inside '-1\myBodyID\'
+Link::containsNode searching 'background' inside link 'mostrar_ok' (1 condition binds)
+Link::containsNode link 'mostrar_ok' has 'background' with descriptor = 'fondo'
+CompositeExecutionObject::removeLinkUncompiled 'mostrar_ok'
+FormatterLinkConverter::createCausalLink inside '-1\myBodyID\' from ncmlinkId 'mostrar_ok'
 CascadingDescriptor::~CascadingDescriptor(fondo)
-FormatterConverter::getExecutionObjectFromPerspective Adding_object with id = '-1\myBodyID\m_banner\d_banner', perspective = '-1\myBodyID\m_banner' and parent = '-1\myBodyID\'
-FormatterConverter::compileExecutionObjectLinks object = '-1\myBodyID\m_banner\d_banner'
-CompositeExecutionObject::getUncompiledLinks '-1\myBodyID\' has '2' uncompiled links
-FormatterConverter::compileExecutionObjectLinks processing ncmLink 'mostrar_ins2' inside '-1\myBodyID\'
-Link::containsNode searching 'm_banner' inside link 'mostrar_ins2' (1 condition binds)
-Link::containsNode link 'mostrar_ins2' has 'background' with descriptor = 'd_banner'
-FormatterConverter::compileExecutionObjectLinks can't process ncmLink 'mostrar_ins2' inside '-1\myBodyID\'  because 'mostrar_ins2' does not contain 'm_banner' src
+FormatterConverter::getExecutionObjectFromPerspective Adding_object with id = '-1\myBodyID\ok\boton_ok', perspective = '-1\myBodyID\ok' and parent = '-1\myBodyID\'
+FormatterConverter::compileExecutionObjectLinks object = '-1\myBodyID\ok\boton_ok'
+CompositeExecutionObject::getUncompiledLinks '-1\myBodyID\' has '3' uncompiled links
 FormatterConverter::compileExecutionObjectLinks processing ncmLink 'mostrar_ins1' inside '-1\myBodyID\'
-Link::containsNode searching 'm_banner' inside link 'mostrar_ins1' (1 condition binds)
-Link::containsNode link 'mostrar_ins1' has 'background' with descriptor = 'd_banner'
-FormatterConverter::compileExecutionObjectLinks can't process ncmLink 'mostrar_ins1' inside '-1\myBodyID\'  because 'mostrar_ins1' does not contain 'm_banner' src
-FormatterConverter::compileExecutionObjectLinks object = '-1\myBodyID\m_banner\d_banner'
+Link::containsNode searching 'ok' inside link 'mostrar_ins1' (1 condition binds)
+Link::containsNode link 'mostrar_ins1' has 'background' with descriptor = 'boton_ok'
+FormatterConverter::compileExecutionObjectLinks can't process ncmLink 'mostrar_ins1' inside '-1\myBodyID\'  because 'mostrar_ins1' does not contain 'ok' src
+FormatterConverter::compileExecutionObjectLinks processing ncmLink 'mostrar_ins2' inside '-1\myBodyID\'
+Link::containsNode searching 'ok' inside link 'mostrar_ins2' (1 condition binds)
+Link::containsNode link 'mostrar_ins2' has 'background' with descriptor = 'boton_ok'
+FormatterConverter::compileExecutionObjectLinks can't process ncmLink 'mostrar_ins2' inside '-1\myBodyID\'  because 'mostrar_ins2' does not contain 'ok' src
+FormatterConverter::compileExecutionObjectLinks processing ncmLink 'mostrar_banner' inside '-1\myBodyID\'
+Link::containsNode searching 'ok' inside link 'mostrar_banner' (1 condition binds)
+Link::containsNode link 'mostrar_banner' has 'background' with descriptor = 'boton_ok'
+FormatterConverter::compileExecutionObjectLinks can't process ncmLink 'mostrar_banner' inside '-1\myBodyID\'  because 'mostrar_banner' does not contain 'ok' src
+FormatterConverter::compileExecutionObjectLinks object = '-1\myBodyID\ok\boton_ok'
 CompositeExecutionObject::getUncompiledLinks '-1\' has '0' uncompiled links
 FormatterConverter::compileExecutionObjectLinks all links are already compiled for '-1\'
-ExecutionObject::addEvent 'm_banner_1' in '-1\myBodyID\m_banner\d_banner'
-ExecutionObject::addPresentationEvent in '-1\myBodyID\m_banner\d_banner'. Call transition manager addPresentationEvent for 'm_banner_1' begin = '0'; end = '1.#INF' position = '-1'
-FormatterConverter::compileExecutionObjectLinks LINKCOMPILED 'mostrar_banner'
+ExecutionObject::addEvent 'ok_1' in '-1\myBodyID\ok\boton_ok'
+ExecutionObject::addPresentationEvent in '-1\myBodyID\ok\boton_ok'. Call transition manager addPresentationEvent for 'ok_1' begin = '0'; end = '1.#INF' position = '-1'
+FormatterConverter::compileExecutionObjectLinks LINKCOMPILED 'mostrar_ok'
+FormatterConverter::compileExecutionObjectLinks processing ncmLink 'mostrar_ins1' inside '-1\myBodyID\'
+Link::containsNode searching 'background' inside link 'mostrar_ins1' (1 condition binds)
+Link::containsNode link 'mostrar_ins1' has 'background' with descriptor = 'fondo'
+CompositeExecutionObject::removeLinkUncompiled 'mostrar_ins1'
+FormatterLinkConverter::createCausalLink inside '-1\myBodyID\' from ncmlinkId 'mostrar_ins1'
+CascadingDescriptor::~CascadingDescriptor(fondo)
+FormatterConverter::getExecutionObjectFromPerspective Adding_object with id = '-1\myBodyID\instruccion1\instruc_1', perspective = '-1\myBodyID\instruccion1' and parent = '-1\myBodyID\'
+FormatterConverter::compileExecutionObjectLinks object = '-1\myBodyID\instruccion1\instruc_1'
+CompositeExecutionObject::getUncompiledLinks '-1\myBodyID\' has '2' uncompiled links
+FormatterConverter::compileExecutionObjectLinks processing ncmLink 'mostrar_ins2' inside '-1\myBodyID\'
+Link::containsNode searching 'instruccion1' inside link 'mostrar_ins2' (1 condition binds)
+Link::containsNode link 'mostrar_ins2' has 'background' with descriptor = 'instruc_1'
+FormatterConverter::compileExecutionObjectLinks can't process ncmLink 'mostrar_ins2' inside '-1\myBodyID\'  because 'mostrar_ins2' does not contain 'instruccion1' src
+FormatterConverter::compileExecutionObjectLinks processing ncmLink 'mostrar_banner' inside '-1\myBodyID\'
+Link::containsNode searching 'instruccion1' inside link 'mostrar_banner' (1 condition binds)
+Link::containsNode link 'mostrar_banner' has 'background' with descriptor = 'instruc_1'
+FormatterConverter::compileExecutionObjectLinks can't process ncmLink 'mostrar_banner' inside '-1\myBodyID\'  because 'mostrar_banner' does not contain 'instruccion1' src
+FormatterConverter::compileExecutionObjectLinks object = '-1\myBodyID\instruccion1\instruc_1'
+CompositeExecutionObject::getUncompiledLinks '-1\' has '0' uncompiled links
+FormatterConverter::compileExecutionObjectLinks all links are already compiled for '-1\'
+ExecutionObject::addEvent 'instruccion1_1' in '-1\myBodyID\instruccion1\instruc_1'
+ExecutionObject::addPresentationEvent in '-1\myBodyID\instruccion1\instruc_1'. Call transition manager addPresentationEvent for 'instruccion1_1' begin = '0'; end = '1.#INF' position = '-1'
+FormatterConverter::compileExecutionObjectLinks LINKCOMPILED 'mostrar_ins1'
 FormatterConverter::compileExecutionObjectLinks processing ncmLink 'mostrar_ins2' inside '-1\myBodyID\'
 Link::containsNode searching 'background' inside link 'mostrar_ins2' (1 condition binds)
 Link::containsNode link 'mostrar_ins2' has 'background' with descriptor = 'fondo'
@@ -3353,32 +3351,32 @@ CascadingDescriptor::~CascadingDescriptor(fondo)
 FormatterConverter::getExecutionObjectFromPerspective Adding_object with id = '-1\myBodyID\instruccion2\instruc_2', perspective = '-1\myBodyID\instruccion2' and parent = '-1\myBodyID\'
 FormatterConverter::compileExecutionObjectLinks object = '-1\myBodyID\instruccion2\instruc_2'
 CompositeExecutionObject::getUncompiledLinks '-1\myBodyID\' has '1' uncompiled links
-FormatterConverter::compileExecutionObjectLinks processing ncmLink 'mostrar_ins1' inside '-1\myBodyID\'
-Link::containsNode searching 'instruccion2' inside link 'mostrar_ins1' (1 condition binds)
-Link::containsNode link 'mostrar_ins1' has 'background' with descriptor = 'instruc_2'
-FormatterConverter::compileExecutionObjectLinks can't process ncmLink 'mostrar_ins1' inside '-1\myBodyID\'  because 'mostrar_ins1' does not contain 'instruccion2' src
+FormatterConverter::compileExecutionObjectLinks processing ncmLink 'mostrar_banner' inside '-1\myBodyID\'
+Link::containsNode searching 'instruccion2' inside link 'mostrar_banner' (1 condition binds)
+Link::containsNode link 'mostrar_banner' has 'background' with descriptor = 'instruc_2'
+FormatterConverter::compileExecutionObjectLinks can't process ncmLink 'mostrar_banner' inside '-1\myBodyID\'  because 'mostrar_banner' does not contain 'instruccion2' src
 FormatterConverter::compileExecutionObjectLinks object = '-1\myBodyID\instruccion2\instruc_2'
 CompositeExecutionObject::getUncompiledLinks '-1\' has '0' uncompiled links
 FormatterConverter::compileExecutionObjectLinks all links are already compiled for '-1\'
 ExecutionObject::addEvent 'instruccion2_1' in '-1\myBodyID\instruccion2\instruc_2'
 ExecutionObject::addPresentationEvent in '-1\myBodyID\instruccion2\instruc_2'. Call transition manager addPresentationEvent for 'instruccion2_1' begin = '0'; end = '1.#INF' position = '-1'
 FormatterConverter::compileExecutionObjectLinks LINKCOMPILED 'mostrar_ins2'
-FormatterConverter::compileExecutionObjectLinks processing ncmLink 'mostrar_ins1' inside '-1\myBodyID\'
-Link::containsNode searching 'background' inside link 'mostrar_ins1' (1 condition binds)
-Link::containsNode link 'mostrar_ins1' has 'background' with descriptor = 'fondo'
-CompositeExecutionObject::removeLinkUncompiled 'mostrar_ins1'
-FormatterLinkConverter::createCausalLink inside '-1\myBodyID\' from ncmlinkId 'mostrar_ins1'
+FormatterConverter::compileExecutionObjectLinks processing ncmLink 'mostrar_banner' inside '-1\myBodyID\'
+Link::containsNode searching 'background' inside link 'mostrar_banner' (1 condition binds)
+Link::containsNode link 'mostrar_banner' has 'background' with descriptor = 'fondo'
+CompositeExecutionObject::removeLinkUncompiled 'mostrar_banner'
+FormatterLinkConverter::createCausalLink inside '-1\myBodyID\' from ncmlinkId 'mostrar_banner'
 CascadingDescriptor::~CascadingDescriptor(fondo)
-FormatterConverter::getExecutionObjectFromPerspective Adding_object with id = '-1\myBodyID\instruccion1\instruc_1', perspective = '-1\myBodyID\instruccion1' and parent = '-1\myBodyID\'
-FormatterConverter::compileExecutionObjectLinks object = '-1\myBodyID\instruccion1\instruc_1'
+FormatterConverter::getExecutionObjectFromPerspective Adding_object with id = '-1\myBodyID\m_banner\d_banner', perspective = '-1\myBodyID\m_banner' and parent = '-1\myBodyID\'
+FormatterConverter::compileExecutionObjectLinks object = '-1\myBodyID\m_banner\d_banner'
 CompositeExecutionObject::getUncompiledLinks '-1\myBodyID\' has '0' uncompiled links
 FormatterConverter::compileExecutionObjectLinks all links are already compiled for '-1\myBodyID\'
 FormatterConverter::compileExecutionObjectLinks object = '-1\myBodyID\'
 CompositeExecutionObject::getUncompiledLinks '-1\' has '0' uncompiled links
 FormatterConverter::compileExecutionObjectLinks all links are already compiled for '-1\'
-ExecutionObject::addEvent 'instruccion1_1' in '-1\myBodyID\instruccion1\instruc_1'
-ExecutionObject::addPresentationEvent in '-1\myBodyID\instruccion1\instruc_1'. Call transition manager addPresentationEvent for 'instruccion1_1' begin = '0'; end = '1.#INF' position = '-1'
-FormatterConverter::compileExecutionObjectLinks LINKCOMPILED 'mostrar_ins1'
+ExecutionObject::addEvent 'm_banner_1' in '-1\myBodyID\m_banner\d_banner'
+ExecutionObject::addPresentationEvent in '-1\myBodyID\m_banner\d_banner'. Call transition manager addPresentationEvent for 'm_banner_1' begin = '0'; end = '1.#INF' position = '-1'
+FormatterConverter::compileExecutionObjectLinks LINKCOMPILED 'mostrar_banner'
 FormatterConverter::compileExecutionObjectLinks object = '-1\myBodyID\background\fondo'
 CompositeExecutionObject::getUncompiledLinks '-1\' has '0' uncompiled links
 FormatterConverter::compileExecutionObjectLinks all links are already compiled for '-1\'
@@ -3389,22 +3387,24 @@ RuleAdapter::adaptDescriptor for '-1\myBodyID\background\fondo'
 RuleAdapter::adaptDescriptor first unsolved descriptor address '00000000'
 FormatterPlayerAdapter::hasPrepared return false because object = '00000000' and player = '00000000'
 ImagePlayerAdapter::createPlayer 'C:\Users\Cristobal\Documents\RedesPC2\media\fondo.jpg'
+AVPlayer::run
+AVPlayer::run total media time that will be considered  is '591.807'
 ImagePlayerAdapter::createPlayer 'C:\Users\Cristobal\Documents\RedesPC2\media\fondo.jpg' ALL DONE
 FormatterPlayerAdapter::createPlayer for 'C:\Users\Cristobal\Documents\RedesPC2\media\fondo.jpg' object = '-1\myBodyID\background\fondo' objectDevice = '0'
-ExecutionObject::prepare(-1\myBodyID\background\fondo) 2nd call addEventListener '05521058' or '05521134'
+ExecutionObject::prepare(-1\myBodyID\background\fondo) 2nd call addEventListener '05B01058' or '05B01134'
 Player::setScope 'background'
 FormatterLayout::prepareFormatterRegion for '-1\myBodyID\background\fondo'
-FormatterRegion::prepareOutputDisplay '05535DF8' created with left   = '974' top    = '0' width  = '379' height = '432' 
+FormatterRegion::prepareOutputDisplay '05B140F8' created with left   = '936' top    = '0' width  = '364' height = '451' 
 FormatterLayout::prepareFormatterRegion deviceRegion class is '0'
 FormatterScheduler::eventStateChanged 'background_1' transition '0'
 FormatterMultiDevice::showObject '-1\myBodyID\background\fondo' class '0'
-FormatterRegion::setRegionVisibility (05529770) object 'fondo' display '05535DF8' SHOW
+FormatterRegion::setRegionVisibility (05B09770) object 'fondo' display '05B140F8' SHOW
 FormatterFocusManager::showObject 'background' with focus index = '' current focus = 'inputIdx'
 PresentationContext::getPropertyValue prop 'service.currentFocus' == 'inputIdx'
 PresentationContext::getPropertyValue prop 'service.currentKeyMaster' == 'inputIdx'
 FormatterPlayerAdapter::checkAnchorMonitor can't create TIME NominalEventMonitor for '-1\myBodyID\background\fondo' because next transition = '1.#INF' 
 InputManager::addInputEventListener add listener but I am not running. I will notify you though,as soon as you start me!
-FormatterScheduler::runAction takes '142' ms to start '-1\myBodyID\background\fondo'
+FormatterScheduler::runAction takes '94' ms to start '-1\myBodyID\background\fondo'
 CompositeExecutionObject::linkEvaluationFinished(-1\myBodyID\) 'mostrar_instrucciones'
 FormatterScheduler::runAction '1' over object '-1\myBodyID\cuadro_busqueda\fondo_busqueda' with event 'cuadro_busqueda_1'
 FormatterConverter::compileExecutionObjectLinks object = '-1\myBodyID\cuadro_busqueda\fondo_busqueda'
@@ -3422,36 +3422,20 @@ FormatterPlayerAdapter::hasPrepared return false because object = '00000000' and
 ImagePlayerAdapter::createPlayer 'C:\Users\Cristobal\Documents\RedesPC2\media\cuadro_busqueda.png'
 ImagePlayerAdapter::createPlayer 'C:\Users\Cristobal\Documents\RedesPC2\media\cuadro_busqueda.png' ALL DONE
 FormatterPlayerAdapter::createPlayer for 'C:\Users\Cristobal\Documents\RedesPC2\media\cuadro_busqueda.png' object = '-1\myBodyID\cuadro_busqueda\fondo_busqueda' objectDevice = '0'
-ExecutionObject::prepare(-1\myBodyID\cuadro_busqueda\fondo_busqueda) 2nd call addEventListener '05521058' or '05521134'
+ExecutionObject::prepare(-1\myBodyID\cuadro_busqueda\fondo_busqueda) 2nd call addEventListener '05B01058' or '05B01134'
 Player::setScope 'cuadro_busqueda'
 FormatterLayout::prepareFormatterRegion for '-1\myBodyID\cuadro_busqueda\fondo_busqueda'
-ApplicationExecutionObject::start starting transition manager!
-FormatterScheduler::eventStateChanged 'loading_1' transition '0'
-FormatterMultiDevice::showObject '-1\myBodyID\loading\cargando' class '0'
-FormatterRegion::setRegionVisibility (05523600) object 'cargando' display '05537B30' SHOW
-FormatterFocusManager::showObject 'loading' with focus index = '' current focus = 'inputIdx'
-PresentationContext::getPropertyValue prop 'service.currentFocus' == 'inputIdx'
-PresentationContext::getPropertyValue prop 'service.currentKeyMaster' == 'inputIdx'
-EntryEventListener::eventStateChanged parent id = '-1\myBodyID\' parent is running = '1' interface id = 'p0' events running = '2'
-PresentationEngineManager::updateStatus
-ApplicationExecutionObject::start YEAP! Current event is running!
-FormatterPlayerAdapter::checkAnchorMonitor can't create TIME NominalEventMonitor for '-1\myBodyID\loading\cargando' because next transition = '1.#INF' 
-InputManager::addInputEventListener add listener but I am not running. I will notify you though,as soon as you start me!
-FormatterScheduler::runActionOverApp takes '263' ms to start '-1\myBodyID\loading\cargando'
-LinkSimpleAction::~LinkSimpleAction
-FormatterScheduler::startDocument Through event 'myBodyID_1' started '3' events
-PresentationEngineManager::waitUnlockCondition
-FormatterRegion::prepareOutputDisplay '05536AB8' created with left   = '0' top    = '432' width  = '1354' height = '78' 
+FormatterRegion::prepareOutputDisplay '05B13A10' created with left   = '0' top    = '451' width  = '1300' height = '82' 
 FormatterLayout::prepareFormatterRegion deviceRegion class is '0'
 FormatterScheduler::eventStateChanged 'cuadro_busqueda_1' transition '0'
 FormatterMultiDevice::showObject '-1\myBodyID\cuadro_busqueda\fondo_busqueda' class '0'
-FormatterRegion::setRegionVisibility (0552DC60) object 'fondo_busqueda' display '05536AB8' SHOW
+FormatterRegion::setRegionVisibility (05B0DC60) object 'fondo_busqueda' display '05B13A10' SHOW
 FormatterFocusManager::showObject 'cuadro_busqueda' with focus index = '' current focus = 'inputIdx'
 PresentationContext::getPropertyValue prop 'service.currentFocus' == 'inputIdx'
 PresentationContext::getPropertyValue prop 'service.currentKeyMaster' == 'inputIdx'
 FormatterPlayerAdapter::checkAnchorMonitor can't create TIME NominalEventMonitor for '-1\myBodyID\cuadro_busqueda\fondo_busqueda' because next transition = '1.#INF' 
 InputManager::addInputEventListener add listener but I am not running. I will notify you though,as soon as you start me!
-FormatterScheduler::runAction takes '87' ms to start '-1\myBodyID\cuadro_busqueda\fondo_busqueda'
+FormatterScheduler::runAction takes '82' ms to start '-1\myBodyID\cuadro_busqueda\fondo_busqueda'
 CompositeExecutionObject::linkEvaluationFinished(-1\myBodyID\) 'mostrar_cuadro_busqueda'
 FormatterScheduler::runAction '1' over object '-1\myBodyID\twitter\descTwitter' with event 'twitter_1'
 FormatterConverter::compileExecutionObjectLinks object = '-1\myBodyID\twitter\descTwitter'
@@ -3461,7 +3445,7 @@ FormatterConverter::compileExecutionObjectLinks object = '-1\myBodyID\'
 CompositeExecutionObject::getUncompiledLinks '-1\' has '0' uncompiled links
 FormatterConverter::compileExecutionObjectLinks all links are already compiled for '-1\'
 FormatterScheduler::runAction acquiring player for '-1\myBodyID\twitter\descTwitter' PlayerAdapterManager::getPlayerClass is finding a suitable player
-ApplicationPlayerAdapter::ApplicationPlayerAdapter(05584B48)
+ApplicationPlayerAdapter::ApplicationPlayerAdapter(05B580D0)
 PlayerAdapterManager::initializePlayer creating 'LuaPlayerAdapter' param = 'nclEdit'
 FormatterScheduler::runAction event 'twitter_1' for '-1\myBodyID\twitter\descTwitter' action '1'
 FormatterScheduler::runActionOverApplicationObject ACTION = '1' event = 'twitter_1'
@@ -3470,28 +3454,69 @@ RuleAdapter::adaptDescriptor for '-1\myBodyID\twitter\descTwitter'
 RuleAdapter::adaptDescriptor first unsolved descriptor address '00000000'
 FormatterScheduler::runActionOverApplicationObject START 'twitter_1' call player->prepare1
 FormatterPlayerAdapter::prepareProperties(C:\Users\Cristobal\Documents\RedesPC2\twitter.lua) property 'text' with value ''
-ApplicationPlayerAdapter::createPlayer(05584B48)
+ApplicationPlayerAdapter::createPlayer(05B580D0)
 FormatterPlayerAdapter::createPlayer for 'C:\Users\Cristobal\Documents\RedesPC2\twitter.lua' set property 'text' value ''
 FormatterPlayerAdapter::createPlayer for 'C:\Users\Cristobal\Documents\RedesPC2\twitter.lua' object = '-1\myBodyID\twitter\descTwitter' objectDevice = '0'
-ExecutionObject::addEvent Warning! Trying to add the same event 'twitter_1' twice current event address '055201C8'  addEvent address '055201C8'
+ExecutionObject::addEvent Warning! Trying to add the same event 'twitter_1' twice current event address '05B00270'  addEvent address '05B00270'
 FormatterLayout::prepareFormatterRegion for '-1\myBodyID\twitter\descTwitter'
-FormatterRegion::prepareOutputDisplay '05535F08' created with left   = '27' top    = '529' width  = '1299' height = '109' 
-SDLWindow::renderFrom(05535F08) Warning! NULL underlying surface!
+FormatterRegion::prepareOutputDisplay '05B137F0' created with left   = '26' top    = '552' width  = '1248' height = '114' 
+SDLWindow::renderFrom(05B137F0) Warning! NULL underlying surface!
 FormatterLayout::prepareFormatterRegion deviceRegion class is '0'
 ApplicationPlayerAdapter::start 
 InputManager::addInputEventListener add listener but I am not running. I will notify you though,as soon as you start me!
 ApplicationExecutionObject::start starting transition manager!
 FormatterScheduler::eventStateChanged 'twitter_1' transition '0'
 FormatterMultiDevice::showObject '-1\myBodyID\twitter\descTwitter' class '0'
-FormatterRegion::setRegionVisibility (0552E5E0) object 'descTwitter' display '05535F08' SHOW
+FormatterRegion::setRegionVisibility (05B0E570) object 'descTwitter' display '05B137F0' SHOW
 FormatterFocusManager::showObject 'twitter' with focus index = '' current focus = 'inputIdx'
 PresentationContext::getPropertyValue prop 'service.currentFocus' == 'inputIdx'
 PresentationContext::getPropertyValue prop 'service.currentKeyMaster' == 'inputIdx'
 ApplicationExecutionObject::start YEAP! Current event is running!
 FormatterPlayerAdapter::checkAnchorMonitor can't create TIME NominalEventMonitor for '-1\myBodyID\twitter\descTwitter' because next transition = '1.#INF' 
 InputManager::addInputEventListener add listener but I am not running. I will notify you though,as soon as you start me!
-FormatterScheduler::runActionOverApp takes '3' ms to start '-1\myBodyID\twitter\descTwitter'
+FormatterScheduler::runActionOverApp takes '2' ms to start '-1\myBodyID\twitter\descTwitter'
 CompositeExecutionObject::linkEvaluationFinished(-1\myBodyID\) ''
+FormatterScheduler::runAction '1' over object '-1\myBodyID\red\boton_rojo' with event 'red_1'
+FormatterScheduler::runAction acquiring player for '-1\myBodyID\red\boton_rojo' PlayerAdapterManager::getPlayerClass is finding a suitable player
+PlayerAdapterManager::initializePlayer creating 'ImagePlayerAdapter' param = ''
+FormatterPlayerAdapter::hasPrepared return false because object = '00000000' and player = '00000000'
+RuleAdapter::adaptDescriptor for '-1\myBodyID\red\boton_rojo'
+RuleAdapter::adaptDescriptor first unsolved descriptor address '00000000'
+FormatterPlayerAdapter::hasPrepared return false because object = '00000000' and player = '00000000'
+ImagePlayerAdapter::createPlayer 'C:\Users\Cristobal\Documents\RedesPC2\media\red.png'
+ApplicationExecutionObject::start starting transition manager!
+FormatterScheduler::eventStateChanged 'loading_1' transition '0'
+FormatterMultiDevice::showObject '-1\myBodyID\loading\cargando' class '0'
+FormatterRegion::setRegionVisibility (05B03600) object 'cargando' display '05B13328' SHOW
+FormatterFocusManager::showObject 'loading' with focus index = '' current focus = 'inputIdx'
+PresentationContext::getPropertyValue prop 'service.currentFocus' == 'inputIdx'
+PresentationContext::getPropertyValue prop 'service.currentKeyMaster' == 'inputIdx'
+EntryEventListener::eventStateChanged parent id = '-1\myBodyID\' parent is running = '1' interface id = 'p0' events running = '2'
+PresentationEngineManager::updateStatus
+ApplicationExecutionObject::start YEAP! Current event is running!
+FormatterPlayerAdapter::checkAnchorMonitor can't create TIME NominalEventMonitor for '-1\myBodyID\loading\cargando' because next transition = '1.#INF' 
+InputManager::addInputEventListener add listener but I am not running. I will notify you though,as soon as you start me!
+FormatterScheduler::runActionOverApp takes '305' ms to start '-1\myBodyID\loading\cargando'
+LinkSimpleAction::~LinkSimpleAction
+ImagePlayerAdapter::createPlayer 'C:\Users\Cristobal\Documents\RedesPC2\media\red.png' ALL DONE
+FormatterPlayerAdapter::createPlayer for 'C:\Users\Cristobal\Documents\RedesPC2\media\red.png' object = '-1\myBodyID\red\boton_rojo' objectDevice = '0'
+ExecutionObject::prepare(-1\myBodyID\red\boton_rojo) 2nd call addEventListener '05B01058' or '05B01134'
+Player::setScope 'red'
+FormatterLayout::prepareFormatterRegion for '-1\myBodyID\red\boton_rojo'
+FormatterRegion::prepareOutputDisplay '05B70C38' created with left   = '1069' top    = '225' width  = '54' height = '54' 
+FormatterLayout::prepareFormatterRegion deviceRegion class is '0'
+FormatterScheduler::startDocument Through event 'myBodyID_1' started '3' events
+PresentationEngineManager::waitUnlockCondition
+FormatterScheduler::eventStateChanged 'red_1' transition '0'
+FormatterMultiDevice::showObject '-1\myBodyID\red\boton_rojo' class '0'
+FormatterRegion::setRegionVisibility (05B4AFF8) object 'boton_rojo' display '05B70C38' SHOW
+FormatterFocusManager::showObject 'red' with focus index = '' current focus = 'inputIdx'
+PresentationContext::getPropertyValue prop 'service.currentFocus' == 'inputIdx'
+PresentationContext::getPropertyValue prop 'service.currentKeyMaster' == 'inputIdx'
+FormatterPlayerAdapter::checkAnchorMonitor can't create TIME NominalEventMonitor for '-1\myBodyID\red\boton_rojo' because next transition = '1.#INF' 
+InputManager::addInputEventListener add listener but I am not running. I will notify you though,as soon as you start me!
+FormatterScheduler::runAction takes '3' ms to start '-1\myBodyID\red\boton_rojo'
+CompositeExecutionObject::linkEvaluationFinished(-1\myBodyID\) 'mostrar_red'
 FormatterScheduler::runAction '1' over object '-1\myBodyID\ok\boton_ok' with event 'ok_1'
 FormatterScheduler::runAction acquiring player for '-1\myBodyID\ok\boton_ok' PlayerAdapterManager::getPlayerClass is finding a suitable player
 PlayerAdapterManager::initializePlayer creating 'ImagePlayerAdapter' param = ''
@@ -3502,46 +3527,21 @@ FormatterPlayerAdapter::hasPrepared return false because object = '00000000' and
 ImagePlayerAdapter::createPlayer 'C:\Users\Cristobal\Documents\RedesPC2\media\ok.png'
 ImagePlayerAdapter::createPlayer 'C:\Users\Cristobal\Documents\RedesPC2\media\ok.png' ALL DONE
 FormatterPlayerAdapter::createPlayer for 'C:\Users\Cristobal\Documents\RedesPC2\media\ok.png' object = '-1\myBodyID\ok\boton_ok' objectDevice = '0'
-ExecutionObject::prepare(-1\myBodyID\ok\boton_ok) 2nd call addEventListener '05521058' or '05521134'
+ExecutionObject::prepare(-1\myBodyID\ok\boton_ok) 2nd call addEventListener '05B01058' or '05B01134'
 Player::setScope 'ok'
 FormatterLayout::prepareFormatterRegion for '-1\myBodyID\ok\boton_ok'
-FormatterRegion::prepareOutputDisplay '05596E78' created with left   = '1114' top    = '370' width  = '72' height = '51' 
+FormatterRegion::prepareOutputDisplay '05B71430' created with left   = '1070' top    = '386' width  = '69' height = '54' 
 FormatterLayout::prepareFormatterRegion deviceRegion class is '0'
 FormatterScheduler::eventStateChanged 'ok_1' transition '0'
 FormatterMultiDevice::showObject '-1\myBodyID\ok\boton_ok' class '0'
-FormatterRegion::setRegionVisibility (0555A538) object 'boton_ok' display '05596E78' SHOW
+FormatterRegion::setRegionVisibility (05B4BBF8) object 'boton_ok' display '05B71430' SHOW
 FormatterFocusManager::showObject 'ok' with focus index = '' current focus = 'inputIdx'
 PresentationContext::getPropertyValue prop 'service.currentFocus' == 'inputIdx'
 PresentationContext::getPropertyValue prop 'service.currentKeyMaster' == 'inputIdx'
 FormatterPlayerAdapter::checkAnchorMonitor can't create TIME NominalEventMonitor for '-1\myBodyID\ok\boton_ok' because next transition = '1.#INF' 
 InputManager::addInputEventListener add listener but I am not running. I will notify you though,as soon as you start me!
-FormatterScheduler::runAction takes '6' ms to start '-1\myBodyID\ok\boton_ok'
+FormatterScheduler::runAction takes '2' ms to start '-1\myBodyID\ok\boton_ok'
 CompositeExecutionObject::linkEvaluationFinished(-1\myBodyID\) 'mostrar_ok'
-FormatterScheduler::runAction '1' over object '-1\myBodyID\red\boton_rojo' with event 'red_1'
-FormatterScheduler::runAction acquiring player for '-1\myBodyID\red\boton_rojo' PlayerAdapterManager::getPlayerClass is finding a suitable player
-PlayerAdapterManager::initializePlayer creating 'ImagePlayerAdapter' param = ''
-FormatterPlayerAdapter::hasPrepared return false because object = '00000000' and player = '00000000'
-RuleAdapter::adaptDescriptor for '-1\myBodyID\red\boton_rojo'
-RuleAdapter::adaptDescriptor first unsolved descriptor address '00000000'
-FormatterPlayerAdapter::hasPrepared return false because object = '00000000' and player = '00000000'
-ImagePlayerAdapter::createPlayer 'C:\Users\Cristobal\Documents\RedesPC2\media\red.png'
-ImagePlayerAdapter::createPlayer 'C:\Users\Cristobal\Documents\RedesPC2\media\red.png' ALL DONE
-FormatterPlayerAdapter::createPlayer for 'C:\Users\Cristobal\Documents\RedesPC2\media\red.png' object = '-1\myBodyID\red\boton_rojo' objectDevice = '0'
-ExecutionObject::prepare(-1\myBodyID\red\boton_rojo) 2nd call addEventListener '05521058' or '05521134'
-Player::setScope 'red'
-FormatterLayout::prepareFormatterRegion for '-1\myBodyID\red\boton_rojo'
-FormatterRegion::prepareOutputDisplay '055960A8' created with left   = '1112' top    = '216' width  = '56' height = '51' 
-FormatterLayout::prepareFormatterRegion deviceRegion class is '0'
-FormatterScheduler::eventStateChanged 'red_1' transition '0'
-FormatterMultiDevice::showObject '-1\myBodyID\red\boton_rojo' class '0'
-FormatterRegion::setRegionVisibility (0556FAC8) object 'boton_rojo' display '055960A8' SHOW
-FormatterFocusManager::showObject 'red' with focus index = '' current focus = 'inputIdx'
-PresentationContext::getPropertyValue prop 'service.currentFocus' == 'inputIdx'
-PresentationContext::getPropertyValue prop 'service.currentKeyMaster' == 'inputIdx'
-FormatterPlayerAdapter::checkAnchorMonitor can't create TIME NominalEventMonitor for '-1\myBodyID\red\boton_rojo' because next transition = '1.#INF' 
-InputManager::addInputEventListener add listener but I am not running. I will notify you though,as soon as you start me!
-FormatterScheduler::runAction takes '2' ms to start '-1\myBodyID\red\boton_rojo'
-CompositeExecutionObject::linkEvaluationFinished(-1\myBodyID\) 'mostrar_red'
 FormatterScheduler::runAction '1' over object '-1\myBodyID\instruccion2\instruc_2' with event 'instruccion2_1'
 FormatterScheduler::runAction acquiring player for '-1\myBodyID\instruccion2\instruc_2' PlayerAdapterManager::getPlayerClass is finding a suitable player
 PlayerAdapterManager::initializePlayer creating 'PlainTxtPlayerAdapter' param = ''
@@ -3554,17 +3554,17 @@ FormatterPlayerAdapter::prepareProperties(C:\Users\Cristobal\Documents\RedesPC2\
 FormatterPlayerAdapter::prepareProperties(C:\Users\Cristobal\Documents\RedesPC2\media\instruccion2.txt) param 'fontSize' with value '18'
 FormatterPlayerAdapter::prepareProperties(C:\Users\Cristobal\Documents\RedesPC2\media\instruccion2.txt) param 'fontWeight' with value 'normal'
 FormatterPlayerAdapter::createPlayer for 'C:\Users\Cristobal\Documents\RedesPC2\media\instruccion2.txt' object = '-1\myBodyID\instruccion2\instruc_2' objectDevice = '0'
-ExecutionObject::prepare(-1\myBodyID\instruccion2\instruc_2) 2nd call addEventListener '05521058' or '05521134'
+ExecutionObject::prepare(-1\myBodyID\instruccion2\instruc_2) 2nd call addEventListener '05B01058' or '05B01134'
 Player::setScope 'instruccion2'
 FormatterLayout::prepareFormatterRegion for '-1\myBodyID\instruccion2\instruc_2'
-FormatterRegion::prepareOutputDisplay '05596708' created with left   = '998' top    = '270' width  = '329' height = '109' 
-SDLWindow::renderFrom(05596708) Warning! NULL underlying surface!
+FormatterRegion::prepareOutputDisplay '05B70CC0' created with left   = '959' top    = '282' width  = '316' height = '114' 
+SDLWindow::renderFrom(05B70CC0) Warning! NULL underlying surface!
 FormatterLayout::prepareFormatterRegion deviceRegion class is '0'
 PlainTxtPlayer::play ok
-SDLFontProvider::playOver parent = '05596708' bounds = '998,270,329,109' text rectangle = '0, 0, 213, 23'
+SDLFontProvider::playOver parent = '05B70CC0' bounds = '959,282,316,114' text rectangle = '0, 0, 213, 23'
 FormatterScheduler::eventStateChanged 'instruccion2_1' transition '0'
 FormatterMultiDevice::showObject '-1\myBodyID\instruccion2\instruc_2' class '0'
-FormatterRegion::setRegionVisibility (055700B8) object 'instruc_2' display '05596708' SHOW
+FormatterRegion::setRegionVisibility (05B4D470) object 'instruc_2' display '05B70CC0' SHOW
 FormatterFocusManager::showObject 'instruccion2' with focus index = '' current focus = 'inputIdx'
 PresentationContext::getPropertyValue prop 'service.currentFocus' == 'inputIdx'
 PresentationContext::getPropertyValue prop 'service.currentKeyMaster' == 'inputIdx'
@@ -3582,20 +3582,20 @@ FormatterPlayerAdapter::hasPrepared return false because object = '00000000' and
 ImagePlayerAdapter::createPlayer 'C:\Users\Cristobal\Documents\RedesPC2\media\banner.jpg'
 ImagePlayerAdapter::createPlayer 'C:\Users\Cristobal\Documents\RedesPC2\media\banner.jpg' ALL DONE
 FormatterPlayerAdapter::createPlayer for 'C:\Users\Cristobal\Documents\RedesPC2\media\banner.jpg' object = '-1\myBodyID\m_banner\d_banner' objectDevice = '0'
-ExecutionObject::prepare(-1\myBodyID\m_banner\d_banner) 2nd call addEventListener '05521058' or '05521134'
+ExecutionObject::prepare(-1\myBodyID\m_banner\d_banner) 2nd call addEventListener '05B01058' or '05B01134'
 Player::setScope 'm_banner'
 FormatterLayout::prepareFormatterRegion for '-1\myBodyID\m_banner\d_banner'
-FormatterRegion::prepareOutputDisplay '05596790' created with left   = '992' top    = '0' width  = '341' height = '129' 
+FormatterRegion::prepareOutputDisplay '05B70A18' created with left   = '954' top    = '0' width  = '327' height = '135' 
 FormatterLayout::prepareFormatterRegion deviceRegion class is '0'
 FormatterScheduler::eventStateChanged 'm_banner_1' transition '0'
 FormatterMultiDevice::showObject '-1\myBodyID\m_banner\d_banner' class '0'
-FormatterRegion::setRegionVisibility (0556FDC0) object 'd_banner' display '05596790' SHOW
+FormatterRegion::setRegionVisibility (05B4D8E8) object 'd_banner' display '05B70A18' SHOW
 FormatterFocusManager::showObject 'm_banner' with focus index = '' current focus = 'inputIdx'
 PresentationContext::getPropertyValue prop 'service.currentFocus' == 'inputIdx'
 PresentationContext::getPropertyValue prop 'service.currentKeyMaster' == 'inputIdx'
 FormatterPlayerAdapter::checkAnchorMonitor can't create TIME NominalEventMonitor for '-1\myBodyID\m_banner\d_banner' because next transition = '1.#INF' 
 InputManager::addInputEventListener add listener but I am not running. I will notify you though,as soon as you start me!
-FormatterScheduler::runAction takes '5' ms to start '-1\myBodyID\m_banner\d_banner'
+FormatterScheduler::runAction takes '4' ms to start '-1\myBodyID\m_banner\d_banner'
 CompositeExecutionObject::linkEvaluationFinished(-1\myBodyID\) 'mostrar_banner'
 FormatterScheduler::runAction '1' over object '-1\myBodyID\instruccion1\instruc_1' with event 'instruccion1_1'
 FormatterScheduler::runAction acquiring player for '-1\myBodyID\instruccion1\instruc_1' PlayerAdapterManager::getPlayerClass is finding a suitable player
@@ -3609,29 +3609,27 @@ FormatterPlayerAdapter::prepareProperties(C:\Users\Cristobal\Documents\RedesPC2\
 FormatterPlayerAdapter::prepareProperties(C:\Users\Cristobal\Documents\RedesPC2\media\instruccion1.txt) param 'fontSize' with value '18'
 FormatterPlayerAdapter::prepareProperties(C:\Users\Cristobal\Documents\RedesPC2\media\instruccion1.txt) param 'fontWeight' with value 'normal'
 FormatterPlayerAdapter::createPlayer for 'C:\Users\Cristobal\Documents\RedesPC2\media\instruccion1.txt' object = '-1\myBodyID\instruccion1\instruc_1' objectDevice = '0'
-ExecutionObject::prepare(-1\myBodyID\instruccion1\instruc_1) 2nd call addEventListener '05521058' or '05521134'
+ExecutionObject::prepare(-1\myBodyID\instruccion1\instruc_1) 2nd call addEventListener '05B01058' or '05B01134'
 Player::setScope 'instruccion1'
 FormatterLayout::prepareFormatterRegion for '-1\myBodyID\instruccion1\instruc_1'
-FormatterRegion::prepareOutputDisplay '05596F00' created with left   = '998' top    = '138' width  = '330' height = '75' 
-SDLWindow::renderFrom(05596F00) Warning! NULL underlying surface!
+FormatterRegion::prepareOutputDisplay '05B715C8' created with left   = '959' top    = '144' width  = '317' height = '79' 
+SDLWindow::renderFrom(05B715C8) Warning! NULL underlying surface!
 FormatterLayout::prepareFormatterRegion deviceRegion class is '0'
 PlainTxtPlayer::play ok
-SDLFontProvider::playOver parent = '05596F00' bounds = '998,138,330,75' text rectangle = '0, 0, 203, 23'
+SDLFontProvider::playOver parent = '05B715C8' bounds = '959,144,317,79' text rectangle = '0, 0, 203, 23'
 FormatterScheduler::eventStateChanged 'instruccion1_1' transition '0'
 FormatterMultiDevice::showObject '-1\myBodyID\instruccion1\instruc_1' class '0'
-FormatterRegion::setRegionVisibility (0557B908) object 'instruc_1' display '05596F00' SHOW
+FormatterRegion::setRegionVisibility (05B4CFF8) object 'instruc_1' display '05B715C8' SHOW
 FormatterFocusManager::showObject 'instruccion1' with focus index = '' current focus = 'inputIdx'
 PresentationContext::getPropertyValue prop 'service.currentFocus' == 'inputIdx'
 PresentationContext::getPropertyValue prop 'service.currentKeyMaster' == 'inputIdx'
 FormatterPlayerAdapter::checkAnchorMonitor can't create TIME NominalEventMonitor for '-1\myBodyID\instruccion1\instruc_1' because next transition = '1.#INF' 
 InputManager::addInputEventListener add listener but I am not running. I will notify you though,as soon as you start me!
-FormatterScheduler::runAction takes '2' ms to start '-1\myBodyID\instruccion1\instruc_1'
+FormatterScheduler::runAction takes '3' ms to start '-1\myBodyID\instruccion1\instruc_1'
 CompositeExecutionObject::linkEvaluationFinished(-1\myBodyID\) 'mostrar_ins1'
-SDL2ffmpeg::getPosition(C:\Users\Cristobal\Documents\RedesPC2\media\gymkhana.mp4) master_clock = '0.682392' (duration = '591755')
+SDL2ffmpeg::getPosition(C:\Users\Cristobal\Documents\RedesPC2\media\gymkhana.mp4) master_clock = '0.680389' (duration = '591755')
 SDL2ffmpeg::getPosition(C:\Users\Cristobal\Documents\RedesPC2\media\gymkhana.mp4) current_pts = '0.667378' (duration = '591755')
 AVPlayer::run dur = '591.755' curMediaTime = '0.667378' total = '591.755' for 'C:\Users\Cristobal\Documents\RedesPC2\media\gymkhana.mp4'
-SDL2ffmpeg::getPosition(C:\Users\Cristobal\Documents\RedesPC2\media\gymkhana_audio.mp3) master_clock = '0.777268' (duration = '591807')
+SDL2ffmpeg::getPosition(C:\Users\Cristobal\Documents\RedesPC2\media\gymkhana_audio.mp3) master_clock = '0.799486' (duration = '591807')
 SDL2ffmpeg::getPosition(C:\Users\Cristobal\Documents\RedesPC2\media\gymkhana_audio.mp3) current_pts = '0' (duration = '591807')
-AVPlayer::run dur = '591.807' curMediaTime = '0.766259' total = '591.807' for 'C:\Users\Cristobal\Documents\RedesPC2\media\gymkhana_audio.mp3'
-fileExists is false: can't access 'Tiresias.ttf'
-fileExists is false: can't access 'C:\Program Files\TeleMidia\Ginga\files\font\Tiresias.ttf'
+AVPlayer::run dur = '591.807' curMediaTime = '0.789478' total = '591.807' for 'C:\Users\Cristobal\Documents\RedesPC2\media\gymkhana_audio.mp3'

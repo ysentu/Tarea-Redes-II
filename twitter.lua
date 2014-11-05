@@ -4,12 +4,14 @@ require 'tcp'
 
 
 --PARAMETROS
-local TEXT   = ''
+local TEXT   = ''                  -- Texto de busqueda
 local HOST   = 'www2.elo.utfsm.cl' -- Host a conectarse
-local url    = '~elo323/tweet/settweet.php?search=%40kblog43+car' -- Consulta
-local result = ''                  -- Resultado html de la busqueda
-local answer = ''
+local result = ''                  -- Respuesta de petición HTTP
+local answer = ''                  -- Resultado html de la busqueda
+local url    = '~elo323/tweet/settweet.php?search=%40kblog43+car' -- Consulta al host
 
+
+-- FUNCIÓN PARA ESCRIBIR TEXTO EN PANTALLA
 local function write_text(text)
   canvas:attrFont("Tiresias", 20, "normal")
   canvas:attrColor('green') 
@@ -37,10 +39,7 @@ local function handler (evt)
         TEXT = evt.value -- Toma el valor de campo busqueda NCL
         url = url..TEXT
         
-        --evt.action = 'stop' -- Avisa que lo leyo cambiando el parametro action
-        --event.post(evt)     -- Entre la clase evt modificado a NCL
-        
-        -- Implementa dentro de las funciones que tiene tcp.lua
+        -- Consulta HTTP a host
         tcp.execute(
             function ()
 	           tcp.connect(HOST, 80)
@@ -50,14 +49,15 @@ local function handler (evt)
 	           result = tcp.receive()
 	      
 	           if result then
-	               _,_,answer = string.find(result, "<tweet>(.*)</tweet>")       
+	           		-- Obtención de texto twitteado
+	               	_,_,answer = string.find(result, "<tweet>(.*)</tweet>")       
 	            else
-	              answer = 'error, intente de nuevo.'
+	              	answer = 'error, intente de nuevo.'
 	           end
 	           
-	           canvas:clear()      
+	           canvas:clear()	-- limpear pantalla de textos anteriores (varias consultas) 
 	           write_text('Tweet: '..answer)
-	           --redraw('Tweet: '..answer)
+	           
 	           tcp.disconnect()
 	      
 	           end
