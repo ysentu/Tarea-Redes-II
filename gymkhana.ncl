@@ -165,33 +165,27 @@
 				</bind>
 	    </link>
 	    
-	    <!-- DETENER ANIMACION DESPUES DE 3S -->
-	    <link xconnector="conn#onBeginSet_var_delay">
-			<bind role="onBegin" component="input" interface="select"/>
-			<linkParam name="delay" value="3s"/>
-			<bind role="set" component="loading" interface="state" >
-					<bindParam name="var" value="stop"/>
-			</bind>
-	    </link>
+
    	
    	
 	 		<link xconnector="onKeySelectionSet">
-				<linkParam name="keyCode" value="RED"/>
+				<linkParam name="keyCode" value="ENTER"/>
 				<bind role="onSelection" component="gymkhana"  />
 				<bind role="set" component="loading" interface="state" >
 					<bindParam name="var" value="start"/>
 				</bind>
 			</link>
  
+		<link xconnector="conn#onKeySelectionSet_var_delay">
+			<bind role="onSelection" component="gymkhana">
+				<bindParam name="keyCode" value="ENTER"/>
+			</bind>
+			<linkParam name="delay" value="3s"/>
+			<bind role="set" component="loading" interface="state">
+				<bindParam name="var" value="stop"/>
+			</bind>
+		</link>
 	
-			<link xconnector="onKeySelectionSet">
-				<linkParam name="keyCode" value="GREEN"/>
-				<bind role="onSelection" component="gymkhana"  />
-				<bind role="set" component="loading" interface="state" >
-					<bindParam name="var" value="stop"/>
-				</bind>
-			</link> 
-		
 		<!--START-->
 		<port id="START" component="gymkhana"/>
 		<port id="entryPoint" component="input"/>
