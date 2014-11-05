@@ -18,12 +18,23 @@
 				<simpleAction role="set" value="$var"/>
 			</causalConnector>
 			
+			
+			
 			<!-- ANIMACION -->
 			<causalConnector id="onKeySelectionSet">
 				<connectorParam name="keyCode"/>
 				<connectorParam name="var"/>
 				<simpleCondition role="onSelection" key="$keyCode"/>
 				<simpleAction role="set" value="$var"/>
+				<simpleAction role="set" value="$var" delay="3s"/>
+			</causalConnector>	
+	
+			<!-- ANIMACION -->
+			<causalConnector id="onKeySelectionSet_Delay">
+				<connectorParam name="keyCode"/>
+				<connectorParam name="var"/>
+				<simpleCondition role="onSelection" key="$keyCode"/>
+				<simpleAction role="set" value="$var" delay="3s"/>
 			</causalConnector>	
 	
 		</connectorBase>
@@ -163,29 +174,18 @@
 				<bind role="set" component="loading" interface="state" >
 					<bindParam name="var" value="start"/>
 				</bind>
-	    </link>
-	    
-
-   	
+	    </link>   	
    	
 	 		<link xconnector="onKeySelectionSet">
 				<linkParam name="keyCode" value="ENTER"/>
 				<bind role="onSelection" component="gymkhana"  />
 				<bind role="set" component="loading" interface="state" >
 					<bindParam name="var" value="start"/>
+					<bindParam name="var" value="stop"/>
 				</bind>
 			</link>
- 
-		<link xconnector="conn#onKeySelectionSet_var_delay">
-			<bind role="onSelection" component="gymkhana">
-				<bindParam name="keyCode" value="ENTER"/>
-			</bind>
-			<linkParam name="delay" value="3s"/>
-			<bind role="set" component="loading" interface="state">
-				<bindParam name="var" value="stop"/>
-			</bind>
-		</link>
-	
+			
+
 		<!--START-->
 		<port id="START" component="gymkhana"/>
 		<port id="entryPoint" component="input"/>
